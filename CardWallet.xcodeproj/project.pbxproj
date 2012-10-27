@@ -19,6 +19,10 @@
 		1FBD4BB4163A1985001C81AF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD4BB2163A1985001C81AF /* MainStoryboard_iPhone.storyboard */; };
 		1FBD4BB7163A1985001C81AF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD4BB5163A1985001C81AF /* MainStoryboard_iPad.storyboard */; };
 		1FBD4BBA163A1985001C81AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BB9163A1985001C81AF /* ViewController.m */; };
+		1FBD4BC2163A2F32001C81AF /* StoreCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BC1163A2F32001C81AF /* StoreCollection.m */; };
+		1FBD4BC5163A3547001C81AF /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BC4163A3547001C81AF /* CardView.m */; };
+		1FBD4BC8163B62C1001C81AF /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BC7163B62C1001C81AF /* CollectionViewCell.m */; };
+		1FBD4BCA163B69E6001C81AF /* costco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD4BC9163B69E6001C81AF /* costco.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,13 @@
 		1FBD4BB6163A1985001C81AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		1FBD4BB8163A1985001C81AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1FBD4BB9163A1985001C81AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1FBD4BC0163A2F32001C81AF /* StoreCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCollection.h; sourceTree = "<group>"; };
+		1FBD4BC1163A2F32001C81AF /* StoreCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCollection.m; sourceTree = "<group>"; };
+		1FBD4BC3163A3547001C81AF /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		1FBD4BC4163A3547001C81AF /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		1FBD4BC6163B62C1001C81AF /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		1FBD4BC7163B62C1001C81AF /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		1FBD4BC9163B69E6001C81AF /* costco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = costco.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +99,12 @@
 				1FBD4BA9163A1985001C81AF /* AppDelegate.h */,
 				1FBD4BAA163A1985001C81AF /* AppDelegate.m */,
 				1FBD4BB2163A1985001C81AF /* MainStoryboard_iPhone.storyboard */,
+				1FBD4BC3163A3547001C81AF /* CardView.h */,
+				1FBD4BC4163A3547001C81AF /* CardView.m */,
+				1FBD4BC0163A2F32001C81AF /* StoreCollection.h */,
+				1FBD4BC1163A2F32001C81AF /* StoreCollection.m */,
+				1FBD4BC6163B62C1001C81AF /* CollectionViewCell.h */,
+				1FBD4BC7163B62C1001C81AF /* CollectionViewCell.m */,
 				1FBD4BB5163A1985001C81AF /* MainStoryboard_iPad.storyboard */,
 				1FBD4BB8163A1985001C81AF /* ViewController.h */,
 				1FBD4BB9163A1985001C81AF /* ViewController.m */,
@@ -99,6 +116,7 @@
 		1FBD4BA1163A1985001C81AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1FBD4BCB163B69F3001C81AF /* icons */,
 				1FBD4BA2163A1985001C81AF /* CardWallet-Info.plist */,
 				1FBD4BA3163A1985001C81AF /* InfoPlist.strings */,
 				1FBD4BA6163A1985001C81AF /* main.m */,
@@ -108,6 +126,14 @@
 				1FBD4BB0163A1985001C81AF /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FBD4BCB163B69F3001C81AF /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				1FBD4BC9163B69E6001C81AF /* costco.jpg */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +193,7 @@
 				1FBD4BB1163A1985001C81AF /* Default-568h@2x.png in Resources */,
 				1FBD4BB4163A1985001C81AF /* MainStoryboard_iPhone.storyboard in Resources */,
 				1FBD4BB7163A1985001C81AF /* MainStoryboard_iPad.storyboard in Resources */,
+				1FBD4BCA163B69E6001C81AF /* costco.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +207,9 @@
 				1FBD4BA7163A1985001C81AF /* main.m in Sources */,
 				1FBD4BAB163A1985001C81AF /* AppDelegate.m in Sources */,
 				1FBD4BBA163A1985001C81AF /* ViewController.m in Sources */,
+				1FBD4BC2163A2F32001C81AF /* StoreCollection.m in Sources */,
+				1FBD4BC5163A3547001C81AF /* CardView.m in Sources */,
+				1FBD4BC8163B62C1001C81AF /* CollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
