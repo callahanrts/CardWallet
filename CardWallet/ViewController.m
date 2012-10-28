@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation ViewController

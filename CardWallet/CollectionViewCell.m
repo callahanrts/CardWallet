@@ -9,7 +9,7 @@
 #import "CollectionViewCell.h"
 
 @implementation CollectionViewCell
-
+@synthesize iconCollection;
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
