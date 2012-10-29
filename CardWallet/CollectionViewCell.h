@@ -10,7 +10,6 @@
 
 @interface CollectionViewCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet UIImageView *iconCollection;
-
+@property (strong, nonatomic) IBOutlet UIImageView *iconImage;
 
 @end

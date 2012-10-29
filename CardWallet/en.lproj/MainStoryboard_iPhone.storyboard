@@ -29,32 +29,45 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6V9-q8-JJf">
-                            <size key="itemSize" width="62" height="86"/>
+                            <size key="itemSize" width="71" height="87"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="iconCell" id="CG7-w1-vZ9">
-                                <rect key="frame" x="0.0" y="0.0" width="62" height="86"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="iconCell" id="CG7-w1-vZ9" customClass="CollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="71" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="62" height="86"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="71" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Costco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvv-gC-Yfz">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Costco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvv-gC-Yfz">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="tra-d9-kCv"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72M-MV-G80">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="61" id="6LM-R7-5eR"/>
+                                                <constraint firstAttribute="width" constant="58" id="9IA-lL-cvV"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="mvv-gC-Yfz" secondAttribute="bottom" constant="2" id="939-t2-k26"/>
-                                    <constraint firstItem="mvv-gC-Yfz" firstAttribute="leading" secondItem="CG7-w1-vZ9" secondAttribute="leading" constant="4" id="vpQ-tS-UoK"/>
+                                    <constraint firstItem="mvv-gC-Yfz" firstAttribute="trailing" secondItem="CG7-w1-vZ9" secondAttribute="trailing" type="default" id="5rH-Tl-rMm"/>
+                                    <constraint firstItem="mvv-gC-Yfz" firstAttribute="leading" secondItem="CG7-w1-vZ9" secondAttribute="leading" type="default" id="DgG-X7-zXX"/>
+                                    <constraint firstItem="mvv-gC-Yfz" firstAttribute="top" secondItem="CG7-w1-vZ9" secondAttribute="top" constant="67" id="ENQ-Pg-L12"/>
+                                    <constraint firstItem="72M-MV-G80" firstAttribute="top" secondItem="CG7-w1-vZ9" secondAttribute="top" constant="8" id="HqY-AV-fGd"/>
+                                    <constraint firstItem="72M-MV-G80" firstAttribute="centerX" secondItem="mvv-gC-Yfz" secondAttribute="centerX" type="default" id="hz7-59-mxx"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="iconImage" destination="72M-MV-G80" id="7Mr-uQ-k8Q"/>
                                     <segue destination="kd9-aA-CW9" kind="push" id="pFA-cy-LeZ"/>
                                 </connections>
                             </collectionViewCell>
@@ -102,6 +115,12 @@
         </scene>
     </scenes>
     <classes>
+        <class className="CollectionViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CollectionViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="iconImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>

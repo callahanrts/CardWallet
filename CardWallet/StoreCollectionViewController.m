@@ -7,6 +7,7 @@
 //
 
 #import "StoreCollectionViewController.h"
+#import "CollectionViewCell.h"
 
 @interface StoreCollectionViewController ()
 
@@ -21,13 +22,13 @@
     if (self) {
         // Custom initialization
     }
-    [icons addObject:@"costco.jpg"];
+    
     return self;
 }
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 6;//later return the length of the object holding all of the stores;
+    return 26;//later return the length of the object holding all of the stores;
 }
 
 -(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -37,8 +38,9 @@
 
 -(UICollectionViewCell*) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView
+    CollectionViewCell *cell = [collectionView
                                   dequeueReusableCellWithReuseIdentifier:@"iconCell" forIndexPath:indexPath];
+    cell.iconImage.image = [UIImage imageNamed:@"costcoIcon.png"];
     
     return cell;
 }
