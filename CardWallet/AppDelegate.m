@@ -10,6 +10,10 @@
 
 @implementation AppDelegate
 @synthesize navBar;
+@synthesize window;
+@synthesize managedObjectModel = __managedObjectModel;
+@synthesize managedObjectContext = __managedObjectContext;
+@synthesize persistentStoreCoordinator = __managedObjectCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -43,5 +47,17 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+//USE FOR CORE DATA
+
+-(NSURL*) applicationDocumentsDirectory {
+    NSURL * temp;
+    return temp;
+}
+
+-(void) saveContext{
+    
+}
+//END OF CORE DATA 
 
 @end
