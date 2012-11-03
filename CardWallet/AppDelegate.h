@@ -13,7 +13,7 @@
     NSManagedObjectContext *managedObjectContext;
     NSPersistentStoreCoordinator *persistentStoreCoordinator;
 }
-
+- (NSString *)applicationDocumentsDirectory;
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic, readonly) UINavigationBar *navBar;
 @property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

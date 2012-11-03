@@ -21,6 +21,7 @@
 		1FBD4BBA163A1985001C81AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BB9163A1985001C81AF /* ViewController.m */; };
 		1FBD4BC5163A3547001C81AF /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BC4163A3547001C81AF /* CardView.m */; };
 		1FBD4BC8163B62C1001C81AF /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BC7163B62C1001C81AF /* CollectionViewCell.m */; };
+		1FD0CD101644A785001CAC9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD0CD0F1644A785001CAC9F /* CoreData.framework */; };
 		1FE5442C163DD863002D5769 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5442B163DD863002D5769 /* StoreCollectionViewController.m */; };
 		1FE54433163E0149002D5769 /* costcoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE54432163E0149002D5769 /* costcoIcon.png */; };
 		1FE54436163F8F6E002D5769 /* CardModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FE54434163F8F6E002D5769 /* CardModel.xcdatamodeld */; };
@@ -48,6 +49,7 @@
 		1FBD4BC4163A3547001C81AF /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		1FBD4BC6163B62C1001C81AF /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		1FBD4BC7163B62C1001C81AF /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		1FD0CD0F1644A785001CAC9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1FE5442A163DD863002D5769 /* StoreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCollectionViewController.h; sourceTree = "<group>"; };
 		1FE5442B163DD863002D5769 /* StoreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCollectionViewController.m; sourceTree = "<group>"; };
 		1FE54432163E0149002D5769 /* costcoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = costcoIcon.png; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD0CD101644A785001CAC9F /* CoreData.framework in Frameworks */,
 				1FBD4B9B163A1985001C81AF /* UIKit.framework in Frameworks */,
 				1FBD4B9D163A1985001C81AF /* Foundation.framework in Frameworks */,
 				1FBD4B9F163A1985001C81AF /* CoreGraphics.framework in Frameworks */,
@@ -88,6 +91,7 @@
 		1FBD4B99163A1985001C81AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FD0CD0F1644A785001CAC9F /* CoreData.framework */,
 				1FBD4B9A163A1985001C81AF /* UIKit.framework */,
 				1FBD4B9C163A1985001C81AF /* Foundation.framework */,
 				1FBD4B9E163A1985001C81AF /* CoreGraphics.framework */,

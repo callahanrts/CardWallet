@@ -16,6 +16,8 @@
 
 @implementation ViewController
 
+@synthesize fetchedResultsController, managedObjectContext;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
