@@ -21,10 +21,10 @@
 		1F10C1E01647A07700CC7519 /* MainiPhoneStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F10C1DF1647A07700CC7519 /* MainiPhoneStoryBoard.storyboard */; };
 		1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB51647A228000B8660 /* StoreCollectionViewController.m */; };
 		1F116BBA1647A269000B8660 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB91647A269000B8660 /* StoreCell.m */; };
-		1F116BBD1647A323000B8660 /* costcoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F116BBC1647A323000B8660 /* costcoIcon.png */; };
 		1F116BC01647A5F0000B8660 /* GiftCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BBF1647A5F0000B8660 /* GiftCards.m */; };
 		1F116BC31647A5F1000B8660 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC21647A5F1000B8660 /* Store.m */; };
 		1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC616481F9C000B8660 /* AddStoreViewController.m */; };
+		1F3DC3401648E8CB0085586B /* costcoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F3DC33F1648E8CB0085586B /* costcoIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,13 +48,13 @@
 		1F116BB51647A228000B8660 /* StoreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCollectionViewController.m; sourceTree = "<group>"; };
 		1F116BB81647A269000B8660 /* StoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCell.h; sourceTree = "<group>"; };
 		1F116BB91647A269000B8660 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
-		1F116BBC1647A323000B8660 /* costcoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = costcoIcon.png; path = ../../../Desktop/CardWallet/CardWallet/costcoIcon.png; sourceTree = "<group>"; };
 		1F116BBE1647A5F0000B8660 /* GiftCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCards.h; sourceTree = "<group>"; };
 		1F116BBF1647A5F0000B8660 /* GiftCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCards.m; sourceTree = "<group>"; };
 		1F116BC11647A5F1000B8660 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		1F116BC21647A5F1000B8660 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		1F116BC516481F9C000B8660 /* AddStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoreViewController.h; sourceTree = "<group>"; };
 		1F116BC616481F9C000B8660 /* AddStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoreViewController.m; sourceTree = "<group>"; };
+		1F3DC33F1648E8CB0085586B /* costcoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = costcoIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,7 @@
 		1F116BBB1647A2D5000B8660 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				1F116BBC1647A323000B8660 /* costcoIcon.png */,
+				1F3DC33F1648E8CB0085586B /* costcoIcon.png */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 				1F10C1D416479FE400CC7519 /* Default@2x.png in Resources */,
 				1F10C1D616479FE400CC7519 /* Default-568h@2x.png in Resources */,
 				1F10C1E01647A07700CC7519 /* MainiPhoneStoryBoard.storyboard in Resources */,
-				1F116BBD1647A323000B8660 /* costcoIcon.png in Resources */,
+				1F3DC3401648E8CB0085586B /* costcoIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
