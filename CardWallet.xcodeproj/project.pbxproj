@@ -7,152 +7,170 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FBD4B9B163A1985001C81AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBD4B9A163A1985001C81AF /* UIKit.framework */; };
-		1FBD4B9D163A1985001C81AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBD4B9C163A1985001C81AF /* Foundation.framework */; };
-		1FBD4B9F163A1985001C81AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBD4B9E163A1985001C81AF /* CoreGraphics.framework */; };
-		1FBD4BA5163A1985001C81AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD4BA3163A1985001C81AF /* InfoPlist.strings */; };
-		1FBD4BA7163A1985001C81AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BA6163A1985001C81AF /* main.m */; };
-		1FBD4BAB163A1985001C81AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BAA163A1985001C81AF /* AppDelegate.m */; };
-		1FBD4BAD163A1985001C81AF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD4BAC163A1985001C81AF /* Default.png */; };
-		1FBD4BAF163A1985001C81AF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD4BAE163A1985001C81AF /* Default@2x.png */; };
-		1FBD4BB1163A1985001C81AF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD4BB0163A1985001C81AF /* Default-568h@2x.png */; };
-		1FBD4BB4163A1985001C81AF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD4BB2163A1985001C81AF /* MainStoryboard_iPhone.storyboard */; };
-		1FBD4BB7163A1985001C81AF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FBD4BB5163A1985001C81AF /* MainStoryboard_iPad.storyboard */; };
-		1FBD4BBA163A1985001C81AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BB9163A1985001C81AF /* ViewController.m */; };
-		1FBD4BC5163A3547001C81AF /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BC4163A3547001C81AF /* CardView.m */; };
-		1FBD4BC8163B62C1001C81AF /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD4BC7163B62C1001C81AF /* CollectionViewCell.m */; };
-		1FD0CD101644A785001CAC9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD0CD0F1644A785001CAC9F /* CoreData.framework */; };
-		1FE5442C163DD863002D5769 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE5442B163DD863002D5769 /* StoreCollectionViewController.m */; };
-		1FE54433163E0149002D5769 /* costcoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE54432163E0149002D5769 /* costcoIcon.png */; };
-		1FE54436163F8F6E002D5769 /* CardModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1FE54434163F8F6E002D5769 /* CardModel.xcdatamodeld */; };
+		1F10C1BE16479FE400CC7519 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F10C1BD16479FE400CC7519 /* UIKit.framework */; };
+		1F10C1C016479FE400CC7519 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F10C1BF16479FE400CC7519 /* Foundation.framework */; };
+		1F10C1C216479FE400CC7519 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F10C1C116479FE400CC7519 /* CoreGraphics.framework */; };
+		1F10C1C416479FE400CC7519 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F10C1C316479FE400CC7519 /* CoreData.framework */; };
+		1F10C1CA16479FE400CC7519 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F10C1C816479FE400CC7519 /* InfoPlist.strings */; };
+		1F10C1CC16479FE400CC7519 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F10C1CB16479FE400CC7519 /* main.m */; };
+		1F10C1D016479FE400CC7519 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F10C1CF16479FE400CC7519 /* AppDelegate.m */; };
+		1F10C1D216479FE400CC7519 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F10C1D116479FE400CC7519 /* Default.png */; };
+		1F10C1D416479FE400CC7519 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F10C1D316479FE400CC7519 /* Default@2x.png */; };
+		1F10C1D616479FE400CC7519 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F10C1D516479FE400CC7519 /* Default-568h@2x.png */; };
+		1F10C1D916479FE400CC7519 /* CardWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F10C1D716479FE400CC7519 /* CardWallet.xcdatamodeld */; };
+		1F10C1E01647A07700CC7519 /* MainiPhoneStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F10C1DF1647A07700CC7519 /* MainiPhoneStoryBoard.storyboard */; };
+		1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB51647A228000B8660 /* StoreCollectionViewController.m */; };
+		1F116BBA1647A269000B8660 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB91647A269000B8660 /* StoreCell.m */; };
+		1F116BBD1647A323000B8660 /* costcoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F116BBC1647A323000B8660 /* costcoIcon.png */; };
+		1F116BC01647A5F0000B8660 /* GiftCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BBF1647A5F0000B8660 /* GiftCards.m */; };
+		1F116BC31647A5F1000B8660 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC21647A5F1000B8660 /* Store.m */; };
+		1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC616481F9C000B8660 /* AddStoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1FBD4B96163A1985001C81AF /* CardWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FBD4B9A163A1985001C81AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		1FBD4B9C163A1985001C81AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1FBD4B9E163A1985001C81AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1FBD4BA2163A1985001C81AF /* CardWallet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CardWallet-Info.plist"; sourceTree = "<group>"; };
-		1FBD4BA4163A1985001C81AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1FBD4BA6163A1985001C81AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1FBD4BA8163A1985001C81AF /* CardWallet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CardWallet-Prefix.pch"; sourceTree = "<group>"; };
-		1FBD4BA9163A1985001C81AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1FBD4BAA163A1985001C81AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1FBD4BAC163A1985001C81AF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		1FBD4BAE163A1985001C81AF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		1FBD4BB0163A1985001C81AF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		1FBD4BB3163A1985001C81AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		1FBD4BB6163A1985001C81AF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		1FBD4BB8163A1985001C81AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1FBD4BB9163A1985001C81AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1FBD4BC3163A3547001C81AF /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
-		1FBD4BC4163A3547001C81AF /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
-		1FBD4BC6163B62C1001C81AF /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
-		1FBD4BC7163B62C1001C81AF /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
-		1FD0CD0F1644A785001CAC9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		1FE5442A163DD863002D5769 /* StoreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCollectionViewController.h; sourceTree = "<group>"; };
-		1FE5442B163DD863002D5769 /* StoreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCollectionViewController.m; sourceTree = "<group>"; };
-		1FE54432163E0149002D5769 /* costcoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = costcoIcon.png; sourceTree = "<group>"; };
-		1FE54435163F8F6E002D5769 /* CardModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardModel.xcdatamodel; sourceTree = "<group>"; };
+		1F10C1B916479FE400CC7519 /* CardWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F10C1BD16479FE400CC7519 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1F10C1BF16479FE400CC7519 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1F10C1C116479FE400CC7519 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1F10C1C316479FE400CC7519 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1F10C1C716479FE400CC7519 /* CardWallet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CardWallet-Info.plist"; sourceTree = "<group>"; };
+		1F10C1C916479FE400CC7519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1F10C1CB16479FE400CC7519 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F10C1CD16479FE400CC7519 /* CardWallet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CardWallet-Prefix.pch"; sourceTree = "<group>"; };
+		1F10C1CE16479FE400CC7519 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1F10C1CF16479FE400CC7519 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1F10C1D116479FE400CC7519 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1F10C1D316479FE400CC7519 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1F10C1D516479FE400CC7519 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1F10C1D816479FE400CC7519 /* CardWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardWallet.xcdatamodel; sourceTree = "<group>"; };
+		1F10C1DF1647A07700CC7519 /* MainiPhoneStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainiPhoneStoryBoard.storyboard; path = ../MainiPhoneStoryBoard.storyboard; sourceTree = "<group>"; };
+		1F116BB41647A228000B8660 /* StoreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCollectionViewController.h; sourceTree = "<group>"; };
+		1F116BB51647A228000B8660 /* StoreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCollectionViewController.m; sourceTree = "<group>"; };
+		1F116BB81647A269000B8660 /* StoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCell.h; sourceTree = "<group>"; };
+		1F116BB91647A269000B8660 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
+		1F116BBC1647A323000B8660 /* costcoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = costcoIcon.png; path = ../../../Desktop/CardWallet/CardWallet/costcoIcon.png; sourceTree = "<group>"; };
+		1F116BBE1647A5F0000B8660 /* GiftCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCards.h; sourceTree = "<group>"; };
+		1F116BBF1647A5F0000B8660 /* GiftCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCards.m; sourceTree = "<group>"; };
+		1F116BC11647A5F1000B8660 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		1F116BC21647A5F1000B8660 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		1F116BC516481F9C000B8660 /* AddStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoreViewController.h; sourceTree = "<group>"; };
+		1F116BC616481F9C000B8660 /* AddStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoreViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1FBD4B93163A1985001C81AF /* Frameworks */ = {
+		1F10C1B616479FE400CC7519 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FD0CD101644A785001CAC9F /* CoreData.framework in Frameworks */,
-				1FBD4B9B163A1985001C81AF /* UIKit.framework in Frameworks */,
-				1FBD4B9D163A1985001C81AF /* Foundation.framework in Frameworks */,
-				1FBD4B9F163A1985001C81AF /* CoreGraphics.framework in Frameworks */,
+				1F10C1BE16479FE400CC7519 /* UIKit.framework in Frameworks */,
+				1F10C1C016479FE400CC7519 /* Foundation.framework in Frameworks */,
+				1F10C1C216479FE400CC7519 /* CoreGraphics.framework in Frameworks */,
+				1F10C1C416479FE400CC7519 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FBD4B8B163A1985001C81AF = {
+		1F10C1AE16479FE400CC7519 = {
 			isa = PBXGroup;
 			children = (
-				1FBD4BA0163A1985001C81AF /* CardWallet */,
-				1FBD4B99163A1985001C81AF /* Frameworks */,
-				1FBD4B97163A1985001C81AF /* Products */,
+				1F10C1C516479FE400CC7519 /* CardWallet */,
+				1F10C1BC16479FE400CC7519 /* Frameworks */,
+				1F10C1BA16479FE400CC7519 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1FBD4B97163A1985001C81AF /* Products */ = {
+		1F10C1BA16479FE400CC7519 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1FBD4B96163A1985001C81AF /* CardWallet.app */,
+				1F10C1B916479FE400CC7519 /* CardWallet.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1FBD4B99163A1985001C81AF /* Frameworks */ = {
+		1F10C1BC16479FE400CC7519 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1FD0CD0F1644A785001CAC9F /* CoreData.framework */,
-				1FBD4B9A163A1985001C81AF /* UIKit.framework */,
-				1FBD4B9C163A1985001C81AF /* Foundation.framework */,
-				1FBD4B9E163A1985001C81AF /* CoreGraphics.framework */,
+				1F10C1BD16479FE400CC7519 /* UIKit.framework */,
+				1F10C1BF16479FE400CC7519 /* Foundation.framework */,
+				1F10C1C116479FE400CC7519 /* CoreGraphics.framework */,
+				1F10C1C316479FE400CC7519 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1FBD4BA0163A1985001C81AF /* CardWallet */ = {
+		1F10C1C516479FE400CC7519 /* CardWallet */ = {
 			isa = PBXGroup;
 			children = (
-				1FBD4BA9163A1985001C81AF /* AppDelegate.h */,
-				1FBD4BAA163A1985001C81AF /* AppDelegate.m */,
-				1FE54434163F8F6E002D5769 /* CardModel.xcdatamodeld */,
-				1FE5442A163DD863002D5769 /* StoreCollectionViewController.h */,
-				1FE5442B163DD863002D5769 /* StoreCollectionViewController.m */,
-				1FBD4BB2163A1985001C81AF /* MainStoryboard_iPhone.storyboard */,
-				1FBD4BC3163A3547001C81AF /* CardView.h */,
-				1FBD4BC4163A3547001C81AF /* CardView.m */,
-				1FBD4BC6163B62C1001C81AF /* CollectionViewCell.h */,
-				1FBD4BC7163B62C1001C81AF /* CollectionViewCell.m */,
-				1FBD4BB5163A1985001C81AF /* MainStoryboard_iPad.storyboard */,
-				1FBD4BB8163A1985001C81AF /* ViewController.h */,
-				1FBD4BB9163A1985001C81AF /* ViewController.m */,
-				1FBD4BA1163A1985001C81AF /* Supporting Files */,
+				1F10C1D716479FE400CC7519 /* CardWallet.xcdatamodeld */,
+				1F10C1DF1647A07700CC7519 /* MainiPhoneStoryBoard.storyboard */,
+				1F10C1CE16479FE400CC7519 /* AppDelegate.h */,
+				1F10C1CF16479FE400CC7519 /* AppDelegate.m */,
+				1F116BC8164827A0000B8660 /* Stores */,
+				1F116BC41647A5F9000B8660 /* EntitySubClasses */,
+				1F10C1C616479FE400CC7519 /* Supporting Files */,
 			);
 			path = CardWallet;
 			sourceTree = "<group>";
 		};
-		1FBD4BA1163A1985001C81AF /* Supporting Files */ = {
+		1F10C1C616479FE400CC7519 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1FBD4BCB163B69F3001C81AF /* icons */,
-				1FBD4BA2163A1985001C81AF /* CardWallet-Info.plist */,
-				1FBD4BA3163A1985001C81AF /* InfoPlist.strings */,
-				1FBD4BA6163A1985001C81AF /* main.m */,
-				1FBD4BA8163A1985001C81AF /* CardWallet-Prefix.pch */,
-				1FBD4BAC163A1985001C81AF /* Default.png */,
-				1FBD4BAE163A1985001C81AF /* Default@2x.png */,
-				1FBD4BB0163A1985001C81AF /* Default-568h@2x.png */,
+				1F116BBB1647A2D5000B8660 /* icons */,
+				1F10C1C716479FE400CC7519 /* CardWallet-Info.plist */,
+				1F10C1C816479FE400CC7519 /* InfoPlist.strings */,
+				1F10C1CB16479FE400CC7519 /* main.m */,
+				1F10C1CD16479FE400CC7519 /* CardWallet-Prefix.pch */,
+				1F10C1D116479FE400CC7519 /* Default.png */,
+				1F10C1D316479FE400CC7519 /* Default@2x.png */,
+				1F10C1D516479FE400CC7519 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1FBD4BCB163B69F3001C81AF /* icons */ = {
+		1F116BBB1647A2D5000B8660 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				1FE54432163E0149002D5769 /* costcoIcon.png */,
+				1F116BBC1647A323000B8660 /* costcoIcon.png */,
 			);
 			name = icons;
+			sourceTree = "<group>";
+		};
+		1F116BC41647A5F9000B8660 /* EntitySubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1F116BC11647A5F1000B8660 /* Store.h */,
+				1F116BC21647A5F1000B8660 /* Store.m */,
+				1F116BBE1647A5F0000B8660 /* GiftCards.h */,
+				1F116BBF1647A5F0000B8660 /* GiftCards.m */,
+			);
+			name = EntitySubClasses;
+			sourceTree = "<group>";
+		};
+		1F116BC8164827A0000B8660 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				1F116BB41647A228000B8660 /* StoreCollectionViewController.h */,
+				1F116BB51647A228000B8660 /* StoreCollectionViewController.m */,
+				1F116BC516481F9C000B8660 /* AddStoreViewController.h */,
+				1F116BC616481F9C000B8660 /* AddStoreViewController.m */,
+				1F116BB81647A269000B8660 /* StoreCell.h */,
+				1F116BB91647A269000B8660 /* StoreCell.m */,
+			);
+			name = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1FBD4B95163A1985001C81AF /* CardWallet */ = {
+		1F10C1B816479FE400CC7519 /* CardWallet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FBD4BBD163A1985001C81AF /* Build configuration list for PBXNativeTarget "CardWallet" */;
+			buildConfigurationList = 1F10C1DC16479FE400CC7519 /* Build configuration list for PBXNativeTarget "CardWallet" */;
 			buildPhases = (
-				1FBD4B92163A1985001C81AF /* Sources */,
-				1FBD4B93163A1985001C81AF /* Frameworks */,
-				1FBD4B94163A1985001C81AF /* Resources */,
+				1F10C1B516479FE400CC7519 /* Sources */,
+				1F10C1B616479FE400CC7519 /* Frameworks */,
+				1F10C1B716479FE400CC7519 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -160,98 +178,82 @@
 			);
 			name = CardWallet;
 			productName = CardWallet;
-			productReference = 1FBD4B96163A1985001C81AF /* CardWallet.app */;
+			productReference = 1F10C1B916479FE400CC7519 /* CardWallet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1FBD4B8D163A1985001C81AF /* Project object */ = {
+		1F10C1B016479FE400CC7519 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = RCM;
 			};
-			buildConfigurationList = 1FBD4B90163A1985001C81AF /* Build configuration list for PBXProject "CardWallet" */;
+			buildConfigurationList = 1F10C1B316479FE400CC7519 /* Build configuration list for PBXProject "CardWallet" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 1FBD4B8B163A1985001C81AF;
-			productRefGroup = 1FBD4B97163A1985001C81AF /* Products */;
+			mainGroup = 1F10C1AE16479FE400CC7519;
+			productRefGroup = 1F10C1BA16479FE400CC7519 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1FBD4B95163A1985001C81AF /* CardWallet */,
+				1F10C1B816479FE400CC7519 /* CardWallet */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1FBD4B94163A1985001C81AF /* Resources */ = {
+		1F10C1B716479FE400CC7519 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBD4BA5163A1985001C81AF /* InfoPlist.strings in Resources */,
-				1FBD4BAD163A1985001C81AF /* Default.png in Resources */,
-				1FBD4BAF163A1985001C81AF /* Default@2x.png in Resources */,
-				1FBD4BB1163A1985001C81AF /* Default-568h@2x.png in Resources */,
-				1FBD4BB4163A1985001C81AF /* MainStoryboard_iPhone.storyboard in Resources */,
-				1FBD4BB7163A1985001C81AF /* MainStoryboard_iPad.storyboard in Resources */,
-				1FE54433163E0149002D5769 /* costcoIcon.png in Resources */,
+				1F10C1CA16479FE400CC7519 /* InfoPlist.strings in Resources */,
+				1F10C1D216479FE400CC7519 /* Default.png in Resources */,
+				1F10C1D416479FE400CC7519 /* Default@2x.png in Resources */,
+				1F10C1D616479FE400CC7519 /* Default-568h@2x.png in Resources */,
+				1F10C1E01647A07700CC7519 /* MainiPhoneStoryBoard.storyboard in Resources */,
+				1F116BBD1647A323000B8660 /* costcoIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1FBD4B92163A1985001C81AF /* Sources */ = {
+		1F10C1B516479FE400CC7519 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBD4BA7163A1985001C81AF /* main.m in Sources */,
-				1FBD4BAB163A1985001C81AF /* AppDelegate.m in Sources */,
-				1FBD4BBA163A1985001C81AF /* ViewController.m in Sources */,
-				1FBD4BC5163A3547001C81AF /* CardView.m in Sources */,
-				1FBD4BC8163B62C1001C81AF /* CollectionViewCell.m in Sources */,
-				1FE5442C163DD863002D5769 /* StoreCollectionViewController.m in Sources */,
-				1FE54436163F8F6E002D5769 /* CardModel.xcdatamodeld in Sources */,
+				1F10C1CC16479FE400CC7519 /* main.m in Sources */,
+				1F10C1D016479FE400CC7519 /* AppDelegate.m in Sources */,
+				1F10C1D916479FE400CC7519 /* CardWallet.xcdatamodeld in Sources */,
+				1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */,
+				1F116BBA1647A269000B8660 /* StoreCell.m in Sources */,
+				1F116BC01647A5F0000B8660 /* GiftCards.m in Sources */,
+				1F116BC31647A5F1000B8660 /* Store.m in Sources */,
+				1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1FBD4BA3163A1985001C81AF /* InfoPlist.strings */ = {
+		1F10C1C816479FE400CC7519 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1FBD4BA4163A1985001C81AF /* en */,
+				1F10C1C916479FE400CC7519 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		1FBD4BB2163A1985001C81AF /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FBD4BB3163A1985001C81AF /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		1FBD4BB5163A1985001C81AF /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1FBD4BB6163A1985001C81AF /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1FBD4BBB163A1985001C81AF /* Debug */ = {
+		1F10C1DA16479FE400CC7519 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +282,7 @@
 			};
 			name = Debug;
 		};
-		1FBD4BBC163A1985001C81AF /* Release */ = {
+		1F10C1DB16479FE400CC7519 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -303,7 +305,7 @@
 			};
 			name = Release;
 		};
-		1FBD4BBE163A1985001C81AF /* Debug */ = {
+		1F10C1DD16479FE400CC7519 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -314,7 +316,7 @@
 			};
 			name = Debug;
 		};
-		1FBD4BBF163A1985001C81AF /* Release */ = {
+		1F10C1DE16479FE400CC7519 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -328,20 +330,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1FBD4B90163A1985001C81AF /* Build configuration list for PBXProject "CardWallet" */ = {
+		1F10C1B316479FE400CC7519 /* Build configuration list for PBXProject "CardWallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FBD4BBB163A1985001C81AF /* Debug */,
-				1FBD4BBC163A1985001C81AF /* Release */,
+				1F10C1DA16479FE400CC7519 /* Debug */,
+				1F10C1DB16479FE400CC7519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FBD4BBD163A1985001C81AF /* Build configuration list for PBXNativeTarget "CardWallet" */ = {
+		1F10C1DC16479FE400CC7519 /* Build configuration list for PBXNativeTarget "CardWallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FBD4BBE163A1985001C81AF /* Debug */,
-				1FBD4BBF163A1985001C81AF /* Release */,
+				1F10C1DD16479FE400CC7519 /* Debug */,
+				1F10C1DE16479FE400CC7519 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -349,17 +351,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1FE54434163F8F6E002D5769 /* CardModel.xcdatamodeld */ = {
+		1F10C1D716479FE400CC7519 /* CardWallet.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1FE54435163F8F6E002D5769 /* CardModel.xcdatamodel */,
+				1F10C1D816479FE400CC7519 /* CardWallet.xcdatamodel */,
 			);
-			currentVersion = 1FE54435163F8F6E002D5769 /* CardModel.xcdatamodel */;
-			path = CardModel.xcdatamodeld;
+			currentVersion = 1F10C1D816479FE400CC7519 /* CardWallet.xcdatamodel */;
+			path = CardWallet.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 1FBD4B8D163A1985001C81AF /* Project object */;
+	rootObject = 1F10C1B016479FE400CC7519 /* Project object */;
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1FBD4B95163A1985001C81AF"
+               BlueprintIdentifier = "1F10C1B816479FE400CC7519"
                BuildableName = "CardWallet.app"
                BlueprintName = "CardWallet"
                ReferencedContainer = "container:CardWallet.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1FBD4B95163A1985001C81AF"
+            BlueprintIdentifier = "1F10C1B816479FE400CC7519"
             BuildableName = "CardWallet.app"
             BlueprintName = "CardWallet"
             ReferencedContainer = "container:CardWallet.xcodeproj">
@@ -51,7 +51,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1FBD4B95163A1985001C81AF"
+            BlueprintIdentifier = "1F10C1B816479FE400CC7519"
             BuildableName = "CardWallet.app"
             BlueprintName = "CardWallet"
             ReferencedContainer = "container:CardWallet.xcodeproj">
@@ -69,7 +69,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1FBD4B95163A1985001C81AF"
+            BlueprintIdentifier = "1F10C1B816479FE400CC7519"
             BuildableName = "CardWallet.app"
             BlueprintName = "CardWallet"
             ReferencedContainer = "container:CardWallet.xcodeproj">

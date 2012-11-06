@@ -2,21 +2,21 @@
 //  AppDelegate.h
 //  CardWallet
 //
-//  Created by Cody Callahan on 10/25/12.
+//  Created by Cody Callahan on 11/4/12.
 //  Copyright (c) 2012 RCM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>{
-    NSManagedObjectModel *managedObjectModel;
-    NSManagedObjectContext *managedObjectContext;
-    NSPersistentStoreCoordinator *persistentStoreCoordinator;
-}
-- (NSString *)applicationDocumentsDirectory;
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
 @property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, readonly) UINavigationBar *navBar;
-@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
+
 @end
