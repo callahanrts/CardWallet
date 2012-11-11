@@ -14,7 +14,7 @@
         <relationship name="giftCard" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GiftCard" inverseName="store" inverseEntity="GiftCard" syncable="YES"/>
     </entity>
     <elements>
-        <element name="GiftCard" positionX="160" positionY="192" width="128" height="118"/>
-        <element name="Store" positionX="-45" positionY="207" width="128" height="103"/>
+        <element name="GiftCard" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Store" positionX="-45" positionY="207" width="128" height="105"/>
     </elements>
 </model>

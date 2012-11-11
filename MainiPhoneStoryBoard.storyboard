@@ -79,11 +79,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Stores" id="EvE-a9-qnv">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="N32-B8-Ucc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Info" id="N32-B8-Ucc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hvK-Sn-7Kc">
                             <connections>
                                 <action selector="addStore:" destination="UNq-6s-VFW" id="OUI-7H-bXf"/>
-                                <segue destination="gcE-Ev-Nvg" kind="modal" identifier="addStore" id="zeu-uh-iGV"/>
+                                <segue destination="gcE-Ev-Nvg" kind="modal" identifier="addCardAndStore" id="zeu-uh-iGV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -95,6 +95,7 @@
         <!--Add Store View Controller-->
         <scene sceneID="h0j-FE-cIT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7O4-X4-GzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="gcE-Ev-Nvg" customClass="AddStoreViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fsM-cv-R63">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
@@ -103,7 +104,7 @@
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-6n-PNC">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Add Store" id="TcU-qz-YmE">
+                                    <navigationItem title="Add Gift Card" id="TcU-qz-YmE">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2YX-eZ-vHq">
                                             <connections>
                                                 <action selector="cancel:" destination="gcE-Ev-Nvg" id="ri2-8t-iIG"/>
@@ -117,10 +118,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWD-jr-ryu">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="4d4-ot-9AW"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Store Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWD-jr-ryu">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -134,28 +132,89 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Account Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvk-1m-YrJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bar Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAC-i8-sNV">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pin Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGa-1L-7Dc">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEV-jY-ouM">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3kf-3m-DJJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8b-WC-efg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="V6V-rx-fuc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gift Card Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6o-ub-dio">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bwO-ae-hcR">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FAP-Jv-zkZ" firstAttribute="top" secondItem="fsM-cv-R63" secondAttribute="top" constant="63" id="Cfq-vR-Sf8"/>
+                            <constraint firstItem="UWD-jr-ryu" firstAttribute="centerX" secondItem="FAP-Jv-zkZ" secondAttribute="centerX" type="default" id="3Uj-uY-zgG"/>
+                            <constraint firstItem="bwO-ae-hcR" firstAttribute="top" secondItem="fsM-cv-R63" secondAttribute="top" constant="147" id="3Za-5c-oc5"/>
+                            <constraint firstItem="bwO-ae-hcR" firstAttribute="centerX" secondItem="d6o-ub-dio" secondAttribute="centerX" type="default" id="8Xr-fc-TMK"/>
+                            <constraint firstAttribute="trailing" secondItem="FAP-Jv-zkZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9Hr-8f-imI"/>
+                            <constraint firstItem="NGa-1L-7Dc" firstAttribute="top" secondItem="3kf-3m-DJJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Ea2-rr-zjA"/>
+                            <constraint firstItem="FAP-Jv-zkZ" firstAttribute="top" secondItem="UWD-jr-ryu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="G31-9f-E44"/>
+                            <constraint firstItem="XEV-jY-ouM" firstAttribute="leading" secondItem="fsM-cv-R63" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="GBb-8r-psM"/>
+                            <constraint firstItem="yvk-1m-YrJ" firstAttribute="centerX" secondItem="bwO-ae-hcR" secondAttribute="centerX" type="default" id="H12-4d-8IW"/>
+                            <constraint firstAttribute="trailing" secondItem="bwO-ae-hcR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="IXW-v1-8df"/>
+                            <constraint firstItem="3kf-3m-DJJ" firstAttribute="leading" secondItem="fsM-cv-R63" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Ogu-hV-lOV"/>
+                            <constraint firstAttribute="trailing" secondItem="XEV-jY-ouM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ohk-bp-kxK"/>
+                            <constraint firstItem="NGa-1L-7Dc" firstAttribute="leading" secondItem="UWD-jr-ryu" secondAttribute="leading" type="default" id="PD9-nK-kPB"/>
+                            <constraint firstItem="d6o-ub-dio" firstAttribute="top" secondItem="FAP-Jv-zkZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Rkg-BL-FOB"/>
+                            <constraint firstItem="h8b-WC-efg" firstAttribute="top" secondItem="NGa-1L-7Dc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Scv-Mj-ouT"/>
+                            <constraint firstItem="iAC-i8-sNV" firstAttribute="centerX" secondItem="XEV-jY-ouM" secondAttribute="centerX" type="default" id="Uu5-7m-c6h"/>
                             <constraint firstItem="hsJ-6n-PNC" firstAttribute="trailing" secondItem="fsM-cv-R63" secondAttribute="trailing" type="default" id="WGE-1d-kNy"/>
                             <constraint firstItem="obU-h5-dG1" firstAttribute="leading" secondItem="fsM-cv-R63" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XQA-Vw-mUs"/>
-                            <constraint firstItem="obU-h5-dG1" firstAttribute="top" secondItem="UWD-jr-ryu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dPD-Vz-fRn"/>
-                            <constraint firstItem="FAP-Jv-zkZ" firstAttribute="baseline" secondItem="UWD-jr-ryu" secondAttribute="baseline" type="default" id="fuA-jc-WIv"/>
+                            <constraint firstItem="NGa-1L-7Dc" firstAttribute="centerX" secondItem="h8b-WC-efg" secondAttribute="centerX" type="default" id="Xjr-19-dzU"/>
+                            <constraint firstAttribute="trailing" secondItem="3kf-3m-DJJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Xnr-oH-o0Y"/>
+                            <constraint firstItem="bwO-ae-hcR" firstAttribute="leading" secondItem="fsM-cv-R63" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="apm-3x-GuP"/>
                             <constraint firstItem="hsJ-6n-PNC" firstAttribute="leading" secondItem="fsM-cv-R63" secondAttribute="leading" type="default" id="lFM-qm-j0b"/>
-                            <constraint firstAttribute="trailing" secondItem="FAP-Jv-zkZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lZ1-Yv-WMo"/>
-                            <constraint firstItem="UWD-jr-ryu" firstAttribute="leading" secondItem="fsM-cv-R63" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lpb-XV-x3c"/>
+                            <constraint firstItem="UWD-jr-ryu" firstAttribute="top" secondItem="fsM-cv-R63" secondAttribute="top" constant="52" id="nlv-FD-YGV"/>
+                            <constraint firstItem="iAC-i8-sNV" firstAttribute="top" secondItem="XEV-jY-ouM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="p7A-To-zoN"/>
+                            <constraint firstItem="XEV-jY-ouM" firstAttribute="top" secondItem="yvk-1m-YrJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qcn-lV-NW5"/>
+                            <constraint firstItem="3kf-3m-DJJ" firstAttribute="top" secondItem="iAC-i8-sNV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qr6-eS-h2z"/>
                             <constraint firstItem="hsJ-6n-PNC" firstAttribute="top" secondItem="fsM-cv-R63" secondAttribute="top" type="default" id="vvU-6z-ERN"/>
-                            <constraint firstItem="FAP-Jv-zkZ" firstAttribute="leading" secondItem="UWD-jr-ryu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zD7-kK-EOn"/>
+                            <constraint firstItem="FAP-Jv-zkZ" firstAttribute="leading" secondItem="fsM-cv-R63" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vvU-Pc-Fut"/>
+                            <constraint firstItem="yvk-1m-YrJ" firstAttribute="top" secondItem="bwO-ae-hcR" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="z6L-kn-L5d"/>
+                            <constraint firstItem="obU-h5-dG1" firstAttribute="top" secondItem="fsM-cv-R63" secondAttribute="top" constant="70" id="zqY-ZQ-Skd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="accountNumber" destination="XEV-jY-ouM" id="nCx-Wv-PxT"/>
+                        <outlet property="barCode" destination="3kf-3m-DJJ" id="qAf-vi-xs6"/>
+                        <outlet property="giftCardName" destination="bwO-ae-hcR" id="Ccb-7w-e7b"/>
                         <outlet property="nameField" destination="FAP-Jv-zkZ" id="59L-I2-gVs"/>
+                        <outlet property="pinNumber" destination="h8b-WC-efg" id="8v0-yx-RQZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7O4-X4-GzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-307" y="-496"/>
+            <point key="canvasLocation" x="-297" y="-586"/>
         </scene>
         <!--Gift Card Table View Controller-->
         <scene sceneID="8fJ-Kn-blA">
@@ -191,7 +250,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yr-Yl-o8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-297" y="171"/>
+            <point key="canvasLocation" x="-297" y="107"/>
         </scene>
         <!--Add Gift Card View Controller-->
         <scene sceneID="jc3-NA-WLG">
@@ -304,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0B-8B-eLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="171"/>
+            <point key="canvasLocation" x="183" y="107"/>
         </scene>
     </scenes>
     <classes>
@@ -324,7 +383,11 @@
             <relationships>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="accountNumber" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="barCode" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="giftCardName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pinNumber" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="GiftCardTableCell" superclassName="UITableViewCell">
@@ -357,9 +420,6 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

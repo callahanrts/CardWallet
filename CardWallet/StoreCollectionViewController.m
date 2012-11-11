@@ -25,6 +25,13 @@
 @synthesize selectedStoreIndex;
 
 
+#pragma mark - Custom Functions
+
+-(void) cleanStores
+{
+   
+}
+
 #pragma mark - Fetch and Store
 -(void)addStoreViewControllerDidCancel:(Store *)storeToDelete{
     NSManagedObjectContext *context = self.managedObjectContext;
@@ -47,6 +54,7 @@
     if(_fetchedResultsController != nil){
         return _fetchedResultsController;
     }
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Store"
     inManagedObjectContext:self.managedObjectContext];
@@ -56,14 +64,15 @@
     ascending:YES];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     [fetchRequest setSortDescriptors:sortDescriptors];
-
+    
+    
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
     _fetchedResultsController.delegate = self;
     
     return _fetchedResultsController;
-
 }
+
 
 
 #pragma mark - Fetched Results Delegate
@@ -177,15 +186,12 @@
 
 -(NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    NSLog(@"Number of Sections: %@", [NSString stringWithFormat:@"%i", [[self.fetchedResultsController sections] count]]);
     return [[self.fetchedResultsController sections] count];
 }
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> secInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    
-    NSLog(@"Number of Items in Section: %@", [NSString stringWithFormat:@"%i", [secInfo numberOfObjects]]);
     return [secInfo numberOfObjects];
 }
 
@@ -216,16 +222,19 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"addStore"]){
+    if([[segue identifier] isEqualToString:@"addCardAndStore"]){
         AddStoreViewController *asvc = (AddStoreViewController*)[segue destinationViewController];
         asvc.delegate = self;
         Store *store = (Store*)[NSEntityDescription insertNewObjectForEntityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
         asvc.currentStore = store;
+        
+        GiftCard *newGiftCard = (GiftCard*)[NSEntityDescription insertNewObjectForEntityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
+        newGiftCard.store = store;
+        asvc.currentGiftCard = newGiftCard;
     }
     else if([[segue identifier] isEqualToString:@"toCards"]){
         GiftCardTableViewController *gctvc = (GiftCardTableViewController*)[segue destinationViewController];
         Store *store = [self.fetchedResultsController objectAtIndexPath:selectedStoreIndex];
-        NSLog(@"Store: %@", store.name);
         gctvc.currentStore = store;
         gctvc.managedObjectContext = (NSManagedObjectContext*)self.managedObjectContext;
     }
@@ -237,6 +246,8 @@
 	// Do any additional setup after loading the view.
     _objectChanges = [NSMutableArray array];
     _sectionChanges = [NSMutableArray array];
+    
+    [self cleanStores];
     
     NSError *error = nil;
     if(![[self fetchedResultsController] performFetch:&error]){

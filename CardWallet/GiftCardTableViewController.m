@@ -52,7 +52,7 @@
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     [fetchRequest setSortDescriptors:sortDescriptors];
     
-    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"store == %@" arguments:(va_list)self.store];
+    //Search predicate
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(store == %@)", currentStore];
     [fetchRequest setPredicate:predicate];
     
@@ -190,14 +190,39 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         GiftCard *cardToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        [self.managedObjectContext deleteObject:cardToDelete];
         NSError *error = nil;
+        
+        NSString *storeToTestForDeletion = cardToDelete.store.name;
+        
+        [self.managedObjectContext deleteObject:cardToDelete];
+        [self removeStoreIfNoCards:storeToTestForDeletion];
+        
         if(![self.managedObjectContext save:&error]){
             NSLog(@"Error saving deleted object, %@", error);
         }
     }
 }
 
+- (void)removeStoreIfNoCards:(NSString*)storeToTestForDeletion
+{
+    NSError *error = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"store.name == %@", storeToTestForDeletion];
+    [fetchRequest setPredicate:predicate];
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    int numOfCards = [fetchedObjects count];
+    
+    if(numOfCards == 0){
+        entity = [NSEntityDescription entityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
+        [fetchRequest setEntity:entity];
+        predicate = [NSPredicate predicateWithFormat:@"name == %@", storeToTestForDeletion];
+        [fetchRequest setPredicate:predicate];
+        fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        [self.managedObjectContext deleteObject:[fetchedObjects objectAtIndex:0]];
+    }
+}
 
 /*
 // Override to support rearranging the table view.
