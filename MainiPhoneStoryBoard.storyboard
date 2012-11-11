@@ -69,7 +69,7 @@
                                 <connections>
                                     <outlet property="iconImage" destination="caL-kE-I2q" id="urj-3i-ruR"/>
                                     <outlet property="storeLabel" destination="AEt-e0-g9e" id="zTR-E0-2dR"/>
-                                    <segue destination="17P-q6-3qq" kind="push" id="39T-Zd-RVt"/>
+                                    <segue destination="17P-q6-3qq" kind="push" identifier="toCards" id="39T-Zd-RVt"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -103,7 +103,7 @@
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-6n-PNC">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="TcU-qz-YmE">
+                                    <navigationItem title="Add Store" id="TcU-qz-YmE">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2YX-eZ-vHq">
                                             <connections>
                                                 <action selector="cancel:" destination="gcE-Ev-Nvg" id="ri2-8t-iIG"/>
@@ -157,16 +157,16 @@
             </objects>
             <point key="canvasLocation" x="-307" y="-496"/>
         </scene>
-        <!--Table View Controller - Gift Cards-->
+        <!--Gift Card Table View Controller-->
         <scene sceneID="8fJ-Kn-blA">
             <objects>
-                <tableViewController id="17P-q6-3qq" sceneMemberID="viewController">
+                <tableViewController id="17P-q6-3qq" customClass="GiftCardTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="h1W-ma-9Nr">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="giftCard" id="8I8-c6-suC">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="giftCardCell" id="8I8-c6-suC" customClass="GiftCardTableCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -181,14 +181,144 @@
                             <outlet property="delegate" destination="17P-q6-3qq" id="LCe-rH-4XS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Gift Cards" id="hM4-2y-W2t"/>
+                    <navigationItem key="navigationItem" id="hM4-2y-W2t">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kRV-pK-ZTO">
+                            <connections>
+                                <segue destination="RvJ-Hd-ylv" kind="modal" identifier="addGiftCard" id="eQz-AY-ySk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Yr-Yl-o8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-297" y="171"/>
         </scene>
+        <!--Add Gift Card View Controller-->
+        <scene sceneID="jc3-NA-WLG">
+            <objects>
+                <viewController id="RvJ-Hd-ylv" customClass="AddGiftCardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PjS-GW-nb1">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="1G0-6e-HPR">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Add Gift Card" id="4hn-nc-FgE">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="X3e-8R-4lw">
+                                            <connections>
+                                                <action selector="cancel:" destination="RvJ-Hd-ylv" id="aJZ-6l-uqY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="epc-Cu-DH0">
+                                            <connections>
+                                                <action selector="save:" destination="RvJ-Hd-ylv" id="UdL-Od-Vrx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg2-rO-7sc">
+                                <constraints>
+                                    <constraint firstAttribute="height" id="TOe-F5-WiP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Account Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE4-i5-oti">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bar Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phd-eV-LTl">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pin Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dip-ij-fKO">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcj-bI-hZo">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-OM-Rtz">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCk-eW-oWF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="tBG-aj-WLv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gift Card Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo0-a7-CDc">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHm-y8-bdd">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rwe-OM-Rtz" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7SI-CW-MFl"/>
+                            <constraint firstItem="kHm-y8-bdd" firstAttribute="top" secondItem="PjS-GW-nb1" secondAttribute="top" constant="80" id="88P-VX-Db4"/>
+                            <constraint firstItem="eo0-a7-CDc" firstAttribute="top" secondItem="PjS-GW-nb1" secondAttribute="top" constant="52" id="Af0-1f-siT"/>
+                            <constraint firstItem="WE4-i5-oti" firstAttribute="centerX" secondItem="kHm-y8-bdd" secondAttribute="centerX" type="default" id="CXb-Wg-jU9"/>
+                            <constraint firstItem="kg2-rO-7sc" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Epo-98-NS5"/>
+                            <constraint firstItem="1G0-6e-HPR" firstAttribute="trailing" secondItem="PjS-GW-nb1" secondAttribute="trailing" type="default" id="F8x-Yp-NMS"/>
+                            <constraint firstItem="dip-ij-fKO" firstAttribute="top" secondItem="Rwe-OM-Rtz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GJ7-jh-9j0"/>
+                            <constraint firstItem="Rwe-OM-Rtz" firstAttribute="top" secondItem="phd-eV-LTl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HA6-Zg-5em"/>
+                            <constraint firstItem="phd-eV-LTl" firstAttribute="centerX" secondItem="zcj-bI-hZo" secondAttribute="centerX" type="default" id="IM2-8n-7KL"/>
+                            <constraint firstItem="1G0-6e-HPR" firstAttribute="top" secondItem="PjS-GW-nb1" secondAttribute="top" type="default" id="Miy-rF-GD5"/>
+                            <constraint firstItem="kHm-y8-bdd" firstAttribute="centerX" secondItem="eo0-a7-CDc" secondAttribute="centerX" type="default" id="Ndt-9Q-082"/>
+                            <constraint firstItem="GCk-eW-oWF" firstAttribute="top" secondItem="dip-ij-fKO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OrN-6O-9RC"/>
+                            <constraint firstAttribute="trailing" secondItem="zcj-bI-hZo" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Pal-P4-BXF"/>
+                            <constraint firstItem="kHm-y8-bdd" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZrL-nu-OJk"/>
+                            <constraint firstAttribute="trailing" secondItem="kHm-y8-bdd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cPg-DF-mL8"/>
+                            <constraint firstItem="1G0-6e-HPR" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" type="default" id="djS-z2-gJS"/>
+                            <constraint firstItem="zcj-bI-hZo" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="et3-zw-Nuw"/>
+                            <constraint firstItem="dip-ij-fKO" firstAttribute="centerX" secondItem="GCk-eW-oWF" secondAttribute="centerX" type="default" id="iAp-b8-TW4"/>
+                            <constraint firstItem="WE4-i5-oti" firstAttribute="top" secondItem="kHm-y8-bdd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jLO-Cc-zE4"/>
+                            <constraint firstAttribute="trailing" secondItem="Rwe-OM-Rtz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kWE-Eu-n4g"/>
+                            <constraint firstItem="phd-eV-LTl" firstAttribute="top" secondItem="zcj-bI-hZo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qTT-N2-IjG"/>
+                            <constraint firstItem="zcj-bI-hZo" firstAttribute="top" secondItem="WE4-i5-oti" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="w3o-lm-rxW"/>
+                            <constraint firstItem="kHm-y8-bdd" firstAttribute="baseline" secondItem="kg2-rO-7sc" secondAttribute="baseline" type="default" id="wCv-T8-d49"/>
+                            <constraint firstItem="kg2-rO-7sc" firstAttribute="centerY" secondItem="kHm-y8-bdd" secondAttribute="centerY" type="default" id="xpD-gL-06l"/>
+                            <constraint firstItem="dip-ij-fKO" firstAttribute="centerX" secondItem="Rwe-OM-Rtz" secondAttribute="centerX" type="default" id="y1W-PC-WKJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountNumber" destination="zcj-bI-hZo" id="fR8-Ur-bXJ"/>
+                        <outlet property="barCode" destination="Rwe-OM-Rtz" id="FdI-lq-2x0"/>
+                        <outlet property="name" destination="kHm-y8-bdd" id="HD7-7L-Vy5"/>
+                        <outlet property="pinNumber" destination="GCk-eW-oWF" id="ZpE-uo-wPn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0B-8B-eLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="171"/>
+        </scene>
     </scenes>
     <classes>
+        <class className="AddGiftCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGiftCardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="outlet" name="accountNumber" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="barCode" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pinNumber" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="AddStoreViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddStoreViewController.h"/>
             <relationships>
@@ -196,6 +326,12 @@
                 <relationship kind="action" name="save:"/>
                 <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
             </relationships>
+        </class>
+        <class className="GiftCardTableCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GiftCardTableCell.h"/>
+        </class>
+        <class className="GiftCardTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GiftCardTableViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

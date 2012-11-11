@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GiftCardTableViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

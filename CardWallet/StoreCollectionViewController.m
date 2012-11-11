@@ -22,7 +22,7 @@
 @synthesize theAppDelegate;
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize managedObjectContext = _managedObjectContext;
-
+@synthesize selectedStoreIndex;
 
 
 #pragma mark - Fetch and Store
@@ -201,6 +201,9 @@
 }
 
 #pragma mark - Generated Functions
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    selectedStoreIndex = indexPath;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -218,6 +221,13 @@
         asvc.delegate = self;
         Store *store = (Store*)[NSEntityDescription insertNewObjectForEntityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
         asvc.currentStore = store;
+    }
+    else if([[segue identifier] isEqualToString:@"toCards"]){
+        GiftCardTableViewController *gctvc = (GiftCardTableViewController*)[segue destinationViewController];
+        Store *store = [self.fetchedResultsController objectAtIndexPath:selectedStoreIndex];
+        NSLog(@"Store: %@", store.name);
+        gctvc.currentStore = store;
+        gctvc.managedObjectContext = (NSManagedObjectContext*)self.managedObjectContext;
     }
 }
 

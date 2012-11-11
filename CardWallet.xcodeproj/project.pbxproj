@@ -21,10 +21,13 @@
 		1F10C1E01647A07700CC7519 /* MainiPhoneStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F10C1DF1647A07700CC7519 /* MainiPhoneStoryBoard.storyboard */; };
 		1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB51647A228000B8660 /* StoreCollectionViewController.m */; };
 		1F116BBA1647A269000B8660 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB91647A269000B8660 /* StoreCell.m */; };
-		1F116BC01647A5F0000B8660 /* GiftCards.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BBF1647A5F0000B8660 /* GiftCards.m */; };
-		1F116BC31647A5F1000B8660 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC21647A5F1000B8660 /* Store.m */; };
 		1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC616481F9C000B8660 /* AddStoreViewController.m */; };
 		1F3DC3401648E8CB0085586B /* costcoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F3DC33F1648E8CB0085586B /* costcoIcon.png */; };
+		1F3DC365164DCF040085586B /* GiftCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC364164DCF040085586B /* GiftCardTableViewController.m */; };
+		1F3DC368164DCF700085586B /* GiftCardTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC367164DCF700085586B /* GiftCardTableCell.m */; };
+		1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */; };
+		1FFE1F50164EE75E00DA0869 /* GiftCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE1F4F164EE75E00DA0869 /* GiftCard.m */; };
+		1FFE1F53164EE77300DA0869 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE1F52164EE77300DA0869 /* Store.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,13 +51,19 @@
 		1F116BB51647A228000B8660 /* StoreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCollectionViewController.m; sourceTree = "<group>"; };
 		1F116BB81647A269000B8660 /* StoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreCell.h; sourceTree = "<group>"; };
 		1F116BB91647A269000B8660 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
-		1F116BBE1647A5F0000B8660 /* GiftCards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCards.h; sourceTree = "<group>"; };
-		1F116BBF1647A5F0000B8660 /* GiftCards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCards.m; sourceTree = "<group>"; };
-		1F116BC11647A5F1000B8660 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
-		1F116BC21647A5F1000B8660 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		1F116BC516481F9C000B8660 /* AddStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoreViewController.h; sourceTree = "<group>"; };
 		1F116BC616481F9C000B8660 /* AddStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoreViewController.m; sourceTree = "<group>"; };
 		1F3DC33F1648E8CB0085586B /* costcoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = costcoIcon.png; sourceTree = "<group>"; };
+		1F3DC363164DCF040085586B /* GiftCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableViewController.h; sourceTree = "<group>"; };
+		1F3DC364164DCF040085586B /* GiftCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableViewController.m; sourceTree = "<group>"; };
+		1F3DC366164DCF700085586B /* GiftCardTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableCell.h; sourceTree = "<group>"; };
+		1F3DC367164DCF700085586B /* GiftCardTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableCell.m; sourceTree = "<group>"; };
+		1FA5BA16164DEA12001AD0C8 /* AddGiftCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGiftCardViewController.h; sourceTree = "<group>"; };
+		1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGiftCardViewController.m; sourceTree = "<group>"; };
+		1FFE1F4E164EE75E00DA0869 /* GiftCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GiftCard.h; path = ../GiftCard.h; sourceTree = "<group>"; };
+		1FFE1F4F164EE75E00DA0869 /* GiftCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GiftCard.m; path = ../GiftCard.m; sourceTree = "<group>"; };
+		1FFE1F51164EE77300DA0869 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Store.h; path = ../Store.h; sourceTree = "<group>"; };
+		1FFE1F52164EE77300DA0869 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Store.m; path = ../Store.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +116,7 @@
 				1F10C1DF1647A07700CC7519 /* MainiPhoneStoryBoard.storyboard */,
 				1F10C1CE16479FE400CC7519 /* AppDelegate.h */,
 				1F10C1CF16479FE400CC7519 /* AppDelegate.m */,
+				1F3DC361164DCEDF0085586B /* GiftCards */,
 				1F116BC8164827A0000B8660 /* Stores */,
 				1F116BC41647A5F9000B8660 /* EntitySubClasses */,
 				1F10C1C616479FE400CC7519 /* Supporting Files */,
@@ -140,10 +150,10 @@
 		1F116BC41647A5F9000B8660 /* EntitySubClasses */ = {
 			isa = PBXGroup;
 			children = (
-				1F116BC11647A5F1000B8660 /* Store.h */,
-				1F116BC21647A5F1000B8660 /* Store.m */,
-				1F116BBE1647A5F0000B8660 /* GiftCards.h */,
-				1F116BBF1647A5F0000B8660 /* GiftCards.m */,
+				1FFE1F51164EE77300DA0869 /* Store.h */,
+				1FFE1F52164EE77300DA0869 /* Store.m */,
+				1FFE1F4E164EE75E00DA0869 /* GiftCard.h */,
+				1FFE1F4F164EE75E00DA0869 /* GiftCard.m */,
 			);
 			name = EntitySubClasses;
 			sourceTree = "<group>";
@@ -159,6 +169,19 @@
 				1F116BB91647A269000B8660 /* StoreCell.m */,
 			);
 			name = Stores;
+			sourceTree = "<group>";
+		};
+		1F3DC361164DCEDF0085586B /* GiftCards */ = {
+			isa = PBXGroup;
+			children = (
+				1F3DC363164DCF040085586B /* GiftCardTableViewController.h */,
+				1F3DC364164DCF040085586B /* GiftCardTableViewController.m */,
+				1F3DC366164DCF700085586B /* GiftCardTableCell.h */,
+				1F3DC367164DCF700085586B /* GiftCardTableCell.m */,
+				1FA5BA16164DEA12001AD0C8 /* AddGiftCardViewController.h */,
+				1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */,
+			);
+			name = GiftCards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +256,12 @@
 				1F10C1D916479FE400CC7519 /* CardWallet.xcdatamodeld in Sources */,
 				1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */,
 				1F116BBA1647A269000B8660 /* StoreCell.m in Sources */,
-				1F116BC01647A5F0000B8660 /* GiftCards.m in Sources */,
-				1F116BC31647A5F1000B8660 /* Store.m in Sources */,
 				1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */,
+				1F3DC365164DCF040085586B /* GiftCardTableViewController.m in Sources */,
+				1F3DC368164DCF700085586B /* GiftCardTableCell.m in Sources */,
+				1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */,
+				1FFE1F50164EE75E00DA0869 /* GiftCard.m in Sources */,
+				1FFE1F53164EE77300DA0869 /* Store.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
