@@ -15,6 +15,10 @@
 @implementation AddGiftCardViewController
 @synthesize reader;
 @synthesize initialLoad;
+@synthesize fromInStore;
+BOOL stayup;
+
+#pragma mark - Generated Functions
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,22 +33,29 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    if(_currentGiftCard.store.name){
-        _storeName.text = self.currentGiftCard.store.name;
-        [_storeName setEnabled:NO];
-        [_storeName setAlpha:0.7];
-    }
-    _accountNumber.text = self.currentGiftCard.accountNumber;
-    _barCode.text = self.currentGiftCard.barCode;
-    _pinNumber.text = self.currentGiftCard.pin;
-    _name.text  = self.currentGiftCard.name;
     
-    reader = [ZBarReaderViewController new];
-    reader.readerDelegate = self;
-    [reader.scanner setSymbology: ZBAR_QRCODE
-                          config: ZBAR_CFG_ENABLE
-                              to: 0];
-    reader.readerView.zoom = 1.0;
+    CGRect firstPos  = CGRectMake(20, 105, 280, 35);
+    CGRect secondPos = CGRectMake(20, 150, 280, 35);
+    CGRect thirdPos  = CGRectMake(20, 195, 280, 35);
+    CGRect fourthPos = CGRectMake(20, 240, 280, 35);
+    CGRect fifthPos  = CGRectMake(20, 285, 280, 35);
+    
+    if(!fromInStore){
+        _storeName     = [self makeTexfieldWithCGRect:firstPos  withPlaceholder:@"Store Name"];
+        _name          = [self makeTexfieldWithCGRect:secondPos withPlaceholder:@"Gift Card Name"];
+        _accountNumber = [self makeTexfieldWithCGRect:thirdPos  withPlaceholder:@"Account Number"];
+        _pinNumber     = [self makeTexfieldWithCGRect:fourthPos withPlaceholder:@"Pin Number"];
+        _barCode       = [self makeTexfieldWithCGRect:fifthPos  withPlaceholder:@"Bar Code"];
+    } else {
+        //_storeName     = [self makeTexfieldWithCGRect:firstPos  withPlaceholder:@"Store Name"];
+        _name          = [self makeTexfieldWithCGRect:firstPos withPlaceholder:@"Gift Card Name"];
+        _accountNumber = [self makeTexfieldWithCGRect:secondPos  withPlaceholder:@"Account Number"];
+        _pinNumber     = [self makeTexfieldWithCGRect:thirdPos withPlaceholder:@"Pin Number"];
+        _barCode       = [self makeTexfieldWithCGRect:fourthPos  withPlaceholder:@"Bar Code"];
+    }
+    
+    [self initZBarReader];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -55,10 +66,71 @@
     }
 }
 
+#pragma mark - Text Field Delegate Functions
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if(textField == _storeName){
+        //[_storeName setEnabled:NO];
+        //[_storeName setAlpha:.7];
+        //[_storePicker setHidden:NO];
+    }
+}
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    if([_storeName.text length] > 0 && [_name.text length] > 0 && [_accountNumber.text length] > 0
+       && [_pinNumber.text length] > 0 && [_barCode.text length] > 0)
+    {
+        [_saveBtn setEnabled:YES];
+        return YES;
+    }
+    [_saveBtn setEnabled:NO];
+    return YES;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Custom Functions
+
+- (void)initZBarReader
+{
+    reader = [ZBarReaderViewController new];
+    reader.readerDelegate = self;
+    [reader.scanner setSymbology: ZBAR_QRCODE
+                          config: ZBAR_CFG_ENABLE
+                              to: 0];
+    reader.readerView.zoom = 1.0;
+}
+
+-(UITextField*)makeTexfieldWithCGRect:(CGRect)cgrect withPlaceholder:(NSString*)placeholder
+{
+    UITextField* textField = [[UITextField alloc] initWithFrame:cgrect];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.placeholder = placeholder;
+    textField.returnKeyType = UIReturnKeyDone;
+    textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    textField.delegate = self;
+    [self.view addSubview:textField];
+    return textField;
+}
+
+
+
+#pragma mark - IBActions
+
+- (IBAction)scanAgain:(id)sender {
+    [self scan];
 }
 
 - (IBAction)cancel:(id)sender {
@@ -66,15 +138,23 @@
 }
 
 - (IBAction)save:(id)sender {
-    if(!self.currentGiftCard.store.name){
-        self.currentGiftCard.store.name = _storeName.text;
-        self.currentGiftCard.store.image = @"costcoIcon.png";
+    if([_storeName.text length] < 1)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Name?" message:@"Don't forget to assign your gift card to a store!" delegate:self cancelButtonTitle:@"Go Back" otherButtonTitles:nil];
+        [alert show];
     }
-    self.currentGiftCard.name = _name.text;
-    self.currentGiftCard.accountNumber = _accountNumber.text;
-    self.currentGiftCard.pin = _pinNumber.text;
-    self.currentGiftCard.barCode = _barCode.text;
-    [self.delegate AddGiftCardViewControllerDidSave];
+    else
+    {
+        if(!self.currentGiftCard.store.name){
+            self.currentGiftCard.store.name = _storeName.text;
+            self.currentGiftCard.store.image = @"costcoIcon.png";
+        }
+        self.currentGiftCard.name = _name.text;
+        self.currentGiftCard.accountNumber = _accountNumber.text;
+        self.currentGiftCard.pin = _pinNumber.text;
+        self.currentGiftCard.barCode = _barCode.text;
+        [self.delegate AddGiftCardViewControllerDidSave];
+    }
 }
 
 

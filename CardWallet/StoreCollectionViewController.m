@@ -26,6 +26,7 @@
 #pragma mark - Fetch and Store
 -(void)AddGiftCardViewControllerDidCancel:(GiftCard *)giftCardToDelete{
     NSManagedObjectContext *context = self.managedObjectContext;
+    [context deleteObject:giftCardToDelete.store];
     [context deleteObject:giftCardToDelete];
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -222,16 +223,8 @@
         GiftCard *newGiftCard = (GiftCard*)[NSEntityDescription insertNewObjectForEntityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
         newGiftCard.store = store;
         agcvc.currentGiftCard = newGiftCard;
-        agcvc.initialLoad = YES;
-        
-        /*AddStoreViewController *asvc = (AddStoreViewController*)[segue destinationViewController];
-        asvc.delegate = self;
-        Store *store = (Store*)[NSEntityDescription insertNewObjectForEntityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
-        asvc.currentStore = store;
-        
-        GiftCard *newGiftCard = (GiftCard*)[NSEntityDescription insertNewObjectForEntityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
-        newGiftCard.store = store;
-        asvc.currentGiftCard = newGiftCard;*/
+        agcvc.initialLoad = NO;
+        agcvc.fromInStore = NO;
     }
     else if([[segue identifier] isEqualToString:@"toCards"]){
         GiftCardTableViewController *gctvc = (GiftCardTableViewController*)[segue destinationViewController];
@@ -260,5 +253,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

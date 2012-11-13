@@ -115,6 +115,7 @@
         newGiftCard.store = currentStore;
         agcvc.currentGiftCard = newGiftCard;
         agcvc.initialLoad = YES;
+        agcvc.fromInStore = YES;
     }
 }
 

@@ -13,7 +13,7 @@
 
 @protocol AddGiftCardViewControllerDelegate;
 
-@interface AddGiftCardViewController : UIViewController <ZBarReaderDelegate>
+@interface AddGiftCardViewController : UIViewController <ZBarReaderDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) GiftCard *currentGiftCard;
 @property (strong, nonatomic) ZBarReaderViewController *reader;
@@ -24,11 +24,18 @@
 @property (strong, nonatomic) IBOutlet UITextField *barCode;
 @property (strong, nonatomic) IBOutlet UITextField *pinNumber;
 @property (strong, nonatomic) IBOutlet UITextField *storeName;
+@property (strong, nonatomic) IBOutlet UIPickerView *storePicker;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *saveBtn;
 @property BOOL initialLoad;
+@property BOOL fromInStore;
 
+
+- (IBAction)scanAgain:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
 - (void)scan;
+- (UITextField*)makeTexfieldWithCGRect:(CGRect)cgrect withPlaceholder:(NSString*)placeholder;
+- (void)initZBarReader;
 @end
 
 @protocol AddGiftCardViewControllerDelegate

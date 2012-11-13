@@ -79,7 +79,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Stores" id="EvE-a9-qnv">
-                        <barButtonItem key="leftBarButtonItem" title="Info" id="N32-B8-Ucc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="neo-Mc-w6J"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hvK-Sn-7Kc">
                             <connections>
                                 <action selector="addStore:" destination="UNq-6s-VFW" id="OUI-7H-bXf"/>
@@ -91,6 +91,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Heb-lY-OiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-786" y="-197"/>
+        </scene>
+        <!--Help Menu View Controller-->
+        <scene sceneID="aS1-27-tnl">
+            <objects>
+                <viewController id="c9f-n9-dBS" customClass="HelpMenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VxK-VF-HAf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="bcM-G5-pQ6">
+                                <items>
+                                    <navigationItem title="Help" id="JNK-Iw-jo1">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="RLe-aP-Tm0">
+                                            <connections>
+                                                <action selector="backButton:" destination="c9f-n9-dBS" id="WQc-sV-i8C"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bcM-G5-pQ6" firstAttribute="top" secondItem="VxK-VF-HAf" secondAttribute="top" type="default" id="DXV-NB-wwr"/>
+                            <constraint firstItem="bcM-G5-pQ6" firstAttribute="trailing" secondItem="VxK-VF-HAf" secondAttribute="trailing" type="default" id="GxK-1T-Udt"/>
+                            <constraint firstItem="bcM-G5-pQ6" firstAttribute="leading" secondItem="VxK-VF-HAf" secondAttribute="leading" type="default" id="lCE-bv-NUX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="back" destination="RLe-aP-Tm0" id="H46-z5-1ec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIk-vJ-6la" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="-859"/>
         </scene>
         <!--Add Store View Controller-->
         <scene sceneID="h0j-FE-cIT">
@@ -300,94 +335,37 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Account Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE4-i5-oti">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bar Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phd-eV-LTl">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pin Number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dip-ij-fKO">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcj-bI-hZo">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-OM-Rtz">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCk-eW-oWF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-bY-DZW">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="tBG-aj-WLv"/>
+                                    <constraint firstAttribute="height" constant="41" id="w8u-d3-tVq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gift Card Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo0-a7-CDc">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHm-y8-bdd">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Store Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfV-JJ-Er6">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tUs-b8-tVc">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Scan Gift Card">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scanAgain:" destination="RvJ-Hd-ylv" eventType="touchUpInside" id="EfK-sq-VwX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kHm-y8-bdd" firstAttribute="trailing" secondItem="zcj-bI-hZo" secondAttribute="trailing" type="default" id="3PX-U2-POg"/>
-                            <constraint firstItem="kg2-rO-7sc" firstAttribute="top" secondItem="PjS-GW-nb1" secondAttribute="top" constant="95" id="6gi-bc-WX9"/>
-                            <constraint firstItem="tUs-b8-tVc" firstAttribute="centerX" secondItem="WfV-JJ-Er6" secondAttribute="centerX" type="default" id="7Nu-pb-kp8"/>
-                            <constraint firstItem="Rwe-OM-Rtz" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7SI-CW-MFl"/>
-                            <constraint firstItem="tUs-b8-tVc" firstAttribute="top" secondItem="WfV-JJ-Er6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="BTg-6g-xH1"/>
-                            <constraint firstItem="WE4-i5-oti" firstAttribute="centerX" secondItem="kHm-y8-bdd" secondAttribute="centerX" type="default" id="CXb-Wg-jU9"/>
+                            <constraint firstItem="l3X-bY-DZW" firstAttribute="top" secondItem="PjS-GW-nb1" secondAttribute="top" constant="54" id="6cE-f8-31L"/>
+                            <constraint firstAttribute="trailing" secondItem="l3X-bY-DZW" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7YX-r6-20q"/>
+                            <constraint firstItem="1G0-6e-HPR" firstAttribute="centerX" secondItem="l3X-bY-DZW" secondAttribute="centerX" type="default" id="DOI-TZ-9MT"/>
                             <constraint firstItem="kg2-rO-7sc" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Epo-98-NS5"/>
-                            <constraint firstItem="dip-ij-fKO" firstAttribute="top" secondItem="Rwe-OM-Rtz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GJ7-jh-9j0"/>
-                            <constraint firstItem="Rwe-OM-Rtz" firstAttribute="top" secondItem="phd-eV-LTl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HA6-Zg-5em"/>
-                            <constraint firstItem="phd-eV-LTl" firstAttribute="centerX" secondItem="zcj-bI-hZo" secondAttribute="centerX" type="default" id="IM2-8n-7KL"/>
                             <constraint firstItem="1G0-6e-HPR" firstAttribute="top" secondItem="PjS-GW-nb1" secondAttribute="top" type="default" id="Miy-rF-GD5"/>
-                            <constraint firstItem="kHm-y8-bdd" firstAttribute="centerX" secondItem="eo0-a7-CDc" secondAttribute="centerX" type="default" id="Ndt-9Q-082"/>
-                            <constraint firstItem="GCk-eW-oWF" firstAttribute="top" secondItem="dip-ij-fKO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OrN-6O-9RC"/>
-                            <constraint firstItem="eo0-a7-CDc" firstAttribute="top" secondItem="PjS-GW-nb1" secondAttribute="top" constant="126" id="Owx-zY-71e"/>
-                            <constraint firstItem="WfV-JJ-Er6" firstAttribute="leading" secondItem="dip-ij-fKO" secondAttribute="leading" type="default" id="QlN-ov-DzO"/>
-                            <constraint firstItem="kHm-y8-bdd" firstAttribute="top" secondItem="PjS-GW-nb1" secondAttribute="top" constant="154" id="Som-6s-uIZ"/>
-                            <constraint firstItem="kHm-y8-bdd" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZrL-nu-OJk"/>
+                            <constraint firstItem="l3X-bY-DZW" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cb0-c8-sgP"/>
                             <constraint firstItem="1G0-6e-HPR" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" type="default" id="djS-z2-gJS"/>
-                            <constraint firstItem="tUs-b8-tVc" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eEW-Ju-HXC"/>
-                            <constraint firstItem="phd-eV-LTl" firstAttribute="centerX" secondItem="PjS-GW-nb1" secondAttribute="centerX" type="default" id="epu-TK-YJi"/>
-                            <constraint firstItem="zcj-bI-hZo" firstAttribute="leading" secondItem="PjS-GW-nb1" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="et3-zw-Nuw"/>
-                            <constraint firstItem="WfV-JJ-Er6" firstAttribute="top" secondItem="PjS-GW-nb1" secondAttribute="top" constant="50" id="gDr-GI-zgK"/>
-                            <constraint firstItem="dip-ij-fKO" firstAttribute="centerX" secondItem="GCk-eW-oWF" secondAttribute="centerX" type="default" id="iAp-b8-TW4"/>
-                            <constraint firstItem="WE4-i5-oti" firstAttribute="top" secondItem="kHm-y8-bdd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jLO-Cc-zE4"/>
-                            <constraint firstItem="tUs-b8-tVc" firstAttribute="trailing" secondItem="kHm-y8-bdd" secondAttribute="trailing" type="default" id="lBy-Mc-JyO"/>
-                            <constraint firstItem="1G0-6e-HPR" firstAttribute="centerX" secondItem="WfV-JJ-Er6" secondAttribute="centerX" type="default" id="niJ-KW-sB2"/>
-                            <constraint firstItem="Rwe-OM-Rtz" firstAttribute="trailing" secondItem="zcj-bI-hZo" secondAttribute="trailing" type="default" id="pkh-AY-XgY"/>
-                            <constraint firstItem="phd-eV-LTl" firstAttribute="top" secondItem="zcj-bI-hZo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qTT-N2-IjG"/>
-                            <constraint firstItem="zcj-bI-hZo" firstAttribute="top" secondItem="WE4-i5-oti" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="w3o-lm-rxW"/>
+                            <constraint firstItem="l3X-bY-DZW" firstAttribute="bottom" secondItem="kg2-rO-7sc" secondAttribute="bottom" type="default" id="kxC-e6-v06"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="accountNumber" destination="zcj-bI-hZo" id="fR8-Ur-bXJ"/>
-                        <outlet property="barCode" destination="Rwe-OM-Rtz" id="FdI-lq-2x0"/>
-                        <outlet property="name" destination="kHm-y8-bdd" id="HD7-7L-Vy5"/>
-                        <outlet property="pinNumber" destination="GCk-eW-oWF" id="ZpE-uo-wPn"/>
-                        <outlet property="storeName" destination="tUs-b8-tVc" id="kmA-XZ-A01"/>
+                        <outlet property="saveBtn" destination="epc-Cu-DH0" id="nXj-ov-uus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0B-8B-eLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,11 +379,14 @@
             <relationships>
                 <relationship kind="action" name="cancel:"/>
                 <relationship kind="action" name="save:"/>
+                <relationship kind="action" name="scanAgain:"/>
                 <relationship kind="outlet" name="accountNumber" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="barCode" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="name" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="pinNumber" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveBtn" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="storeName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="storePicker" candidateClass="UIPickerView"/>
             </relationships>
         </class>
         <class className="AddStoreViewController" superclassName="UIViewController">
@@ -425,6 +406,9 @@
         </class>
         <class className="GiftCardTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GiftCardTableViewController.h"/>
+        </class>
+        <class className="HelpMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelpMenuViewController.h"/>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

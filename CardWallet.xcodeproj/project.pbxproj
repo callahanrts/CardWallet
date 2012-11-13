@@ -28,6 +28,7 @@
 		1F799C231651C62000AB016A /* bestbuy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F799C1F1651C62000AB016A /* bestbuy.jpg */; };
 		1F799C241651C62000AB016A /* costco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F799C201651C62000AB016A /* costco.jpg */; };
 		1F799C251651C62000AB016A /* kohls.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F799C211651C62000AB016A /* kohls.jpg */; };
+		1F799C3E16521E9900AB016A /* HelpMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F799C3D16521E9900AB016A /* HelpMenuViewController.m */; };
 		1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */; };
 		1FF515D3165196C400C5E0E0 /* ShowCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF515D2165196C400C5E0E0 /* ShowCardViewController.m */; };
 		1FF515F61651980600C5E0E0 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF515F01651980600C5E0E0 /* libzbar.a */; };
@@ -71,6 +72,8 @@
 		1F799C1F1651C62000AB016A /* bestbuy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bestbuy.jpg; path = icons/bestbuy.jpg; sourceTree = "<group>"; };
 		1F799C201651C62000AB016A /* costco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = costco.jpg; path = icons/costco.jpg; sourceTree = "<group>"; };
 		1F799C211651C62000AB016A /* kohls.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kohls.jpg; path = icons/kohls.jpg; sourceTree = "<group>"; };
+		1F799C3C16521E9900AB016A /* HelpMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpMenuViewController.h; sourceTree = "<group>"; };
+		1F799C3D16521E9900AB016A /* HelpMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpMenuViewController.m; sourceTree = "<group>"; };
 		1FA5BA16164DEA12001AD0C8 /* AddGiftCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGiftCardViewController.h; sourceTree = "<group>"; };
 		1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGiftCardViewController.m; sourceTree = "<group>"; };
 		1FF515D1165196C400C5E0E0 /* ShowCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCardViewController.h; sourceTree = "<group>"; };
@@ -170,6 +173,7 @@
 				1F10C1CF16479FE400CC7519 /* AppDelegate.m */,
 				1F3DC361164DCEDF0085586B /* GiftCards */,
 				1F116BC8164827A0000B8660 /* Stores */,
+				1F799C3A16521E7900AB016A /* HelpMenu */,
 				1F116BC41647A5F9000B8660 /* EntitySubClasses */,
 				1F10C1C616479FE400CC7519 /* Supporting Files */,
 			);
@@ -240,6 +244,15 @@
 				1FF515D2165196C400C5E0E0 /* ShowCardViewController.m */,
 			);
 			name = GiftCards;
+			sourceTree = "<group>";
+		};
+		1F799C3A16521E7900AB016A /* HelpMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1F799C3C16521E9900AB016A /* HelpMenuViewController.h */,
+				1F799C3D16521E9900AB016A /* HelpMenuViewController.m */,
+			);
+			name = HelpMenu;
 			sourceTree = "<group>";
 		};
 		1FF515D81651980600C5E0E0 /* ZBarSDK */ = {
@@ -384,6 +397,7 @@
 				1FFE1F50164EE75E00DA0869 /* GiftCard.m in Sources */,
 				1FFE1F53164EE77300DA0869 /* Store.m in Sources */,
 				1FF515D3165196C400C5E0E0 /* ShowCardViewController.m in Sources */,
+				1F799C3E16521E9900AB016A /* HelpMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

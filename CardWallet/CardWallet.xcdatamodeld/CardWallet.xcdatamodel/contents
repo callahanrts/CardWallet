@@ -3,7 +3,7 @@
     <entity name="GiftCard" representedClassName="GiftCards" syncable="YES">
         <attribute name="accountNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="barCode" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" defaultValueString="Name of gift card" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pin" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="store" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Store" inverseName="giftCard" inverseEntity="Store" syncable="YES"/>
     </entity>
