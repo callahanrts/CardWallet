@@ -36,8 +36,11 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 #pragma mark - Fetched Results Controller Stuff
 
 -(NSFetchedResultsController*)fetchedResultsController{
@@ -106,7 +109,11 @@
 #pragma mark - Generated Functions
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+<<<<<<< HEAD
     if([segue.identifier isEqualToString:@"addCardWithoutStore"])
+=======
+    if([segue.identifier isEqualToString:@"addGiftCard"])
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
     {
         AddGiftCardViewController *agcvc = (AddGiftCardViewController*) segue.destinationViewController;
         agcvc.delegate = self;
@@ -114,7 +121,10 @@
         GiftCard *newGiftCard = (GiftCard*)[NSEntityDescription insertNewObjectForEntityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
         newGiftCard.store = currentStore;
         agcvc.currentGiftCard = newGiftCard;
+<<<<<<< HEAD
         agcvc.initialLoad = YES;
+=======
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
     }
 }
 

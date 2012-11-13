@@ -7,6 +7,11 @@
 //
 
 #import "StoreCollectionViewController.h"
+<<<<<<< HEAD
+=======
+#import "StoreCell.h"
+#import "Store.h"
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 
 @interface StoreCollectionViewController ()
 
@@ -23,19 +28,41 @@
 @synthesize selectedStoreIndex;
 
 
+<<<<<<< HEAD
 #pragma mark - Fetch and Store
 -(void)AddGiftCardViewControllerDidCancel:(GiftCard *)giftCardToDelete{
     NSManagedObjectContext *context = self.managedObjectContext;
     [context deleteObject:giftCardToDelete];
+=======
+#pragma mark - Custom Functions
+
+-(void) cleanStores
+{
+   
+}
+
+#pragma mark - Fetch and Store
+-(void)addStoreViewControllerDidCancel:(Store *)storeToDelete{
+    NSManagedObjectContext *context = self.managedObjectContext;
+    [context deleteObject:storeToDelete];
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+<<<<<<< HEAD
 -(void)AddGiftCardViewControllerDidSave
 {
     NSError *error = nil;
     if(![self.managedObjectContext save:&error]){
         NSLog(@"Error Saving %@", error);
+=======
+-(void)addStoreViewControllerDidSave{
+    NSError *error;
+    NSManagedObjectContext *context = self.managedObjectContext;
+    if(![context save:&error]){
+        NSLog(@"Error Saving! %@", error);
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -214,6 +241,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([[segue identifier] isEqualToString:@"addCardAndStore"]){
+<<<<<<< HEAD
         Store *store = (Store*)[NSEntityDescription insertNewObjectForEntityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
         
         AddGiftCardViewController *agcvc = (AddGiftCardViewController*) segue.destinationViewController;
@@ -225,13 +253,20 @@
         agcvc.initialLoad = YES;
         
         /*AddStoreViewController *asvc = (AddStoreViewController*)[segue destinationViewController];
+=======
+        AddStoreViewController *asvc = (AddStoreViewController*)[segue destinationViewController];
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
         asvc.delegate = self;
         Store *store = (Store*)[NSEntityDescription insertNewObjectForEntityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
         asvc.currentStore = store;
         
         GiftCard *newGiftCard = (GiftCard*)[NSEntityDescription insertNewObjectForEntityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
         newGiftCard.store = store;
+<<<<<<< HEAD
         asvc.currentGiftCard = newGiftCard;*/
+=======
+        asvc.currentGiftCard = newGiftCard;
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
     }
     else if([[segue identifier] isEqualToString:@"toCards"]){
         GiftCardTableViewController *gctvc = (GiftCardTableViewController*)[segue destinationViewController];
@@ -248,6 +283,11 @@
     _objectChanges = [NSMutableArray array];
     _sectionChanges = [NSMutableArray array];
     
+<<<<<<< HEAD
+=======
+    [self cleanStores];
+    
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
     NSError *error = nil;
     if(![[self fetchedResultsController] performFetch:&error]){
         NSLog(@"error fetching %@", error);

@@ -8,12 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+<<<<<<< HEAD
 #import "AddGiftCardViewController.h"
 #import "StoreCell.h"
 #import "Store.h"
 
 @interface StoreCollectionViewController : UICollectionViewController
 <AddGiftCardViewControllerDelegate, NSFetchedResultsControllerDelegate>
+=======
+#import "AddStoreViewController.h"
+
+@interface StoreCollectionViewController : UICollectionViewController
+<AddStoreViewControllerDelegate, NSFetchedResultsControllerDelegate>
+>>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 
 @property (nonatomic, retain) AppDelegate *theAppDelegate;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
