@@ -10,11 +10,7 @@
     <entity name="Store" representedClassName="Store" syncable="YES">
         <attribute name="barCodeType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
-<<<<<<< HEAD
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-=======
-        <attribute name="name" optional="YES" attributeType="String" defaultValueString="New Store" syncable="YES"/>
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
         <relationship name="giftCard" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GiftCard" inverseName="store" inverseEntity="GiftCard" syncable="YES"/>
     </entity>
     <elements>

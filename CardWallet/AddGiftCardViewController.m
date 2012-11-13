@@ -13,11 +13,8 @@
 @end
 
 @implementation AddGiftCardViewController
-<<<<<<< HEAD
 @synthesize reader;
 @synthesize initialLoad;
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,19 +29,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-<<<<<<< HEAD
     if(_currentGiftCard.store.name){
         _storeName.text = self.currentGiftCard.store.name;
         [_storeName setEnabled:NO];
         [_storeName setAlpha:0.7];
     }
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
     _accountNumber.text = self.currentGiftCard.accountNumber;
     _barCode.text = self.currentGiftCard.barCode;
     _pinNumber.text = self.currentGiftCard.pin;
     _name.text  = self.currentGiftCard.name;
-<<<<<<< HEAD
     
     reader = [ZBarReaderViewController new];
     reader.readerDelegate = self;
@@ -60,8 +53,6 @@
         [self scan];
         initialLoad = NO;
     }
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,20 +66,16 @@
 }
 
 - (IBAction)save:(id)sender {
-<<<<<<< HEAD
     if(!self.currentGiftCard.store.name){
         self.currentGiftCard.store.name = _storeName.text;
         self.currentGiftCard.store.image = @"costcoIcon.png";
     }
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
     self.currentGiftCard.name = _name.text;
     self.currentGiftCard.accountNumber = _accountNumber.text;
     self.currentGiftCard.pin = _pinNumber.text;
     self.currentGiftCard.barCode = _barCode.text;
     [self.delegate AddGiftCardViewControllerDidSave];
 }
-<<<<<<< HEAD
 
 
 
@@ -154,6 +141,4 @@
         [_accountNumber setOpaque:0.7];
     }
 }
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 @end

@@ -22,7 +22,6 @@
 		1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB51647A228000B8660 /* StoreCollectionViewController.m */; };
 		1F116BBA1647A269000B8660 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB91647A269000B8660 /* StoreCell.m */; };
 		1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC616481F9C000B8660 /* AddStoreViewController.m */; };
-<<<<<<< HEAD
 		1F3DC365164DCF040085586B /* GiftCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC364164DCF040085586B /* GiftCardTableViewController.m */; };
 		1F3DC368164DCF700085586B /* GiftCardTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC367164DCF700085586B /* GiftCardTableCell.m */; };
 		1F799C221651C62000AB016A /* barnes-and-nobles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F799C1E1651C62000AB016A /* barnes-and-nobles.jpg */; };
@@ -37,12 +36,6 @@
 		1FF516001651984F00C5E0E0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF515FF1651984F00C5E0E0 /* CoreMedia.framework */; };
 		1FF516021651985B00C5E0E0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF516011651985B00C5E0E0 /* CoreVideo.framework */; };
 		1FF516041651986A00C5E0E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF516031651986A00C5E0E0 /* QuartzCore.framework */; };
-=======
-		1F3DC3401648E8CB0085586B /* costcoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F3DC33F1648E8CB0085586B /* costcoIcon.png */; };
-		1F3DC365164DCF040085586B /* GiftCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC364164DCF040085586B /* GiftCardTableViewController.m */; };
-		1F3DC368164DCF700085586B /* GiftCardTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC367164DCF700085586B /* GiftCardTableCell.m */; };
-		1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */; };
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 		1FFE1F50164EE75E00DA0869 /* GiftCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE1F4F164EE75E00DA0869 /* GiftCard.m */; };
 		1FFE1F53164EE77300DA0869 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE1F52164EE77300DA0869 /* Store.m */; };
 /* End PBXBuildFile section */
@@ -70,15 +63,10 @@
 		1F116BB91647A269000B8660 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
 		1F116BC516481F9C000B8660 /* AddStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoreViewController.h; sourceTree = "<group>"; };
 		1F116BC616481F9C000B8660 /* AddStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoreViewController.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
-		1F3DC33F1648E8CB0085586B /* costcoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = costcoIcon.png; sourceTree = "<group>"; };
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 		1F3DC363164DCF040085586B /* GiftCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableViewController.h; sourceTree = "<group>"; };
 		1F3DC364164DCF040085586B /* GiftCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableViewController.m; sourceTree = "<group>"; };
 		1F3DC366164DCF700085586B /* GiftCardTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableCell.h; sourceTree = "<group>"; };
 		1F3DC367164DCF700085586B /* GiftCardTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableCell.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		1F799C1E1651C62000AB016A /* barnes-and-nobles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "barnes-and-nobles.jpg"; path = "icons/barnes-and-nobles.jpg"; sourceTree = "<group>"; };
 		1F799C1F1651C62000AB016A /* bestbuy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bestbuy.jpg; path = icons/bestbuy.jpg; sourceTree = "<group>"; };
 		1F799C201651C62000AB016A /* costco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = costco.jpg; path = icons/costco.jpg; sourceTree = "<group>"; };
@@ -113,10 +101,6 @@
 		1FF515FF1651984F00C5E0E0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		1FF516011651985B00C5E0E0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		1FF516031651986A00C5E0E0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-=======
-		1FA5BA16164DEA12001AD0C8 /* AddGiftCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGiftCardViewController.h; sourceTree = "<group>"; };
-		1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGiftCardViewController.m; sourceTree = "<group>"; };
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 		1FFE1F4E164EE75E00DA0869 /* GiftCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GiftCard.h; path = ../GiftCard.h; sourceTree = "<group>"; };
 		1FFE1F4F164EE75E00DA0869 /* GiftCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GiftCard.m; path = ../GiftCard.m; sourceTree = "<group>"; };
 		1FFE1F51164EE77300DA0869 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Store.h; path = ../Store.h; sourceTree = "<group>"; };
@@ -128,22 +112,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				1FF516041651986A00C5E0E0 /* QuartzCore.framework in Frameworks */,
 				1FF516021651985B00C5E0E0 /* CoreVideo.framework in Frameworks */,
 				1FF516001651984F00C5E0E0 /* CoreMedia.framework in Frameworks */,
 				1FF515FE1651984600C5E0E0 /* AVFoundation.framework in Frameworks */,
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 				1F10C1BE16479FE400CC7519 /* UIKit.framework in Frameworks */,
 				1F10C1C016479FE400CC7519 /* Foundation.framework in Frameworks */,
 				1F10C1C216479FE400CC7519 /* CoreGraphics.framework in Frameworks */,
 				1F10C1C416479FE400CC7519 /* CoreData.framework in Frameworks */,
-<<<<<<< HEAD
 				1FF515FC1651983B00C5E0E0 /* libiconv.dylib in Frameworks */,
 				1FF515F61651980600C5E0E0 /* libzbar.a in Frameworks */,
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,10 +131,7 @@
 		1F10C1AE16479FE400CC7519 = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				1FF515FB1651983B00C5E0E0 /* libiconv.dylib */,
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 				1F10C1C516479FE400CC7519 /* CardWallet */,
 				1F10C1BC16479FE400CC7519 /* Frameworks */,
 				1F10C1BA16479FE400CC7519 /* Products */,
@@ -174,13 +149,10 @@
 		1F10C1BC16479FE400CC7519 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				1FF516031651986A00C5E0E0 /* QuartzCore.framework */,
 				1FF516011651985B00C5E0E0 /* CoreVideo.framework */,
 				1FF515FF1651984F00C5E0E0 /* CoreMedia.framework */,
 				1FF515FD1651984600C5E0E0 /* AVFoundation.framework */,
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 				1F10C1BD16479FE400CC7519 /* UIKit.framework */,
 				1F10C1BF16479FE400CC7519 /* Foundation.framework */,
 				1F10C1C116479FE400CC7519 /* CoreGraphics.framework */,
@@ -207,10 +179,7 @@
 		1F10C1C616479FE400CC7519 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				1FF515D81651980600C5E0E0 /* ZBarSDK */,
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 				1F116BBB1647A2D5000B8660 /* icons */,
 				1F10C1C716479FE400CC7519 /* CardWallet-Info.plist */,
 				1F10C1C816479FE400CC7519 /* InfoPlist.strings */,
@@ -226,14 +195,10 @@
 		1F116BBB1647A2D5000B8660 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				1F799C1E1651C62000AB016A /* barnes-and-nobles.jpg */,
 				1F799C1F1651C62000AB016A /* bestbuy.jpg */,
 				1F799C201651C62000AB016A /* costco.jpg */,
 				1F799C211651C62000AB016A /* kohls.jpg */,
-=======
-				1F3DC33F1648E8CB0085586B /* costcoIcon.png */,
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -271,16 +236,12 @@
 				1F3DC367164DCF700085586B /* GiftCardTableCell.m */,
 				1FA5BA16164DEA12001AD0C8 /* AddGiftCardViewController.h */,
 				1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */,
-<<<<<<< HEAD
 				1FF515D1165196C400C5E0E0 /* ShowCardViewController.h */,
 				1FF515D2165196C400C5E0E0 /* ShowCardViewController.m */,
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 			);
 			name = GiftCards;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		1FF515D81651980600C5E0E0 /* ZBarSDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,8 +302,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,14 +358,10 @@
 				1F10C1D416479FE400CC7519 /* Default@2x.png in Resources */,
 				1F10C1D616479FE400CC7519 /* Default-568h@2x.png in Resources */,
 				1F10C1E01647A07700CC7519 /* MainiPhoneStoryBoard.storyboard in Resources */,
-<<<<<<< HEAD
 				1F799C221651C62000AB016A /* barnes-and-nobles.jpg in Resources */,
 				1F799C231651C62000AB016A /* bestbuy.jpg in Resources */,
 				1F799C241651C62000AB016A /* costco.jpg in Resources */,
 				1F799C251651C62000AB016A /* kohls.jpg in Resources */,
-=======
-				1F3DC3401648E8CB0085586B /* costcoIcon.png in Resources */,
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,10 +383,7 @@
 				1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */,
 				1FFE1F50164EE75E00DA0869 /* GiftCard.m in Sources */,
 				1FFE1F53164EE77300DA0869 /* Store.m in Sources */,
-<<<<<<< HEAD
 				1FF515D3165196C400C5E0E0 /* ShowCardViewController.m in Sources */,
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,13 +459,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardWallet/CardWallet-Prefix.pch";
 				INFOPLIST_FILE = "CardWallet/CardWallet-Info.plist";
-<<<<<<< HEAD
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CardWallet/ZBarSDK\"",
 				);
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -525,13 +474,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardWallet/CardWallet-Prefix.pch";
 				INFOPLIST_FILE = "CardWallet/CardWallet-Info.plist";
-<<<<<<< HEAD
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CardWallet/ZBarSDK\"",
 				);
-=======
->>>>>>> 13c914e0fe626ea90480339e679b5e7db076731c
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
