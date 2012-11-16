@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "AddGiftCardViewController.h"
+#import "ShowCardViewController.h"
 #import "GiftCardCell.h"
 #import "Store.h"
 
@@ -18,6 +19,7 @@
 @property (nonatomic, retain) AppDelegate *theAppDelegate;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSIndexPath *selectedCardIndex;
 
 @property (nonatomic, weak) Store *currentStore;
 @end

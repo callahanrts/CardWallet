@@ -232,11 +232,21 @@
         agcvc.initialLoad = YES;
         agcvc.fromInStore = YES;
     }
+    if([segue.identifier isEqualToString:@"viewCard"])
+    {
+        ShowCardViewController *scvc = (ShowCardViewController*)[segue destinationViewController];
+        GiftCard *giftCard = [self.fetchedResultsController objectAtIndexPath:_selectedCardIndex];
+        scvc.currentGiftCard = giftCard;
+        scvc.managedObjectContext = self.managedObjectContext;
+    }
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [self.collectionView reloadData];
+}
 
 - (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    _selectedCardIndex = indexPath;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

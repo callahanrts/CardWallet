@@ -37,6 +37,10 @@
 		1F380A6A165602D300788014 /* iphoneRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A69165602D300788014 /* iphoneRetina.png */; };
 		1F380A6C1656030200788014 /* ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A6B1656030200788014 /* ipad.png */; };
 		1F380A6E1656030C00788014 /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A6D1656030C00788014 /* iphone.png */; };
+		1F380A801656168300788014 /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A7F1656168300788014 /* card.png */; };
+		1F380A82165619A400788014 /* cardTall.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A81165619A400788014 /* cardTall.png */; };
+		1F380A851656A24900788014 /* NavigactionBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A841656A24900788014 /* NavigactionBarController.m */; };
+		1F380A871656B24400788014 /* deleteBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A861656B24400788014 /* deleteBtn.png */; };
 		1F3DC365164DCF040085586B /* GiftCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC364164DCF040085586B /* GiftCardTableViewController.m */; };
 		1F3DC368164DCF700085586B /* GiftCardTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC367164DCF700085586B /* GiftCardTableCell.m */; };
 		1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */; };
@@ -88,10 +92,15 @@
 		1F380A601655DFA400788014 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = icons/bg2.png; sourceTree = "<group>"; };
 		1F380A611655DFA400788014 /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg3.png; path = icons/bg3.png; sourceTree = "<group>"; };
 		1F380A651655E05700788014 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg1.png; path = icons/bg1.png; sourceTree = "<group>"; };
-		1F380A67165602B200788014 /* ipadRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipadRetina.png; sourceTree = "<group>"; };
-		1F380A69165602D300788014 /* iphoneRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneRetina.png; sourceTree = "<group>"; };
-		1F380A6B1656030200788014 /* ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad.png; sourceTree = "<group>"; };
-		1F380A6D1656030C00788014 /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone.png; sourceTree = "<group>"; };
+		1F380A67165602B200788014 /* ipadRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipadRetina.png; path = ../ipadRetina.png; sourceTree = "<group>"; };
+		1F380A69165602D300788014 /* iphoneRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphoneRetina.png; path = ../iphoneRetina.png; sourceTree = "<group>"; };
+		1F380A6B1656030200788014 /* ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipad.png; path = ../ipad.png; sourceTree = "<group>"; };
+		1F380A6D1656030C00788014 /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphone.png; path = ../iphone.png; sourceTree = "<group>"; };
+		1F380A7F1656168300788014 /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card.png; path = icons/card.png; sourceTree = "<group>"; };
+		1F380A81165619A400788014 /* cardTall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardTall.png; path = icons/cardTall.png; sourceTree = "<group>"; };
+		1F380A831656A24900788014 /* NavigactionBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigactionBarController.h; sourceTree = "<group>"; };
+		1F380A841656A24900788014 /* NavigactionBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigactionBarController.m; sourceTree = "<group>"; };
+		1F380A861656B24400788014 /* deleteBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deleteBtn.png; path = icons/deleteBtn.png; sourceTree = "<group>"; };
 		1F3DC363164DCF040085586B /* GiftCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableViewController.h; sourceTree = "<group>"; };
 		1F3DC364164DCF040085586B /* GiftCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableViewController.m; sourceTree = "<group>"; };
 		1F3DC366164DCF700085586B /* GiftCardTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableCell.h; sourceTree = "<group>"; };
@@ -158,10 +167,6 @@
 		1F10C1AE16479FE400CC7519 = {
 			isa = PBXGroup;
 			children = (
-				1F380A6D1656030C00788014 /* iphone.png */,
-				1F380A6B1656030200788014 /* ipad.png */,
-				1F380A69165602D300788014 /* iphoneRetina.png */,
-				1F380A67165602B200788014 /* ipadRetina.png */,
 				1FF515FB1651983B00C5E0E0 /* libiconv.dylib */,
 				1F10C1C516479FE400CC7519 /* CardWallet */,
 				1F10C1BC16479FE400CC7519 /* Frameworks */,
@@ -211,6 +216,7 @@
 		1F10C1C616479FE400CC7519 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F380A761656106F00788014 /* Logos */,
 				1FF515D81651980600C5E0E0 /* ZBarSDK */,
 				1F116BBB1647A2D5000B8660 /* icons */,
 				1F10C1C716479FE400CC7519 /* CardWallet-Info.plist */,
@@ -227,6 +233,9 @@
 		1F116BBB1647A2D5000B8660 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				1F380A861656B24400788014 /* deleteBtn.png */,
+				1F380A81165619A400788014 /* cardTall.png */,
+				1F380A7F1656168300788014 /* card.png */,
 				1F380A651655E05700788014 /* bg1.png */,
 				1F380A601655DFA400788014 /* bg2.png */,
 				1F380A611655DFA400788014 /* bg3.png */,
@@ -264,6 +273,17 @@
 			name = Stores;
 			sourceTree = "<group>";
 		};
+		1F380A761656106F00788014 /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				1F380A6D1656030C00788014 /* iphone.png */,
+				1F380A6B1656030200788014 /* ipad.png */,
+				1F380A69165602D300788014 /* iphoneRetina.png */,
+				1F380A67165602B200788014 /* ipadRetina.png */,
+			);
+			name = Logos;
+			sourceTree = "<group>";
+		};
 		1F3DC361164DCEDF0085586B /* GiftCards */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +308,8 @@
 			children = (
 				1FEE14F416545BFD008E8C3F /* HelpViewController.h */,
 				1FEE14F516545BFD008E8C3F /* HelpViewController.m */,
+				1F380A831656A24900788014 /* NavigactionBarController.h */,
+				1F380A841656A24900788014 /* NavigactionBarController.m */,
 			);
 			name = HelpMenu;
 			sourceTree = "<group>";
@@ -421,6 +443,9 @@
 				1F380A6A165602D300788014 /* iphoneRetina.png in Resources */,
 				1F380A6C1656030200788014 /* ipad.png in Resources */,
 				1F380A6E1656030C00788014 /* iphone.png in Resources */,
+				1F380A801656168300788014 /* card.png in Resources */,
+				1F380A82165619A400788014 /* cardTall.png in Resources */,
+				1F380A871656B24400788014 /* deleteBtn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +471,7 @@
 				1FEE14F616545BFD008E8C3F /* HelpViewController.m in Sources */,
 				1F380A5B1655C32200788014 /* GiftCardCollectionViewController.m in Sources */,
 				1F380A5E1655C61C00788014 /* GiftCardCell.m in Sources */,
+				1F380A851656A24900788014 /* NavigactionBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

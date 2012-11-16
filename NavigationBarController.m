@@ -1,18 +1,18 @@
 //
-//  HelpViewController.m
+//  NavigationBarController.m
 //  CardWallet
 //
-//  Created by Cody Callahan on 11/14/12.
+//  Created by Cody Callahan on 11/15/12.
 //  Copyright (c) 2012 RCM. All rights reserved.
 //
 
-#import "HelpViewController.h"
+#import "NavigationBarController.h"
 
-@interface HelpViewController ()
+@interface NavigationBarController ()
 
 @end
 
-@implementation HelpViewController
+@implementation NavigationBarController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,14 +35,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)back:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(BOOL)shouldAutorotate{
-    return YES;
-}
--(NSUInteger)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskAllButUpsideDown;
-}
 @end
