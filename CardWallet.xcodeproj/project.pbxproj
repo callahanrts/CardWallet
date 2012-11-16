@@ -22,14 +22,25 @@
 		1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB51647A228000B8660 /* StoreCollectionViewController.m */; };
 		1F116BBA1647A269000B8660 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB91647A269000B8660 /* StoreCell.m */; };
 		1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC616481F9C000B8660 /* AddStoreViewController.m */; };
+		1F380A511654829800788014 /* barnes&noble.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A4D1654829800788014 /* barnes&noble.png */; };
+		1F380A521654829800788014 /* bestbuy.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A4E1654829800788014 /* bestbuy.png */; };
+		1F380A531654829800788014 /* costco.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A4F1654829800788014 /* costco.png */; };
+		1F380A541654829800788014 /* kohls.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A501654829800788014 /* kohls.png */; };
+		1F380A571655443200788014 /* fold1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A551655443200788014 /* fold1.png */; };
+		1F380A581655443200788014 /* fold2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A561655443200788014 /* fold2.png */; };
+		1F380A5B1655C32200788014 /* GiftCardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A5A1655C32200788014 /* GiftCardCollectionViewController.m */; };
+		1F380A5E1655C61C00788014 /* GiftCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A5D1655C61C00788014 /* GiftCardCell.m */; };
+		1F380A631655DFA400788014 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A601655DFA400788014 /* bg2.png */; };
+		1F380A641655DFA400788014 /* bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A611655DFA400788014 /* bg3.png */; };
+		1F380A661655E05700788014 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A651655E05700788014 /* bg1.png */; };
+		1F380A68165602B200788014 /* ipadRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A67165602B200788014 /* ipadRetina.png */; };
+		1F380A6A165602D300788014 /* iphoneRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A69165602D300788014 /* iphoneRetina.png */; };
+		1F380A6C1656030200788014 /* ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A6B1656030200788014 /* ipad.png */; };
+		1F380A6E1656030C00788014 /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A6D1656030C00788014 /* iphone.png */; };
 		1F3DC365164DCF040085586B /* GiftCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC364164DCF040085586B /* GiftCardTableViewController.m */; };
 		1F3DC368164DCF700085586B /* GiftCardTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC367164DCF700085586B /* GiftCardTableCell.m */; };
-		1F799C221651C62000AB016A /* barnes-and-nobles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F799C1E1651C62000AB016A /* barnes-and-nobles.jpg */; };
-		1F799C231651C62000AB016A /* bestbuy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F799C1F1651C62000AB016A /* bestbuy.jpg */; };
-		1F799C241651C62000AB016A /* costco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F799C201651C62000AB016A /* costco.jpg */; };
-		1F799C251651C62000AB016A /* kohls.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1F799C211651C62000AB016A /* kohls.jpg */; };
-		1F799C3E16521E9900AB016A /* HelpMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F799C3D16521E9900AB016A /* HelpMenuViewController.m */; };
 		1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */; };
+		1FEE14F616545BFD008E8C3F /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE14F516545BFD008E8C3F /* HelpViewController.m */; };
 		1FF515D3165196C400C5E0E0 /* ShowCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF515D2165196C400C5E0E0 /* ShowCardViewController.m */; };
 		1FF515F61651980600C5E0E0 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF515F01651980600C5E0E0 /* libzbar.a */; };
 		1FF515FC1651983B00C5E0E0 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF515FB1651983B00C5E0E0 /* libiconv.dylib */; };
@@ -64,18 +75,31 @@
 		1F116BB91647A269000B8660 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
 		1F116BC516481F9C000B8660 /* AddStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoreViewController.h; sourceTree = "<group>"; };
 		1F116BC616481F9C000B8660 /* AddStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoreViewController.m; sourceTree = "<group>"; };
+		1F380A4D1654829800788014 /* barnes&noble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barnes&noble.png"; path = "icons/barnes&noble.png"; sourceTree = "<group>"; };
+		1F380A4E1654829800788014 /* bestbuy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bestbuy.png; path = icons/bestbuy.png; sourceTree = "<group>"; };
+		1F380A4F1654829800788014 /* costco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = costco.png; path = icons/costco.png; sourceTree = "<group>"; };
+		1F380A501654829800788014 /* kohls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kohls.png; path = icons/kohls.png; sourceTree = "<group>"; };
+		1F380A551655443200788014 /* fold1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fold1.png; path = icons/fold1.png; sourceTree = "<group>"; };
+		1F380A561655443200788014 /* fold2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fold2.png; path = icons/fold2.png; sourceTree = "<group>"; };
+		1F380A591655C32200788014 /* GiftCardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardCollectionViewController.h; sourceTree = "<group>"; };
+		1F380A5A1655C32200788014 /* GiftCardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardCollectionViewController.m; sourceTree = "<group>"; };
+		1F380A5C1655C61C00788014 /* GiftCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardCell.h; sourceTree = "<group>"; };
+		1F380A5D1655C61C00788014 /* GiftCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardCell.m; sourceTree = "<group>"; };
+		1F380A601655DFA400788014 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = icons/bg2.png; sourceTree = "<group>"; };
+		1F380A611655DFA400788014 /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg3.png; path = icons/bg3.png; sourceTree = "<group>"; };
+		1F380A651655E05700788014 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg1.png; path = icons/bg1.png; sourceTree = "<group>"; };
+		1F380A67165602B200788014 /* ipadRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipadRetina.png; sourceTree = "<group>"; };
+		1F380A69165602D300788014 /* iphoneRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphoneRetina.png; sourceTree = "<group>"; };
+		1F380A6B1656030200788014 /* ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad.png; sourceTree = "<group>"; };
+		1F380A6D1656030C00788014 /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphone.png; sourceTree = "<group>"; };
 		1F3DC363164DCF040085586B /* GiftCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableViewController.h; sourceTree = "<group>"; };
 		1F3DC364164DCF040085586B /* GiftCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableViewController.m; sourceTree = "<group>"; };
 		1F3DC366164DCF700085586B /* GiftCardTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableCell.h; sourceTree = "<group>"; };
 		1F3DC367164DCF700085586B /* GiftCardTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableCell.m; sourceTree = "<group>"; };
-		1F799C1E1651C62000AB016A /* barnes-and-nobles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "barnes-and-nobles.jpg"; path = "icons/barnes-and-nobles.jpg"; sourceTree = "<group>"; };
-		1F799C1F1651C62000AB016A /* bestbuy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bestbuy.jpg; path = icons/bestbuy.jpg; sourceTree = "<group>"; };
-		1F799C201651C62000AB016A /* costco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = costco.jpg; path = icons/costco.jpg; sourceTree = "<group>"; };
-		1F799C211651C62000AB016A /* kohls.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kohls.jpg; path = icons/kohls.jpg; sourceTree = "<group>"; };
-		1F799C3C16521E9900AB016A /* HelpMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpMenuViewController.h; sourceTree = "<group>"; };
-		1F799C3D16521E9900AB016A /* HelpMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpMenuViewController.m; sourceTree = "<group>"; };
 		1FA5BA16164DEA12001AD0C8 /* AddGiftCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGiftCardViewController.h; sourceTree = "<group>"; };
 		1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGiftCardViewController.m; sourceTree = "<group>"; };
+		1FEE14F416545BFD008E8C3F /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		1FEE14F516545BFD008E8C3F /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		1FF515D1165196C400C5E0E0 /* ShowCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCardViewController.h; sourceTree = "<group>"; };
 		1FF515D2165196C400C5E0E0 /* ShowCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCardViewController.m; sourceTree = "<group>"; };
 		1FF515DC1651980600C5E0E0 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
@@ -134,6 +158,10 @@
 		1F10C1AE16479FE400CC7519 = {
 			isa = PBXGroup;
 			children = (
+				1F380A6D1656030C00788014 /* iphone.png */,
+				1F380A6B1656030200788014 /* ipad.png */,
+				1F380A69165602D300788014 /* iphoneRetina.png */,
+				1F380A67165602B200788014 /* ipadRetina.png */,
 				1FF515FB1651983B00C5E0E0 /* libiconv.dylib */,
 				1F10C1C516479FE400CC7519 /* CardWallet */,
 				1F10C1BC16479FE400CC7519 /* Frameworks */,
@@ -199,10 +227,15 @@
 		1F116BBB1647A2D5000B8660 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				1F799C1E1651C62000AB016A /* barnes-and-nobles.jpg */,
-				1F799C1F1651C62000AB016A /* bestbuy.jpg */,
-				1F799C201651C62000AB016A /* costco.jpg */,
-				1F799C211651C62000AB016A /* kohls.jpg */,
+				1F380A651655E05700788014 /* bg1.png */,
+				1F380A601655DFA400788014 /* bg2.png */,
+				1F380A611655DFA400788014 /* bg3.png */,
+				1F380A551655443200788014 /* fold1.png */,
+				1F380A561655443200788014 /* fold2.png */,
+				1F380A4D1654829800788014 /* barnes&noble.png */,
+				1F380A4E1654829800788014 /* bestbuy.png */,
+				1F380A4F1654829800788014 /* costco.png */,
+				1F380A501654829800788014 /* kohls.png */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -242,6 +275,10 @@
 				1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */,
 				1FF515D1165196C400C5E0E0 /* ShowCardViewController.h */,
 				1FF515D2165196C400C5E0E0 /* ShowCardViewController.m */,
+				1F380A591655C32200788014 /* GiftCardCollectionViewController.h */,
+				1F380A5A1655C32200788014 /* GiftCardCollectionViewController.m */,
+				1F380A5C1655C61C00788014 /* GiftCardCell.h */,
+				1F380A5D1655C61C00788014 /* GiftCardCell.m */,
 			);
 			name = GiftCards;
 			sourceTree = "<group>";
@@ -249,8 +286,8 @@
 		1F799C3A16521E7900AB016A /* HelpMenu */ = {
 			isa = PBXGroup;
 			children = (
-				1F799C3C16521E9900AB016A /* HelpMenuViewController.h */,
-				1F799C3D16521E9900AB016A /* HelpMenuViewController.m */,
+				1FEE14F416545BFD008E8C3F /* HelpViewController.h */,
+				1FEE14F516545BFD008E8C3F /* HelpViewController.m */,
 			);
 			name = HelpMenu;
 			sourceTree = "<group>";
@@ -371,10 +408,19 @@
 				1F10C1D416479FE400CC7519 /* Default@2x.png in Resources */,
 				1F10C1D616479FE400CC7519 /* Default-568h@2x.png in Resources */,
 				1F10C1E01647A07700CC7519 /* MainiPhoneStoryBoard.storyboard in Resources */,
-				1F799C221651C62000AB016A /* barnes-and-nobles.jpg in Resources */,
-				1F799C231651C62000AB016A /* bestbuy.jpg in Resources */,
-				1F799C241651C62000AB016A /* costco.jpg in Resources */,
-				1F799C251651C62000AB016A /* kohls.jpg in Resources */,
+				1F380A511654829800788014 /* barnes&noble.png in Resources */,
+				1F380A521654829800788014 /* bestbuy.png in Resources */,
+				1F380A531654829800788014 /* costco.png in Resources */,
+				1F380A541654829800788014 /* kohls.png in Resources */,
+				1F380A571655443200788014 /* fold1.png in Resources */,
+				1F380A581655443200788014 /* fold2.png in Resources */,
+				1F380A631655DFA400788014 /* bg2.png in Resources */,
+				1F380A641655DFA400788014 /* bg3.png in Resources */,
+				1F380A661655E05700788014 /* bg1.png in Resources */,
+				1F380A68165602B200788014 /* ipadRetina.png in Resources */,
+				1F380A6A165602D300788014 /* iphoneRetina.png in Resources */,
+				1F380A6C1656030200788014 /* ipad.png in Resources */,
+				1F380A6E1656030C00788014 /* iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +443,9 @@
 				1FFE1F50164EE75E00DA0869 /* GiftCard.m in Sources */,
 				1FFE1F53164EE77300DA0869 /* Store.m in Sources */,
 				1FF515D3165196C400C5E0E0 /* ShowCardViewController.m in Sources */,
-				1F799C3E16521E9900AB016A /* HelpMenuViewController.m in Sources */,
+				1FEE14F616545BFD008E8C3F /* HelpViewController.m in Sources */,
+				1F380A5B1655C32200788014 /* GiftCardCollectionViewController.m in Sources */,
+				1F380A5E1655C61C00788014 /* GiftCardCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

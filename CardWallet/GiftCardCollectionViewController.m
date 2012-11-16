@@ -1,32 +1,26 @@
 //
-//  StoreCollectionViewController.m
+//  GiftCardCollectionViewController.m
 //  CardWallet
 //
-//  Created by Cody Callahan on 11/4/12.
+//  Created by Cody Callahan on 11/15/12.
 //  Copyright (c) 2012 RCM. All rights reserved.
 //
 
-#import "StoreCollectionViewController.h"
+#import "GiftCardCollectionViewController.h"
 
-@interface StoreCollectionViewController()
+@interface GiftCardCollectionViewController ()
 
 @end
 
-@implementation StoreCollectionViewController{
+@implementation GiftCardCollectionViewController{
     NSMutableArray *_objectChanges;
     NSMutableArray *_sectionChanges;
 }
 
-@synthesize theAppDelegate;
-@synthesize fetchedResultsController = _fetchedResultsController;
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize selectedStoreIndex;
-
-
 #pragma mark - Fetch and Store
+
 -(void)AddGiftCardViewControllerDidCancel:(GiftCard *)giftCardToDelete{
     NSManagedObjectContext *context = self.managedObjectContext;
-    [context deleteObject:giftCardToDelete.store];
     [context deleteObject:giftCardToDelete];
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -47,19 +41,19 @@
     if(_fetchedResultsController != nil){
         return _fetchedResultsController;
     }
-    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Store"
-    inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"GiftCard" inManagedObjectContext:_managedObjectContext];
     [fetchRequest setEntity:entity];
-
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name"
-    ascending:YES];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
     [fetchRequest setSortDescriptors:sortDescriptors];
     
+    //Search predicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(store == %@)", _currentStore];
+    [fetchRequest setPredicate:predicate];
     
-    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     
     _fetchedResultsController.delegate = self;
     
@@ -191,36 +185,58 @@
 
 -(UICollectionViewCell*) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    StoreCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"iconCell" forIndexPath:indexPath];
-    Store *store = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    GiftCardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"iconCell" forIndexPath:indexPath];
+    GiftCard *giftCard = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    //_foldImage.image = [UIImage imageNamed:@"fold1.png"];
     int rand = (arc4random() % 1000) + 1;
     if(rand % 2 == 0){
         cell.foldImage.image = [UIImage imageNamed:@"fold1.png"];
     } else {
         cell.foldImage.image = [UIImage imageNamed:@"fold2.png"];
     }
-    cell.iconImage.image = [UIImage imageNamed:store.image];
-    cell.storeLabel.text = store.name;
+    cell.giftCardImage.image = [UIImage imageNamed:giftCard.store.image];
+    cell.giftCardLabel.text = giftCard.name;
     return cell;
 }
 
+
 #pragma mark - Generated Functions
-- (BOOL)shouldAutorotate {
-    return NO;
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.collectionView.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
+    //top left bottom right
+    [self.collectionView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
+    
+    //Change title of navigation bar
+    self.navigationController.topViewController.title = _currentStore.name;
+    //fetch data
+    NSError *error = nil;
+    if(![self.fetchedResultsController performFetch:&error]){
+        NSLog(@"Error fetching data, %@", error);
+        abort();
+    }
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"addCardWithoutStore"])
+    {
+        AddGiftCardViewController *agcvc = (AddGiftCardViewController*) segue.destinationViewController;
+        agcvc.delegate = self;
+        
+        GiftCard *newGiftCard = (GiftCard*)[NSEntityDescription insertNewObjectForEntityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
+        newGiftCard.store = _currentStore;
+        agcvc.currentGiftCard = newGiftCard;
+        agcvc.initialLoad = YES;
+        agcvc.fromInStore = YES;
+    }
 }
-// pre-iOS 6 support
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
-}
+
 
 - (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
-    selectedStoreIndex = indexPath;
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -232,51 +248,10 @@
     return self;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([[segue identifier] isEqualToString:@"addCardAndStore"]){
-        Store *store = (Store*)[NSEntityDescription insertNewObjectForEntityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
-        
-        AddGiftCardViewController *agcvc = (AddGiftCardViewController*) segue.destinationViewController;
-        agcvc.delegate = self;
-        
-        GiftCard *newGiftCard = (GiftCard*)[NSEntityDescription insertNewObjectForEntityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
-        newGiftCard.store = store;
-        agcvc.currentGiftCard = newGiftCard;
-        agcvc.initialLoad = NO;
-        agcvc.fromInStore = NO;
-    }
-    else if([[segue identifier] isEqualToString:@"toCards"]){
-        GiftCardCollectionViewController *gccvc = (GiftCardCollectionViewController*)[segue destinationViewController];
-        Store *store = [self.fetchedResultsController objectAtIndexPath:selectedStoreIndex];
-        gccvc.currentStore = store;
-        gccvc.managedObjectContext = (NSManagedObjectContext*)self.managedObjectContext;
-    }
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    self.collectionView.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg1.png"]];
-    //top left bottom right
-    [self.collectionView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
-    
-    _objectChanges = [NSMutableArray array];
-    _sectionChanges = [NSMutableArray array];
-    
-    NSError *error = nil;
-    if(![[self fetchedResultsController] performFetch:&error]){
-        NSLog(@"error fetching %@", error);
-        abort();
-    }
-}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 @end

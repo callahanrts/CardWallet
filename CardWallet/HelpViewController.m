@@ -1,18 +1,18 @@
 //
-//  ShowCardViewController.m
+//  HelpViewController.m
 //  CardWallet
 //
-//  Created by Cody Callahan on 11/12/12.
+//  Created by Cody Callahan on 11/14/12.
 //  Copyright (c) 2012 RCM. All rights reserved.
 //
 
-#import "ShowCardViewController.h"
+#import "HelpViewController.h"
 
-@interface ShowCardViewController ()
+@interface HelpViewController ()
 
 @end
 
-@implementation ShowCardViewController
+@implementation HelpViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,10 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
-    //top left bottom right
-    //[self.view setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,4 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

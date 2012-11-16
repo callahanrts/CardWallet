@@ -10,6 +10,7 @@
 
 @interface StoreCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *iconImage;
+@property (strong, nonatomic) IBOutlet UIImageView *foldImage;
 
 @property (strong, nonatomic) IBOutlet UILabel *storeLabel;
 @end

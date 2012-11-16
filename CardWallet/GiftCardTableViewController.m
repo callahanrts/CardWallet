@@ -14,6 +14,7 @@
 @end
 
 @implementation GiftCardTableViewController
+
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize currentStore;
 
@@ -140,7 +141,6 @@
     
     //Change title of navigation bar
     self.navigationController.topViewController.title = currentStore.name;
-    
     //fetch data
     NSError *error = nil;
     if(![self.fetchedResultsController performFetch:&error]){

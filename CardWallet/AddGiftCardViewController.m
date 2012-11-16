@@ -40,18 +40,17 @@ BOOL stayup;
     CGRect fourthPos = CGRectMake(20, 240, 280, 35);
     CGRect fifthPos  = CGRectMake(20, 285, 280, 35);
     
-    if(!fromInStore){
-        _storeName     = [self makeTexfieldWithCGRect:firstPos  withPlaceholder:@"Store Name"];
-        _name          = [self makeTexfieldWithCGRect:secondPos withPlaceholder:@"Gift Card Name"];
-        _accountNumber = [self makeTexfieldWithCGRect:thirdPos  withPlaceholder:@"Account Number"];
-        _pinNumber     = [self makeTexfieldWithCGRect:fourthPos withPlaceholder:@"Pin Number"];
-        _barCode       = [self makeTexfieldWithCGRect:fifthPos  withPlaceholder:@"Bar Code"];
-    } else {
-        //_storeName     = [self makeTexfieldWithCGRect:firstPos  withPlaceholder:@"Store Name"];
-        _name          = [self makeTexfieldWithCGRect:firstPos withPlaceholder:@"Gift Card Name"];
-        _accountNumber = [self makeTexfieldWithCGRect:secondPos  withPlaceholder:@"Account Number"];
-        _pinNumber     = [self makeTexfieldWithCGRect:thirdPos withPlaceholder:@"Pin Number"];
-        _barCode       = [self makeTexfieldWithCGRect:fourthPos  withPlaceholder:@"Bar Code"];
+    _storeName     = [self makeTexfieldWithCGRect:firstPos  withPlaceholder:@"Store Name"];
+    _name          = [self makeTexfieldWithCGRect:secondPos withPlaceholder:@"Gift Card Name"];
+    _accountNumber = [self makeTexfieldWithCGRect:thirdPos  withPlaceholder:@"Account Number"];
+    _pinNumber     = [self makeTexfieldWithCGRect:fourthPos withPlaceholder:@"Pin Number"];
+    _barCode       = [self makeTexfieldWithCGRect:fifthPos  withPlaceholder:@"Bar Code"];
+    if(fromInStore){
+        _storeName.text = self.currentGiftCard.store.name;
+        [_storeName setEnabled:NO];
+        [_storeName setAlpha:0.6];
+        //UIColor *color = [UIColor grayColor];
+        //[_storeName setTextColor:color];
     }
     
     [self initZBarReader];
@@ -91,7 +90,6 @@ BOOL stayup;
         [_saveBtn setEnabled:YES];
         return YES;
     }
-    [_saveBtn setEnabled:NO];
     return YES;
 }
 
@@ -147,7 +145,7 @@ BOOL stayup;
     {
         if(!self.currentGiftCard.store.name){
             self.currentGiftCard.store.name = _storeName.text;
-            self.currentGiftCard.store.image = @"costcoIcon.png";
+            self.currentGiftCard.store.image = @"kohls.png";
         }
         self.currentGiftCard.name = _name.text;
         self.currentGiftCard.accountNumber = _accountNumber.text;
