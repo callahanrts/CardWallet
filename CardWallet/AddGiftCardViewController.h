@@ -13,7 +13,8 @@
 
 @protocol AddGiftCardViewControllerDelegate;
 
-@interface AddGiftCardViewController : UIViewController <ZBarReaderDelegate, UITextFieldDelegate>
+@interface AddGiftCardViewController : UIViewController
+<ZBarReaderDelegate, UITextFieldDelegate, UIPickerViewDelegate>
 
 @property (strong, nonatomic) GiftCard *currentGiftCard;
 @property (strong, nonatomic) ZBarReaderViewController *reader;

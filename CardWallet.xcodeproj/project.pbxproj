@@ -22,25 +22,69 @@
 		1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB51647A228000B8660 /* StoreCollectionViewController.m */; };
 		1F116BBA1647A269000B8660 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB91647A269000B8660 /* StoreCell.m */; };
 		1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC616481F9C000B8660 /* AddStoreViewController.m */; };
-		1F380A511654829800788014 /* barnes&noble.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A4D1654829800788014 /* barnes&noble.png */; };
-		1F380A521654829800788014 /* bestbuy.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A4E1654829800788014 /* bestbuy.png */; };
-		1F380A531654829800788014 /* costco.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A4F1654829800788014 /* costco.png */; };
-		1F380A541654829800788014 /* kohls.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A501654829800788014 /* kohls.png */; };
-		1F380A571655443200788014 /* fold1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A551655443200788014 /* fold1.png */; };
-		1F380A581655443200788014 /* fold2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A561655443200788014 /* fold2.png */; };
 		1F380A5B1655C32200788014 /* GiftCardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A5A1655C32200788014 /* GiftCardCollectionViewController.m */; };
 		1F380A5E1655C61C00788014 /* GiftCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A5D1655C61C00788014 /* GiftCardCell.m */; };
-		1F380A631655DFA400788014 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A601655DFA400788014 /* bg2.png */; };
-		1F380A641655DFA400788014 /* bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A611655DFA400788014 /* bg3.png */; };
-		1F380A661655E05700788014 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A651655E05700788014 /* bg1.png */; };
 		1F380A68165602B200788014 /* ipadRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A67165602B200788014 /* ipadRetina.png */; };
 		1F380A6A165602D300788014 /* iphoneRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A69165602D300788014 /* iphoneRetina.png */; };
 		1F380A6C1656030200788014 /* ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A6B1656030200788014 /* ipad.png */; };
 		1F380A6E1656030C00788014 /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A6D1656030C00788014 /* iphone.png */; };
-		1F380A801656168300788014 /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A7F1656168300788014 /* card.png */; };
-		1F380A82165619A400788014 /* cardTall.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A81165619A400788014 /* cardTall.png */; };
 		1F380A851656A24900788014 /* NavigactionBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A841656A24900788014 /* NavigactionBarController.m */; };
-		1F380A871656B24400788014 /* deleteBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A861656B24400788014 /* deleteBtn.png */; };
+		1F380AC01657450100788014 /* 711.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A881657450100788014 /* 711.png */; };
+		1F380AC11657450100788014 /* acehardware.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A891657450100788014 /* acehardware.png */; };
+		1F380AC21657450100788014 /* amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A8A1657450100788014 /* amazon.png */; };
+		1F380AC31657450100788014 /* applestore.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A8B1657450100788014 /* applestore.png */; };
+		1F380AC41657450100788014 /* autozone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A8C1657450100788014 /* autozone.png */; };
+		1F380AC51657450100788014 /* barnes&noble.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A8D1657450100788014 /* barnes&noble.png */; };
+		1F380AC61657450100788014 /* bedbathandbeyond.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A8E1657450100788014 /* bedbathandbeyond.png */; };
+		1F380AC71657450100788014 /* bestbuy.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A8F1657450100788014 /* bestbuy.png */; };
+		1F380AC81657450100788014 /* bestbuycpy.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A901657450100788014 /* bestbuycpy.png */; };
+		1F380AC91657450100788014 /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A911657450100788014 /* bg1.png */; };
+		1F380ACA1657450100788014 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A921657450100788014 /* bg2.png */; };
+		1F380ACB1657450100788014 /* bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A931657450100788014 /* bg3.png */; };
+		1F380ACC1657450100788014 /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A941657450100788014 /* card.png */; };
+		1F380ACD1657450100788014 /* cardEffects.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A951657450100788014 /* cardEffects.png */; };
+		1F380ACE1657450100788014 /* cardTall.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A961657450100788014 /* cardTall.png */; };
+		1F380ACF1657450100788014 /* costco.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A971657450100788014 /* costco.png */; };
+		1F380AD01657450100788014 /* cvs.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A981657450100788014 /* cvs.png */; };
+		1F380AD11657450100788014 /* deleteBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A991657450100788014 /* deleteBtn.png */; };
+		1F380AD21657450100788014 /* dillards.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A9A1657450100788014 /* dillards.png */; };
+		1F380AD31657450100788014 /* familydollar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A9B1657450100788014 /* familydollar.png */; };
+		1F380AD41657450100788014 /* fold1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A9C1657450100788014 /* fold1.png */; };
+		1F380AD51657450100788014 /* fold2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A9D1657450100788014 /* fold2.png */; };
+		1F380AD61657450100788014 /* gamestop.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A9E1657450100788014 /* gamestop.png */; };
+		1F380AD71657450100788014 /* gap.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A9F1657450100788014 /* gap.png */; };
+		1F380AD81657450100788014 /* homedepot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA01657450100788014 /* homedepot.png */; };
+		1F380AD91657450100788014 /* ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA11657450100788014 /* ipad.png */; };
+		1F380ADA1657450100788014 /* ipadRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA21657450100788014 /* ipadRetina.png */; };
+		1F380ADB1657450100788014 /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA31657450100788014 /* iphone.png */; };
+		1F380ADC1657450100788014 /* iphoneRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA41657450100788014 /* iphoneRetina.png */; };
+		1F380ADD1657450100788014 /* itunes.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA51657450100788014 /* itunes.png */; };
+		1F380ADE1657450100788014 /* jcpenny.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA61657450100788014 /* jcpenny.png */; };
+		1F380ADF1657450100788014 /* kohls.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA71657450100788014 /* kohls.png */; };
+		1F380AE01657450100788014 /* kroger.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA81657450100788014 /* kroger.png */; };
+		1F380AE11657450100788014 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AA91657450100788014 /* logo.png */; };
+		1F380AE21657450100788014 /* lowes.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AAA1657450100788014 /* lowes.png */; };
+		1F380AE31657450100788014 /* macys.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AAB1657450100788014 /* macys.png */; };
+		1F380AE41657450100788014 /* nordstrom.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AAC1657450100788014 /* nordstrom.png */; };
+		1F380AE51657450100788014 /* officedepot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AAD1657450100788014 /* officedepot.png */; };
+		1F380AE61657450100788014 /* officemax.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AAE1657450100788014 /* officemax.png */; };
+		1F380AE71657450100788014 /* oreilly.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AAF1657450100788014 /* oreilly.png */; };
+		1F380AE81657450100788014 /* publix.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB01657450100788014 /* publix.png */; };
+		1F380AE91657450100788014 /* riteaid.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB11657450100788014 /* riteaid.png */; };
+		1F380AEA1657450100788014 /* ross.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB21657450100788014 /* ross.png */; };
+		1F380AEB1657450100788014 /* safeway.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB31657450100788014 /* safeway.png */; };
+		1F380AEC1657450100788014 /* sears.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB41657450100788014 /* sears.png */; };
+		1F380AED1657450100788014 /* staples.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB51657450100788014 /* staples.png */; };
+		1F380AEE1657450100788014 /* starbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB61657450100788014 /* starbucks.png */; };
+		1F380AEF1657450100788014 /* subway.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB71657450100788014 /* subway.png */; };
+		1F380AF01657450100788014 /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB81657450100788014 /* target.png */; };
+		1F380AF11657450100788014 /* tjmax.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380AB91657450100788014 /* tjmax.png */; };
+		1F380AF21657450100788014 /* toysrus.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380ABA1657450100788014 /* toysrus.png */; };
+		1F380AF31657450100788014 /* traderjoes.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380ABB1657450100788014 /* traderjoes.png */; };
+		1F380AF41657450100788014 /* truevalue.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380ABC1657450100788014 /* truevalue.png */; };
+		1F380AF51657450100788014 /* walgreens.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380ABD1657450100788014 /* walgreens.png */; };
+		1F380AF61657450100788014 /* walmart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380ABE1657450100788014 /* walmart.png */; };
+		1F380AF71657450100788014 /* wholefoods.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380ABF1657450100788014 /* wholefoods.png */; };
 		1F3DC365164DCF040085586B /* GiftCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC364164DCF040085586B /* GiftCardTableViewController.m */; };
 		1F3DC368164DCF700085586B /* GiftCardTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC367164DCF700085586B /* GiftCardTableCell.m */; };
 		1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */; };
@@ -79,28 +123,72 @@
 		1F116BB91647A269000B8660 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
 		1F116BC516481F9C000B8660 /* AddStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoreViewController.h; sourceTree = "<group>"; };
 		1F116BC616481F9C000B8660 /* AddStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoreViewController.m; sourceTree = "<group>"; };
-		1F380A4D1654829800788014 /* barnes&noble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barnes&noble.png"; path = "icons/barnes&noble.png"; sourceTree = "<group>"; };
-		1F380A4E1654829800788014 /* bestbuy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bestbuy.png; path = icons/bestbuy.png; sourceTree = "<group>"; };
-		1F380A4F1654829800788014 /* costco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = costco.png; path = icons/costco.png; sourceTree = "<group>"; };
-		1F380A501654829800788014 /* kohls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kohls.png; path = icons/kohls.png; sourceTree = "<group>"; };
-		1F380A551655443200788014 /* fold1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fold1.png; path = icons/fold1.png; sourceTree = "<group>"; };
-		1F380A561655443200788014 /* fold2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fold2.png; path = icons/fold2.png; sourceTree = "<group>"; };
 		1F380A591655C32200788014 /* GiftCardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardCollectionViewController.h; sourceTree = "<group>"; };
 		1F380A5A1655C32200788014 /* GiftCardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardCollectionViewController.m; sourceTree = "<group>"; };
 		1F380A5C1655C61C00788014 /* GiftCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardCell.h; sourceTree = "<group>"; };
 		1F380A5D1655C61C00788014 /* GiftCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardCell.m; sourceTree = "<group>"; };
-		1F380A601655DFA400788014 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = icons/bg2.png; sourceTree = "<group>"; };
-		1F380A611655DFA400788014 /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg3.png; path = icons/bg3.png; sourceTree = "<group>"; };
-		1F380A651655E05700788014 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg1.png; path = icons/bg1.png; sourceTree = "<group>"; };
 		1F380A67165602B200788014 /* ipadRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipadRetina.png; path = ../ipadRetina.png; sourceTree = "<group>"; };
 		1F380A69165602D300788014 /* iphoneRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphoneRetina.png; path = ../iphoneRetina.png; sourceTree = "<group>"; };
 		1F380A6B1656030200788014 /* ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipad.png; path = ../ipad.png; sourceTree = "<group>"; };
 		1F380A6D1656030C00788014 /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphone.png; path = ../iphone.png; sourceTree = "<group>"; };
-		1F380A7F1656168300788014 /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card.png; path = icons/card.png; sourceTree = "<group>"; };
-		1F380A81165619A400788014 /* cardTall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardTall.png; path = icons/cardTall.png; sourceTree = "<group>"; };
 		1F380A831656A24900788014 /* NavigactionBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigactionBarController.h; sourceTree = "<group>"; };
 		1F380A841656A24900788014 /* NavigactionBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigactionBarController.m; sourceTree = "<group>"; };
-		1F380A861656B24400788014 /* deleteBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deleteBtn.png; path = icons/deleteBtn.png; sourceTree = "<group>"; };
+		1F380A881657450100788014 /* 711.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 711.png; path = icons/711.png; sourceTree = "<group>"; };
+		1F380A891657450100788014 /* acehardware.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = acehardware.png; path = icons/acehardware.png; sourceTree = "<group>"; };
+		1F380A8A1657450100788014 /* amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amazon.png; path = icons/amazon.png; sourceTree = "<group>"; };
+		1F380A8B1657450100788014 /* applestore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applestore.png; path = icons/applestore.png; sourceTree = "<group>"; };
+		1F380A8C1657450100788014 /* autozone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = autozone.png; path = icons/autozone.png; sourceTree = "<group>"; };
+		1F380A8D1657450100788014 /* barnes&noble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "barnes&noble.png"; path = "icons/barnes&noble.png"; sourceTree = "<group>"; };
+		1F380A8E1657450100788014 /* bedbathandbeyond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bedbathandbeyond.png; path = icons/bedbathandbeyond.png; sourceTree = "<group>"; };
+		1F380A8F1657450100788014 /* bestbuy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bestbuy.png; path = icons/bestbuy.png; sourceTree = "<group>"; };
+		1F380A901657450100788014 /* bestbuycpy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bestbuycpy.png; path = icons/bestbuycpy.png; sourceTree = "<group>"; };
+		1F380A911657450100788014 /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg1.png; path = icons/bg1.png; sourceTree = "<group>"; };
+		1F380A921657450100788014 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = icons/bg2.png; sourceTree = "<group>"; };
+		1F380A931657450100788014 /* bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg3.png; path = icons/bg3.png; sourceTree = "<group>"; };
+		1F380A941657450100788014 /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = card.png; path = icons/card.png; sourceTree = "<group>"; };
+		1F380A951657450100788014 /* cardEffects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardEffects.png; path = icons/cardEffects.png; sourceTree = "<group>"; };
+		1F380A961657450100788014 /* cardTall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cardTall.png; path = icons/cardTall.png; sourceTree = "<group>"; };
+		1F380A971657450100788014 /* costco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = costco.png; path = icons/costco.png; sourceTree = "<group>"; };
+		1F380A981657450100788014 /* cvs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cvs.png; path = icons/cvs.png; sourceTree = "<group>"; };
+		1F380A991657450100788014 /* deleteBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deleteBtn.png; path = icons/deleteBtn.png; sourceTree = "<group>"; };
+		1F380A9A1657450100788014 /* dillards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dillards.png; path = icons/dillards.png; sourceTree = "<group>"; };
+		1F380A9B1657450100788014 /* familydollar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = familydollar.png; path = icons/familydollar.png; sourceTree = "<group>"; };
+		1F380A9C1657450100788014 /* fold1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fold1.png; path = icons/fold1.png; sourceTree = "<group>"; };
+		1F380A9D1657450100788014 /* fold2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fold2.png; path = icons/fold2.png; sourceTree = "<group>"; };
+		1F380A9E1657450100788014 /* gamestop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gamestop.png; path = icons/gamestop.png; sourceTree = "<group>"; };
+		1F380A9F1657450100788014 /* gap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gap.png; path = icons/gap.png; sourceTree = "<group>"; };
+		1F380AA01657450100788014 /* homedepot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = homedepot.png; path = icons/homedepot.png; sourceTree = "<group>"; };
+		1F380AA11657450100788014 /* ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipad.png; path = icons/ipad.png; sourceTree = "<group>"; };
+		1F380AA21657450100788014 /* ipadRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipadRetina.png; path = icons/ipadRetina.png; sourceTree = "<group>"; };
+		1F380AA31657450100788014 /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphone.png; path = icons/iphone.png; sourceTree = "<group>"; };
+		1F380AA41657450100788014 /* iphoneRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphoneRetina.png; path = icons/iphoneRetina.png; sourceTree = "<group>"; };
+		1F380AA51657450100788014 /* itunes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itunes.png; path = icons/itunes.png; sourceTree = "<group>"; };
+		1F380AA61657450100788014 /* jcpenny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jcpenny.png; path = icons/jcpenny.png; sourceTree = "<group>"; };
+		1F380AA71657450100788014 /* kohls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kohls.png; path = icons/kohls.png; sourceTree = "<group>"; };
+		1F380AA81657450100788014 /* kroger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kroger.png; path = icons/kroger.png; sourceTree = "<group>"; };
+		1F380AA91657450100788014 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = icons/logo.png; sourceTree = "<group>"; };
+		1F380AAA1657450100788014 /* lowes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lowes.png; path = icons/lowes.png; sourceTree = "<group>"; };
+		1F380AAB1657450100788014 /* macys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = macys.png; path = icons/macys.png; sourceTree = "<group>"; };
+		1F380AAC1657450100788014 /* nordstrom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nordstrom.png; path = icons/nordstrom.png; sourceTree = "<group>"; };
+		1F380AAD1657450100788014 /* officedepot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = officedepot.png; path = icons/officedepot.png; sourceTree = "<group>"; };
+		1F380AAE1657450100788014 /* officemax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = officemax.png; path = icons/officemax.png; sourceTree = "<group>"; };
+		1F380AAF1657450100788014 /* oreilly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oreilly.png; path = icons/oreilly.png; sourceTree = "<group>"; };
+		1F380AB01657450100788014 /* publix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = publix.png; path = icons/publix.png; sourceTree = "<group>"; };
+		1F380AB11657450100788014 /* riteaid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = riteaid.png; path = icons/riteaid.png; sourceTree = "<group>"; };
+		1F380AB21657450100788014 /* ross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ross.png; path = icons/ross.png; sourceTree = "<group>"; };
+		1F380AB31657450100788014 /* safeway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = safeway.png; path = icons/safeway.png; sourceTree = "<group>"; };
+		1F380AB41657450100788014 /* sears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sears.png; path = icons/sears.png; sourceTree = "<group>"; };
+		1F380AB51657450100788014 /* staples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = staples.png; path = icons/staples.png; sourceTree = "<group>"; };
+		1F380AB61657450100788014 /* starbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starbucks.png; path = icons/starbucks.png; sourceTree = "<group>"; };
+		1F380AB71657450100788014 /* subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subway.png; path = icons/subway.png; sourceTree = "<group>"; };
+		1F380AB81657450100788014 /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = target.png; path = icons/target.png; sourceTree = "<group>"; };
+		1F380AB91657450100788014 /* tjmax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tjmax.png; path = icons/tjmax.png; sourceTree = "<group>"; };
+		1F380ABA1657450100788014 /* toysrus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toysrus.png; path = icons/toysrus.png; sourceTree = "<group>"; };
+		1F380ABB1657450100788014 /* traderjoes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = traderjoes.png; path = icons/traderjoes.png; sourceTree = "<group>"; };
+		1F380ABC1657450100788014 /* truevalue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = truevalue.png; path = icons/truevalue.png; sourceTree = "<group>"; };
+		1F380ABD1657450100788014 /* walgreens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walgreens.png; path = icons/walgreens.png; sourceTree = "<group>"; };
+		1F380ABE1657450100788014 /* walmart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walmart.png; path = icons/walmart.png; sourceTree = "<group>"; };
+		1F380ABF1657450100788014 /* wholefoods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wholefoods.png; path = icons/wholefoods.png; sourceTree = "<group>"; };
 		1F3DC363164DCF040085586B /* GiftCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableViewController.h; sourceTree = "<group>"; };
 		1F3DC364164DCF040085586B /* GiftCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableViewController.m; sourceTree = "<group>"; };
 		1F3DC366164DCF700085586B /* GiftCardTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableCell.h; sourceTree = "<group>"; };
@@ -233,18 +321,62 @@
 		1F116BBB1647A2D5000B8660 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				1F380A861656B24400788014 /* deleteBtn.png */,
-				1F380A81165619A400788014 /* cardTall.png */,
-				1F380A7F1656168300788014 /* card.png */,
-				1F380A651655E05700788014 /* bg1.png */,
-				1F380A601655DFA400788014 /* bg2.png */,
-				1F380A611655DFA400788014 /* bg3.png */,
-				1F380A551655443200788014 /* fold1.png */,
-				1F380A561655443200788014 /* fold2.png */,
-				1F380A4D1654829800788014 /* barnes&noble.png */,
-				1F380A4E1654829800788014 /* bestbuy.png */,
-				1F380A4F1654829800788014 /* costco.png */,
-				1F380A501654829800788014 /* kohls.png */,
+				1F380A881657450100788014 /* 711.png */,
+				1F380A891657450100788014 /* acehardware.png */,
+				1F380A8A1657450100788014 /* amazon.png */,
+				1F380A8B1657450100788014 /* applestore.png */,
+				1F380A8C1657450100788014 /* autozone.png */,
+				1F380A8D1657450100788014 /* barnes&noble.png */,
+				1F380A8E1657450100788014 /* bedbathandbeyond.png */,
+				1F380A8F1657450100788014 /* bestbuy.png */,
+				1F380A901657450100788014 /* bestbuycpy.png */,
+				1F380A911657450100788014 /* bg1.png */,
+				1F380A921657450100788014 /* bg2.png */,
+				1F380A931657450100788014 /* bg3.png */,
+				1F380A941657450100788014 /* card.png */,
+				1F380A951657450100788014 /* cardEffects.png */,
+				1F380A961657450100788014 /* cardTall.png */,
+				1F380A971657450100788014 /* costco.png */,
+				1F380A981657450100788014 /* cvs.png */,
+				1F380A991657450100788014 /* deleteBtn.png */,
+				1F380A9A1657450100788014 /* dillards.png */,
+				1F380A9B1657450100788014 /* familydollar.png */,
+				1F380A9C1657450100788014 /* fold1.png */,
+				1F380A9D1657450100788014 /* fold2.png */,
+				1F380A9E1657450100788014 /* gamestop.png */,
+				1F380A9F1657450100788014 /* gap.png */,
+				1F380AA01657450100788014 /* homedepot.png */,
+				1F380AA11657450100788014 /* ipad.png */,
+				1F380AA21657450100788014 /* ipadRetina.png */,
+				1F380AA31657450100788014 /* iphone.png */,
+				1F380AA41657450100788014 /* iphoneRetina.png */,
+				1F380AA51657450100788014 /* itunes.png */,
+				1F380AA61657450100788014 /* jcpenny.png */,
+				1F380AA71657450100788014 /* kohls.png */,
+				1F380AA81657450100788014 /* kroger.png */,
+				1F380AA91657450100788014 /* logo.png */,
+				1F380AAA1657450100788014 /* lowes.png */,
+				1F380AAB1657450100788014 /* macys.png */,
+				1F380AAC1657450100788014 /* nordstrom.png */,
+				1F380AAD1657450100788014 /* officedepot.png */,
+				1F380AAE1657450100788014 /* officemax.png */,
+				1F380AAF1657450100788014 /* oreilly.png */,
+				1F380AB01657450100788014 /* publix.png */,
+				1F380AB11657450100788014 /* riteaid.png */,
+				1F380AB21657450100788014 /* ross.png */,
+				1F380AB31657450100788014 /* safeway.png */,
+				1F380AB41657450100788014 /* sears.png */,
+				1F380AB51657450100788014 /* staples.png */,
+				1F380AB61657450100788014 /* starbucks.png */,
+				1F380AB71657450100788014 /* subway.png */,
+				1F380AB81657450100788014 /* target.png */,
+				1F380AB91657450100788014 /* tjmax.png */,
+				1F380ABA1657450100788014 /* toysrus.png */,
+				1F380ABB1657450100788014 /* traderjoes.png */,
+				1F380ABC1657450100788014 /* truevalue.png */,
+				1F380ABD1657450100788014 /* walgreens.png */,
+				1F380ABE1657450100788014 /* walmart.png */,
+				1F380ABF1657450100788014 /* wholefoods.png */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -430,22 +562,66 @@
 				1F10C1D416479FE400CC7519 /* Default@2x.png in Resources */,
 				1F10C1D616479FE400CC7519 /* Default-568h@2x.png in Resources */,
 				1F10C1E01647A07700CC7519 /* MainiPhoneStoryBoard.storyboard in Resources */,
-				1F380A511654829800788014 /* barnes&noble.png in Resources */,
-				1F380A521654829800788014 /* bestbuy.png in Resources */,
-				1F380A531654829800788014 /* costco.png in Resources */,
-				1F380A541654829800788014 /* kohls.png in Resources */,
-				1F380A571655443200788014 /* fold1.png in Resources */,
-				1F380A581655443200788014 /* fold2.png in Resources */,
-				1F380A631655DFA400788014 /* bg2.png in Resources */,
-				1F380A641655DFA400788014 /* bg3.png in Resources */,
-				1F380A661655E05700788014 /* bg1.png in Resources */,
 				1F380A68165602B200788014 /* ipadRetina.png in Resources */,
 				1F380A6A165602D300788014 /* iphoneRetina.png in Resources */,
 				1F380A6C1656030200788014 /* ipad.png in Resources */,
 				1F380A6E1656030C00788014 /* iphone.png in Resources */,
-				1F380A801656168300788014 /* card.png in Resources */,
-				1F380A82165619A400788014 /* cardTall.png in Resources */,
-				1F380A871656B24400788014 /* deleteBtn.png in Resources */,
+				1F380AC01657450100788014 /* 711.png in Resources */,
+				1F380AC11657450100788014 /* acehardware.png in Resources */,
+				1F380AC21657450100788014 /* amazon.png in Resources */,
+				1F380AC31657450100788014 /* applestore.png in Resources */,
+				1F380AC41657450100788014 /* autozone.png in Resources */,
+				1F380AC51657450100788014 /* barnes&noble.png in Resources */,
+				1F380AC61657450100788014 /* bedbathandbeyond.png in Resources */,
+				1F380AC71657450100788014 /* bestbuy.png in Resources */,
+				1F380AC81657450100788014 /* bestbuycpy.png in Resources */,
+				1F380AC91657450100788014 /* bg1.png in Resources */,
+				1F380ACA1657450100788014 /* bg2.png in Resources */,
+				1F380ACB1657450100788014 /* bg3.png in Resources */,
+				1F380ACC1657450100788014 /* card.png in Resources */,
+				1F380ACD1657450100788014 /* cardEffects.png in Resources */,
+				1F380ACE1657450100788014 /* cardTall.png in Resources */,
+				1F380ACF1657450100788014 /* costco.png in Resources */,
+				1F380AD01657450100788014 /* cvs.png in Resources */,
+				1F380AD11657450100788014 /* deleteBtn.png in Resources */,
+				1F380AD21657450100788014 /* dillards.png in Resources */,
+				1F380AD31657450100788014 /* familydollar.png in Resources */,
+				1F380AD41657450100788014 /* fold1.png in Resources */,
+				1F380AD51657450100788014 /* fold2.png in Resources */,
+				1F380AD61657450100788014 /* gamestop.png in Resources */,
+				1F380AD71657450100788014 /* gap.png in Resources */,
+				1F380AD81657450100788014 /* homedepot.png in Resources */,
+				1F380AD91657450100788014 /* ipad.png in Resources */,
+				1F380ADA1657450100788014 /* ipadRetina.png in Resources */,
+				1F380ADB1657450100788014 /* iphone.png in Resources */,
+				1F380ADC1657450100788014 /* iphoneRetina.png in Resources */,
+				1F380ADD1657450100788014 /* itunes.png in Resources */,
+				1F380ADE1657450100788014 /* jcpenny.png in Resources */,
+				1F380ADF1657450100788014 /* kohls.png in Resources */,
+				1F380AE01657450100788014 /* kroger.png in Resources */,
+				1F380AE11657450100788014 /* logo.png in Resources */,
+				1F380AE21657450100788014 /* lowes.png in Resources */,
+				1F380AE31657450100788014 /* macys.png in Resources */,
+				1F380AE41657450100788014 /* nordstrom.png in Resources */,
+				1F380AE51657450100788014 /* officedepot.png in Resources */,
+				1F380AE61657450100788014 /* officemax.png in Resources */,
+				1F380AE71657450100788014 /* oreilly.png in Resources */,
+				1F380AE81657450100788014 /* publix.png in Resources */,
+				1F380AE91657450100788014 /* riteaid.png in Resources */,
+				1F380AEA1657450100788014 /* ross.png in Resources */,
+				1F380AEB1657450100788014 /* safeway.png in Resources */,
+				1F380AEC1657450100788014 /* sears.png in Resources */,
+				1F380AED1657450100788014 /* staples.png in Resources */,
+				1F380AEE1657450100788014 /* starbucks.png in Resources */,
+				1F380AEF1657450100788014 /* subway.png in Resources */,
+				1F380AF01657450100788014 /* target.png in Resources */,
+				1F380AF11657450100788014 /* tjmax.png in Resources */,
+				1F380AF21657450100788014 /* toysrus.png in Resources */,
+				1F380AF31657450100788014 /* traderjoes.png in Resources */,
+				1F380AF41657450100788014 /* truevalue.png in Resources */,
+				1F380AF51657450100788014 /* walgreens.png in Resources */,
+				1F380AF61657450100788014 /* walmart.png in Resources */,
+				1F380AF71657450100788014 /* wholefoods.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
