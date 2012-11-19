@@ -88,15 +88,14 @@ BOOL stayup;
     }
 }
 #pragma mark - Picker View Delegate Methods
+// Handle the selection
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
-    // Handle the selection
     _storeName.text = [retailers objectAtIndex:row];
 }
 
 // tell the picker how many rows are available for a given component
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    NSUInteger numRows = [retailers count];
-    return numRows;
+    return [retailers count];
 }
 
 // tell the picker how many components it will have
@@ -106,15 +105,12 @@ BOOL stayup;
 
 // tell the picker the title for a given component
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    NSString *title;
-    title = [retailers objectAtIndex:row];
-    return title;
+    return [retailers objectAtIndex:row];
 }
 
 // tell the picker the width of each row for a given component
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
-    int sectionWidth = 300;
-    return sectionWidth;
+    return 300;
 }
 
 #pragma mark - Text Field Delegate Functions
@@ -304,8 +300,10 @@ BOOL stayup;
         typeName = sym.typeName;
         data = sym.data;
     }
+    NSLog(@"Sym type:%d",[sym type]);
     _barCode.text = typeName;
     _accountNumber.text = data;
+    _currentGiftCard.zbarCodeType = [NSNumber numberWithInt:[sym type]];
     if(typeName){
         [_barCode setEnabled:NO];
         [_barCode setOpaque:0.7];

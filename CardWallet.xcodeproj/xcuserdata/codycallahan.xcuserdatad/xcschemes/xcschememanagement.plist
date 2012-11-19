@@ -9,10 +9,55 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>CocoBarcodes.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>NoARC.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>NoArc.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1F10C1B816479FE400CC7519</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FDCDDDE16595FC5005863A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FDCDE9C165981D3005863A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FDCDEAC16598204005863A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FDCDF0F1659848F005863A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FDCDF71165990D7005863A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FDCDFC816599223005863A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

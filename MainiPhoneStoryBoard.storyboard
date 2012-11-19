@@ -196,7 +196,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-me-GFV">
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-me-GFV">
                                 <items>
                                     <navigationItem title="Help" id="yV2-Vv-6Sw">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="3zI-XR-EnD">
@@ -207,41 +207,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="2DP-Q8-GjL">
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <barButtonItem style="done" systemItem="done" id="WbK-rw-EZG"/>
-                                </items>
-                            </toolbar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="g7i-6X-vqA">
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="piM-Mh-tO2"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem style="done" systemItem="done" id="z3a-TU-irv"/>
-                                </items>
-                            </toolbar>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jeo-T6-Hcy">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="oRS-XJ-PIO"/>
-                                </constraints>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="g7i-6X-vqA" firstAttribute="top" secondItem="yxo-3n-6uB" secondAttribute="top" constant="309" id="1Hm-QU-3wN"/>
-                            <constraint firstItem="Jeo-T6-Hcy" firstAttribute="top" secondItem="yxo-3n-6uB" secondAttribute="top" constant="343" id="1Pi-H3-JIT"/>
-                            <constraint firstItem="Jeo-T6-Hcy" firstAttribute="top" secondItem="2DP-Q8-GjL" secondAttribute="bottom" type="default" id="E4B-5K-d1q"/>
-                            <constraint firstItem="2DP-Q8-GjL" firstAttribute="trailing" secondItem="yxo-3n-6uB" secondAttribute="trailing" type="default" id="I0c-kY-tva"/>
-                            <constraint firstItem="Jeo-T6-Hcy" firstAttribute="leading" secondItem="yxo-3n-6uB" secondAttribute="leading" type="default" id="PRR-jb-4lS"/>
                             <constraint firstItem="d4f-me-GFV" firstAttribute="leading" secondItem="yxo-3n-6uB" secondAttribute="leading" type="default" id="VfX-BC-8up"/>
                             <constraint firstItem="d4f-me-GFV" firstAttribute="trailing" secondItem="yxo-3n-6uB" secondAttribute="trailing" type="default" id="aIM-8f-7Pk"/>
                             <constraint firstItem="d4f-me-GFV" firstAttribute="top" secondItem="yxo-3n-6uB" secondAttribute="top" type="default" id="bOl-1R-HV2"/>
-                            <constraint firstItem="g7i-6X-vqA" firstAttribute="leading" secondItem="yxo-3n-6uB" secondAttribute="leading" constant="10" id="hvh-Nx-2GH"/>
-                            <constraint firstItem="2DP-Q8-GjL" firstAttribute="leading" secondItem="yxo-3n-6uB" secondAttribute="leading" type="default" id="j3Z-Kl-r5h"/>
-                            <constraint firstItem="Jeo-T6-Hcy" firstAttribute="trailing" secondItem="yxo-3n-6uB" secondAttribute="trailing" type="default" id="pLT-sn-s0g"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -277,14 +248,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="||| || | ||| | || | |" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tja-Qf-1Dd">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="Ua8-cD-ehv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1536 2345 2372 7993 2345 3456 2345" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mK3-vN-nb5">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -313,29 +276,34 @@
                                     <action selector="deleteCard:" destination="JRI-fm-9W7" eventType="touchUpInside" id="i55-TE-XRe"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0p-VQ-gfD">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="BbB-E3-cVy"/>
+                                    <constraint firstAttribute="width" constant="373" id="iU1-ot-iE6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jQc-m6-mRV" firstAttribute="baseline" secondItem="0Iz-Fo-4Vu" secondAttribute="baseline" type="default" id="3yX-s5-6WK"/>
                             <constraint firstItem="jQc-m6-mRV" firstAttribute="leading" secondItem="0Iz-Fo-4Vu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="48j-fu-Sh4"/>
                             <constraint firstItem="7cN-dL-fKs" firstAttribute="leading" secondItem="mRO-oI-8nW" secondAttribute="leading" type="default" id="4NF-CN-tfW"/>
+                            <constraint firstItem="o0p-VQ-gfD" firstAttribute="centerX" secondItem="7cN-dL-fKs" secondAttribute="centerX" type="default" id="Ael-uX-oeh"/>
                             <constraint firstItem="FFS-sT-JIy" firstAttribute="bottom" secondItem="mRO-oI-8nW" secondAttribute="bottom" type="default" id="BjU-wV-7jZ"/>
-                            <constraint firstItem="ss0-i9-1Qt" firstAttribute="centerX" secondItem="7cN-dL-fKs" secondAttribute="centerX" type="default" id="KdY-e5-gXu"/>
+                            <constraint firstItem="noK-k9-x3D" firstAttribute="top" secondItem="mRO-oI-8nW" secondAttribute="top" constant="45" id="GFT-RB-0bO"/>
+                            <constraint firstAttribute="bottom" secondItem="jQc-m6-mRV" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="K1n-60-5ab"/>
                             <constraint firstItem="7cN-dL-fKs" firstAttribute="top" secondItem="mRO-oI-8nW" secondAttribute="top" type="default" id="MEV-Uu-VK4"/>
+                            <constraint firstItem="o0p-VQ-gfD" firstAttribute="leading" secondItem="0Iz-Fo-4Vu" secondAttribute="leading" type="default" id="TmW-ay-n9O"/>
+                            <constraint firstAttribute="bottom" secondItem="0Iz-Fo-4Vu" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="UL2-fa-5DI"/>
                             <constraint firstAttribute="trailing" secondItem="FFS-sT-JIy" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VdQ-yn-Vny"/>
-                            <constraint firstItem="0Iz-Fo-4Vu" firstAttribute="leading" secondItem="Tja-Qf-1Dd" secondAttribute="leading" type="default" id="XPv-9x-eMm"/>
-                            <constraint firstAttribute="bottom" secondItem="0Iz-Fo-4Vu" secondAttribute="bottom" constant="27" id="azN-EG-ftX"/>
-                            <constraint firstItem="noK-k9-x3D" firstAttribute="top" secondItem="ss0-i9-1Qt" secondAttribute="top" type="default" id="bfE-g3-oqA"/>
-                            <constraint firstItem="mK3-vN-nb5" firstAttribute="top" secondItem="Tja-Qf-1Dd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ewb-A9-U0A"/>
-                            <constraint firstItem="Tja-Qf-1Dd" firstAttribute="trailing" secondItem="ss0-i9-1Qt" secondAttribute="trailing" type="default" id="lVN-eE-WrY"/>
+                            <constraint firstItem="ss0-i9-1Qt" firstAttribute="leading" secondItem="o0p-VQ-gfD" secondAttribute="leading" type="default" id="dDx-9p-mTn"/>
+                            <constraint firstItem="o0p-VQ-gfD" firstAttribute="centerX" secondItem="mK3-vN-nb5" secondAttribute="centerX" type="default" id="fyd-09-MSJ"/>
+                            <constraint firstItem="mK3-vN-nb5" firstAttribute="top" secondItem="o0p-VQ-gfD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="j6u-2c-Bfo"/>
+                            <constraint firstAttribute="trailing" secondItem="noK-k9-x3D" secondAttribute="trailing" constant="38" id="lep-4Q-dyY"/>
+                            <constraint firstItem="ss0-i9-1Qt" firstAttribute="centerY" secondItem="noK-k9-x3D" secondAttribute="centerY" type="default" id="nQS-EQ-kFR"/>
                             <constraint firstItem="7cN-dL-fKs" firstAttribute="trailing" secondItem="mRO-oI-8nW" secondAttribute="trailing" type="default" id="pXT-s4-tSk"/>
-                            <constraint firstItem="mK3-vN-nb5" firstAttribute="centerX" secondItem="Tja-Qf-1Dd" secondAttribute="centerX" type="default" id="tQM-tT-Mjm"/>
-                            <constraint firstItem="noK-k9-x3D" firstAttribute="top" secondItem="mRO-oI-8nW" secondAttribute="top" constant="45" id="vAf-11-aFd"/>
-                            <constraint firstItem="Tja-Qf-1Dd" firstAttribute="leading" secondItem="ss0-i9-1Qt" secondAttribute="leading" type="default" id="wRG-TR-JCB"/>
-                            <constraint firstAttribute="trailing" secondItem="noK-k9-x3D" secondAttribute="trailing" constant="38" id="wng-X0-wDp"/>
                             <constraint firstItem="FFS-sT-JIy" firstAttribute="leading" secondItem="mRO-oI-8nW" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wrF-Rp-Yxe"/>
-                            <constraint firstItem="Tja-Qf-1Dd" firstAttribute="top" secondItem="mRO-oI-8nW" secondAttribute="top" constant="95" id="yfA-lD-ihz"/>
                             <constraint firstItem="FFS-sT-JIy" firstAttribute="top" secondItem="7cN-dL-fKs" secondAttribute="bottom" type="default" id="zD6-3Y-4Ft"/>
+                            <constraint firstItem="o0p-VQ-gfD" firstAttribute="top" secondItem="mRO-oI-8nW" secondAttribute="top" constant="74" id="zlb-Ku-3OR"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -343,7 +311,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="accountNumberLabel" destination="mK3-vN-nb5" id="ipU-dX-He6"/>
-                        <outlet property="barCodeLabel" destination="Tja-Qf-1Dd" id="jL6-hi-Qvb"/>
+                        <outlet property="barCodeImage" destination="o0p-VQ-gfD" id="b7k-OA-qMw"/>
                         <outlet property="cardImage" destination="FFS-sT-JIy" id="H2k-4I-t4H"/>
                         <outlet property="navigationBar" destination="7cN-dL-fKs" id="ZKm-7l-stz"/>
                         <outlet property="pinLabel" destination="jQc-m6-mRV" id="YCf-Tx-c3l"/>
@@ -426,6 +394,82 @@
         <image name="card.png" width="394" height="280"/>
         <image name="deleteBtn.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="AddGiftCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGiftCardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="action" name="scanAgain:"/>
+                <relationship kind="outlet" name="accountNumber" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="barCode" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pinNumber" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveBtn" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="storeName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="storePicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="GiftCardCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GiftCardCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="foldImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="giftCardImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="giftCardLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GiftCardCollectionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GiftCardCollectionViewController.h"/>
+        </class>
+        <class className="HelpViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HelpViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="back:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NavigactionBarController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NavigactionBarController.h"/>
+        </class>
+        <class className="ShowCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShowCardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtn:"/>
+                <relationship kind="action" name="deleteCard:"/>
+                <relationship kind="outlet" name="accountNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="barCodeImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cardImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="pinLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="storeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="StoreCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoreCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="foldImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="iconImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="storeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="StoreCollectionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoreCollectionViewController.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

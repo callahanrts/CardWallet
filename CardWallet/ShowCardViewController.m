@@ -36,6 +36,41 @@
     }
 }
 
+- (BarcodeType) getType{
+    BarcodeType type;
+    switch([_currentGiftCard.zbarCodeType intValue])
+    {
+        
+        case 8:
+            type = EAN8;
+            break;
+        case 13:
+            type = EAN13;
+            break;
+        case 9:
+            type = UPCE;
+            break;
+        case 12:
+            type = UPCA;
+            break;
+        case 39:
+            type = Code39;
+            break;
+        case 128:
+            type = Code128;
+            break;
+        case 93:
+        case 25:
+        case 14:
+        case 10:
+        case 2:
+        case 5:
+        default:
+            NSLog(@"Unsupported Type");
+    }
+    return type;
+}
+
 #pragma mark - Buttons
 - (IBAction)deleteCard:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Remove Gift Card?" message:@"Do you really want to delete this gift card?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Delete", nil];
@@ -63,14 +98,35 @@
 	// Do any additional setup after loading the view.
     //Change title of navigation bar
     _navigationBar.topItem.title = _currentGiftCard.name;
+    
+    //labels
     _storeLabel.text = _currentGiftCard.store.name;
-    _barCodeLabel.text = @"|| | ||| | || | ||| | || || |||| | ||| | || | ||| | || || ||";
     _accountNumberLabel.text = _currentGiftCard.accountNumber;
     _pinLabel.text = _currentGiftCard.pin;
-    _barCodeLabel.numberOfLines = 1;
-    _barCodeLabel.adjustsFontSizeToFitWidth = YES;
-    [_barCodeLabel sizeToFit];
+    //barcode image
+    _barCodeImage.image = [BarcodeManager generateBarcodeImageWithContent: _currentGiftCard.accountNumber
+                                                                     type: [self getType]
+                                                                     size: CGSizeMake(0,0)];
+    
+    NSLog(@"EAN2: %d", ZBAR_EAN2);
+    NSLog(@"EAN5: %d", ZBAR_EAN5);
+    NSLog(@"EAN8: %d", ZBAR_EAN8);
+    NSLog(@"EAN13: %d", ZBAR_EAN13);
+    NSLog(@"UPCE: %d", ZBAR_UPCE);
+    NSLog(@"UPCA: %d", ZBAR_UPCA);
+    NSLog(@"ISBN10: %d", ZBAR_ISBN10);
+    NSLog(@"ISBN13: %d", ZBAR_ISBN13);
+    NSLog(@"I25: %d", ZBAR_I25);
+    NSLog(@"Code39: %d", ZBAR_CODE39);
+    NSLog(@"Code128: %d", ZBAR_CODE128);
+    NSLog(@"Code93: %d", ZBAR_CODE93);
+    NSLog(@"QR: %d", ZBAR_QRCODE);
+    NSLog(@"ZBARCODE: %d", [_currentGiftCard.zbarCodeType intValue]);
+    
+    //background
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
+    
+    //set background to gift card
     _cardImage.image = [UIImage imageNamed:@"card.png"];
     
 }

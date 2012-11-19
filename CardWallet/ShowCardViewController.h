@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "GiftCard.h"
 #import "Store.h"
+#import "BarcodeManager.h"
+#import "ZBarSymbol.h"
 
 @interface ShowCardViewController : UIViewController <UIAlertViewDelegate>
 
@@ -16,7 +18,7 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *cardImage;
 @property (strong, nonatomic) IBOutlet UILabel *storeLabel;
-@property (strong, nonatomic) IBOutlet UILabel *barCodeLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *barCodeImage;
 @property (strong, nonatomic) IBOutlet UILabel *accountNumberLabel;
 @property (strong, nonatomic) IBOutlet UILabel *pinLabel;
 @property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
