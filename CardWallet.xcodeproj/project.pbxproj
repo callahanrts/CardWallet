@@ -85,6 +85,10 @@
 		1F7B187F1659ACC8005FDD5C /* BarcodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B187E1659ACC8005FDD5C /* BarcodeManager.m */; };
 		1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */; };
 		1FAAB2531659CD5C000C9E3F /* GiftCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2521659CD5B000C9E3F /* GiftCard.m */; };
+		1FBC505E165A044B00F335A2 /* bl.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC505A165A044B00F335A2 /* bl.png */; };
+		1FBC505F165A044B00F335A2 /* br.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC505B165A044B00F335A2 /* br.png */; };
+		1FBC5060165A044B00F335A2 /* tl.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC505C165A044B00F335A2 /* tl.png */; };
+		1FBC5061165A044B00F335A2 /* tr.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC505D165A044B00F335A2 /* tr.png */; };
 		1FDCDFCA16599223005863A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F10C1BF16479FE400CC7519 /* Foundation.framework */; };
 		1FDCDFD7165993DB005863A7 /* libNoARC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDCDFC916599223005863A7 /* libNoARC.a */; };
 		1FDCE00516599592005863A7 /* JapanPostBarcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDCDFD916599592005863A7 /* JapanPostBarcode.m */; };
@@ -236,6 +240,10 @@
 		1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGiftCardViewController.m; sourceTree = "<group>"; };
 		1FAAB2511659CD5B000C9E3F /* GiftCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCard.h; sourceTree = "<group>"; };
 		1FAAB2521659CD5B000C9E3F /* GiftCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCard.m; sourceTree = "<group>"; };
+		1FBC505A165A044B00F335A2 /* bl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bl.png; sourceTree = "<group>"; };
+		1FBC505B165A044B00F335A2 /* br.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = br.png; sourceTree = "<group>"; };
+		1FBC505C165A044B00F335A2 /* tl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tl.png; sourceTree = "<group>"; };
+		1FBC505D165A044B00F335A2 /* tr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tr.png; sourceTree = "<group>"; };
 		1FDCDFC916599223005863A7 /* libNoARC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNoARC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDCDFCD16599223005863A7 /* NoARC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NoARC-Prefix.pch"; sourceTree = "<group>"; };
 		1FDCDFD816599592005863A7 /* JapanPostBarcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JapanPostBarcode.h; sourceTree = "<group>"; };
@@ -418,6 +426,10 @@
 		1F116BBB1647A2D5000B8660 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				1FBC505A165A044B00F335A2 /* bl.png */,
+				1FBC505B165A044B00F335A2 /* br.png */,
+				1FBC505C165A044B00F335A2 /* tl.png */,
+				1FBC505D165A044B00F335A2 /* tr.png */,
 				1F380A881657450100788014 /* 711.png */,
 				1F380A891657450100788014 /* acehardware.png */,
 				1F380A8A1657450100788014 /* amazon.png */,
@@ -671,6 +683,7 @@
 				1F10C1B516479FE400CC7519 /* Sources */,
 				1F10C1B616479FE400CC7519 /* Frameworks */,
 				1F10C1B716479FE400CC7519 /* Resources */,
+				50524F424C454D533F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -791,10 +804,30 @@
 				1F380AF51657450100788014 /* walgreens.png in Resources */,
 				1F380AF61657450100788014 /* walmart.png in Resources */,
 				1F380AF71657450100788014 /* wholefoods.png in Resources */,
+				1FBC505E165A044B00F335A2 /* bl.png in Resources */,
+				1FBC505F165A044B00F335A2 /* br.png in Resources */,
+				1FBC5060165A044B00F335A2 /* tl.png in Resources */,
+				1FBC5061165A044B00F335A2 /* tr.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50524F424C454D533F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F10C1B516479FE400CC7519 /* Sources */ = {
@@ -881,7 +914,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -911,7 +944,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;

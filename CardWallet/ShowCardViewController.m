@@ -67,6 +67,7 @@
         case 5:
         default:
             NSLog(@"Unsupported Type");
+            type = 0;
     }
     return type;
 }
@@ -104,24 +105,10 @@
     _accountNumberLabel.text = _currentGiftCard.accountNumber;
     _pinLabel.text = _currentGiftCard.pin;
     //barcode image
-    _barCodeImage.image = [BarcodeManager generateBarcodeImageWithContent: _currentGiftCard.accountNumber
-                                                                     type: [self getType]
-                                                                     size: CGSizeMake(0,0)];
-    
-    NSLog(@"EAN2: %d", ZBAR_EAN2);
-    NSLog(@"EAN5: %d", ZBAR_EAN5);
-    NSLog(@"EAN8: %d", ZBAR_EAN8);
-    NSLog(@"EAN13: %d", ZBAR_EAN13);
-    NSLog(@"UPCE: %d", ZBAR_UPCE);
-    NSLog(@"UPCA: %d", ZBAR_UPCA);
-    NSLog(@"ISBN10: %d", ZBAR_ISBN10);
-    NSLog(@"ISBN13: %d", ZBAR_ISBN13);
-    NSLog(@"I25: %d", ZBAR_I25);
-    NSLog(@"Code39: %d", ZBAR_CODE39);
-    NSLog(@"Code128: %d", ZBAR_CODE128);
-    NSLog(@"Code93: %d", ZBAR_CODE93);
-    NSLog(@"QR: %d", ZBAR_QRCODE);
-    NSLog(@"ZBARCODE: %d", [_currentGiftCard.zbarCodeType intValue]);
+    _barCodeImage.image = [BarcodeManager
+                           generateBarcodeImageWithContent: _currentGiftCard.accountNumber
+                                                      type: [self getType]
+                                                      size: CGSizeMake(0, 0)];
     
     //background
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg3.png"]];

@@ -64,7 +64,7 @@ BOOL stayup;
     UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(slidePickerDown)];
     NSMutableArray *buttons = [NSMutableArray arrayWithObjects: doneBtn, nil];
     [toolbar setItems:buttons animated:YES];
-    toolbar.tintColor = [UIColor blackColor];
+    toolbar.barStyle = UIBarStyleBlackOpaque;
     
     [self.view addSubview:toolbar];
     
@@ -193,14 +193,104 @@ BOOL stayup;
 
 - (void)initZBarReader
 {
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self selector:@selector(orientationChanged:)
+     name:UIDeviceOrientationDidChangeNotification
+     object:[UIDevice currentDevice]];
     reader = [ZBarReaderViewController new];
     reader.readerDelegate = self;
+    reader.supportedOrientationsMask = ZBarOrientationMask(UIInterfaceOrientationMaskPortrait);
+    reader.showsZBarControls = NO;
+    reader.cameraOverlayView = [self getCameraOverlay:YES];
     [reader.scanner setSymbology: ZBAR_QRCODE
                           config: ZBAR_CFG_ENABLE
                               to: 0];
     reader.readerView.zoom = 1.0;
 }
 
+- (void) orientationChanged:(NSNotification *)note
+{
+    UIDevice * device = note.object;
+    switch(device.orientation)
+    {
+        case UIDeviceOrientationPortrait:
+            reader.cameraOverlayView = [self getCameraOverlay:YES];
+            break;
+            
+        case UIDeviceOrientationLandscapeLeft:
+        case UIDeviceOrientationLandscapeRight:
+            reader.cameraOverlayView = [self getCameraOverlay:NO];
+            /* start special animation */
+            break;
+            
+        default:
+            break;
+    };
+}
+
+-(UIView*)getCameraOverlay:(BOOL)isPortrait{
+    int width, height;
+    if(isPortrait){
+        width = 320;
+        height = 480;
+    } else {
+        width = 480;
+        height = 320;
+    }
+    UIView *overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+    
+    //instructions label 
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, 40)];
+    label.text = @"Align barcode to scan gift card.";
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [label setBackgroundColor:[UIColor colorWithHue:0.0 saturation:0.0 brightness:0.0 alpha:0.5]];
+    [overlay addSubview:label];
+    
+    //reader toolbar menu
+    UIToolbar *readerToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, height - 45, width, 45)];
+    UIBarButtonItem *cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:self action:@selector(cancelReader)];
+    NSMutableArray *readerToolbarButtons = [NSMutableArray arrayWithObjects: cancelBtn, nil];
+    [readerToolbar setItems:readerToolbarButtons animated:YES];
+    readerToolbar.barStyle = UIBarStyleBlackOpaque;
+    [overlay addSubview:readerToolbar];
+    int offset;
+    if(!isPortrait)
+        offset = 30;
+    else
+        offset = 0;
+    //images for brackets
+    //top left
+    UIImageView *bl = [[UIImageView alloc]initWithFrame:CGRectMake(10, (2 * height / 3), 30, 30)];
+    bl.image = [UIImage imageNamed:@"bl.png"];
+    
+    //bottom left
+    UIImageView *tl = [[UIImageView alloc]initWithFrame:CGRectMake(10, (height / 3) - offset, 30, 30)];
+    tl.image = [UIImage imageNamed:@"tl.png"];
+    
+    //top right
+    UIImageView *br = [[UIImageView alloc]initWithFrame:CGRectMake(width - 10 - 30, (2 * height / 3), 30, 30)];
+    br.image = [UIImage imageNamed:@"br.png"];
+    
+    //bottom right
+    UIImageView *tr = [[UIImageView alloc]initWithFrame:CGRectMake(width - 10 - 30, (height / 3) - offset, 30, 30)];
+    tr.image = [UIImage imageNamed:@"tr.png"];
+    
+    //add subviews
+    [overlay addSubview:tl];
+    [overlay addSubview:bl];
+    [overlay addSubview:tr];
+    [overlay addSubview:br];
+    
+    //return camera overlay view
+    return overlay;
+}
+
+
+-(void)cancelReader{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 -(UITextField*)makeTexfieldWithCGRect:(CGRect)cgrect withPlaceholder:(NSString*)placeholder
 {
@@ -213,7 +303,6 @@ BOOL stayup;
     [self.view addSubview:textField];
     return textField;
 }
-
 
 
 #pragma mark - IBActions
@@ -252,9 +341,10 @@ BOOL stayup;
 #pragma mark - ZBar Functions
 
 - (void)scan {
-    reader.readerView.showsFPS = YES;
+    reader.readerView.showsFPS = NO;
     reader.readerView.zoom = 1.0;
     reader.supportedOrientationsMask = (reader.showsZBarControls)
+    
     ? ZBarOrientationMaskAll
     : ZBarOrientationMask(UIInterfaceOrientationPortrait); // tmp disable
     
@@ -312,6 +402,20 @@ BOOL stayup;
         [_accountNumber setEnabled:NO];
         [_accountNumber setOpaque:0.7];
     }
+}
+
+#pragma mark - Auto Rotate Functions
+
+-(BOOL)shouldAutorotate{
+    return YES;
+}
+
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+//for prior ios support
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
+    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Array of Supported Retailers
