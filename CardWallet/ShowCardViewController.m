@@ -99,19 +99,25 @@
 	// Do any additional setup after loading the view.
     //Change title of navigation bar
     _navigationBar.topItem.title = _currentGiftCard.name;
-    
+    self.navigationBar.frame = CGRectMake(0, 0, self.navigationBar.frame.size.width, self.navigationBar.frame.size.height);
     //labels
     _storeLabel.text = _currentGiftCard.store.name;
     _accountNumberLabel.text = _currentGiftCard.accountNumber;
     _pinLabel.text = _currentGiftCard.pin;
     //barcode image
-    _barCodeImage.image = [BarcodeManager
+    //_barCodeImage.image
+    UIImage *bc = [BarcodeManager
                            generateBarcodeImageWithContent: _currentGiftCard.accountNumber
                                                       type: [self getType]
                                                       size: CGSizeMake(0, 0)];
     
+    UIImageView *bcImage = [[UIImageView alloc] initWithFrame:CGRectMake((480 / 2) - (bc.size.width / 2),
+                                                                         (320 / 2) - (2 * bc.size.height / 3),
+                                                                          bc.size.width, bc.size.height)];
+    bcImage.image = bc;
+    [self.view addSubview:bcImage];
     //background
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg3.png"]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg3Horiz.png"]];
     
     //set background to gift card
     _cardImage.image = [UIImage imageNamed:@"card.png"];
