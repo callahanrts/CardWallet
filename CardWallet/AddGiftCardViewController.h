@@ -14,11 +14,12 @@
 @protocol AddGiftCardViewControllerDelegate;
 
 @interface AddGiftCardViewController : UIViewController
-<ZBarReaderDelegate, ZBarReaderViewDelegate, UITextFieldDelegate, UIPickerViewDelegate>
+<ZBarReaderDelegate, UITextFieldDelegate, UIPickerViewDelegate>
 
 @property (strong, nonatomic) GiftCard *currentGiftCard;
 @property (strong, nonatomic) ZBarReaderViewController *reader;
 @property (weak, nonatomic) id <AddGiftCardViewControllerDelegate> delegate;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) IBOutlet UITextField *name;
 @property (strong, nonatomic) IBOutlet UITextField *accountNumber;
@@ -40,7 +41,7 @@
 @end
 
 @protocol AddGiftCardViewControllerDelegate
--(void)AddGiftCardViewControllerDidSave;
+-(void)AddGiftCardViewControllerDidSave:(GiftCard*)giftCardAdded;
 -(void)AddGiftCardViewControllerDidCancel:(GiftCard*)giftCardToDelete;
 
 @end

@@ -80,8 +80,6 @@
 		1F380AF51657450100788014 /* walgreens.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380ABD1657450100788014 /* walgreens.png */; };
 		1F380AF61657450100788014 /* walmart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380ABE1657450100788014 /* walmart.png */; };
 		1F380AF71657450100788014 /* wholefoods.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380ABF1657450100788014 /* wholefoods.png */; };
-		1F3DC365164DCF040085586B /* GiftCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC364164DCF040085586B /* GiftCardTableViewController.m */; };
-		1F3DC368164DCF700085586B /* GiftCardTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3DC367164DCF700085586B /* GiftCardTableCell.m */; };
 		1F484608165BE44400933F30 /* fold1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F484606165BE44400933F30 /* fold1@2x.png */; };
 		1F484609165BE44400933F30 /* fold2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F484607165BE44400933F30 /* fold2@2x.png */; };
 		1F48460D165BE8FC00933F30 /* bg3Horiz.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F48460B165BE8FC00933F30 /* bg3Horiz.png */; };
@@ -348,10 +346,6 @@
 		1F380ABD1657450100788014 /* walgreens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walgreens.png; path = icons/walgreens.png; sourceTree = "<group>"; };
 		1F380ABE1657450100788014 /* walmart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walmart.png; path = icons/walmart.png; sourceTree = "<group>"; };
 		1F380ABF1657450100788014 /* wholefoods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wholefoods.png; path = icons/wholefoods.png; sourceTree = "<group>"; };
-		1F3DC363164DCF040085586B /* GiftCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableViewController.h; sourceTree = "<group>"; };
-		1F3DC364164DCF040085586B /* GiftCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableViewController.m; sourceTree = "<group>"; };
-		1F3DC366164DCF700085586B /* GiftCardTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardTableCell.h; sourceTree = "<group>"; };
-		1F3DC367164DCF700085586B /* GiftCardTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardTableCell.m; sourceTree = "<group>"; };
 		1F484606165BE44400933F30 /* fold1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fold1@2x.png"; path = "icons/fold1@2x.png"; sourceTree = "<group>"; };
 		1F484607165BE44400933F30 /* fold2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fold2@2x.png"; path = "icons/fold2@2x.png"; sourceTree = "<group>"; };
 		1F48460B165BE8FC00933F30 /* bg3Horiz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg3Horiz.png; path = icons/bg3Horiz.png; sourceTree = "<group>"; };
@@ -877,10 +871,6 @@
 		1F3DC361164DCEDF0085586B /* GiftCards */ = {
 			isa = PBXGroup;
 			children = (
-				1F3DC363164DCF040085586B /* GiftCardTableViewController.h */,
-				1F3DC364164DCF040085586B /* GiftCardTableViewController.m */,
-				1F3DC366164DCF700085586B /* GiftCardTableCell.h */,
-				1F3DC367164DCF700085586B /* GiftCardTableCell.m */,
 				1FA5BA16164DEA12001AD0C8 /* AddGiftCardViewController.h */,
 				1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */,
 				1FF515D1165196C400C5E0E0 /* ShowCardViewController.h */,
@@ -1312,8 +1302,6 @@
 				1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */,
 				1F116BBA1647A269000B8660 /* StoreCell.m in Sources */,
 				1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */,
-				1F3DC365164DCF040085586B /* GiftCardTableViewController.m in Sources */,
-				1F3DC368164DCF700085586B /* GiftCardTableCell.m in Sources */,
 				1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */,
 				1FFE1F53164EE77300DA0869 /* Store.m in Sources */,
 				1FF515D3165196C400C5E0E0 /* ShowCardViewController.m in Sources */,

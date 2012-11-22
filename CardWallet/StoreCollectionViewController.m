@@ -32,7 +32,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)AddGiftCardViewControllerDidSave
+-(void)AddGiftCardViewControllerDidSave:(GiftCard*)giftCardAdded
 {
     NSError *error = nil;
     if(![self.managedObjectContext save:&error]){
@@ -42,6 +42,33 @@
     [self.collectionView reloadData];
 }
 
+-(Store*)getExistingStore:(NSString*)storeName{
+    NSError *error = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    //Search predicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name == %@)", storeName];
+    [fetchRequest setPredicate:predicate];
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if([results count] > 0)
+        return [results objectAtIndex:0];
+    return nil;
+}
+
+-(BOOL)storeDoesExist:(Store*)store{
+    NSError *error = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Store" inManagedObjectContext:_managedObjectContext];
+    [fetchRequest setEntity:entity];
+    //Search predicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name == %@)", store.name];
+    [fetchRequest setPredicate:predicate];
+    if([[_managedObjectContext executeFetchRequest:fetchRequest error:&error] count] > 1)
+        return YES;
+    else
+        return NO;
+}
 
 -(NSFetchedResultsController *)fetchedResultsController{
     if(_fetchedResultsController != nil){
@@ -119,11 +146,9 @@
     if ([_sectionChanges count] > 0)
     {
         [self.collectionView performBatchUpdates:^{
-            
             for (NSDictionary *change in _sectionChanges)
             {
                 [change enumerateKeysAndObjectsUsingBlock:^(NSNumber *key, id obj, BOOL *stop) {
-                    
                     NSFetchedResultsChangeType type = [key unsignedIntegerValue];
                     switch (type)
                     {
@@ -141,38 +166,8 @@
             }
         } completion:nil];
     }
-    
-    if ([_objectChanges count] > 0 && [_sectionChanges count] == 0)
-    {
-        [self.collectionView performBatchUpdates:^{
-            
-            for (NSDictionary *change in _objectChanges)
-            {
-                [change enumerateKeysAndObjectsUsingBlock:^(NSNumber *key, id obj, BOOL *stop) {
-                    
-                    NSFetchedResultsChangeType type = [key unsignedIntegerValue];
-                    switch (type)
-                    {
-                        case NSFetchedResultsChangeInsert:
-                            [self.collectionView insertItemsAtIndexPaths:@[obj]];
-                            break;
-                        case NSFetchedResultsChangeDelete:
-                            [self.collectionView deleteItemsAtIndexPaths:@[obj]];
-                            break;
-                        case NSFetchedResultsChangeUpdate:
-                            [self.collectionView reloadItemsAtIndexPaths:@[obj]];
-                            break;
-                        case NSFetchedResultsChangeMove:
-                            [self.collectionView moveItemAtIndexPath:obj[0] toIndexPath:obj[1]];
-                            break;
-                    }
-                }];
-            }
-        } completion:nil];
-    }
-    
+    [self.collectionView reloadData];
     [_sectionChanges removeAllObjects];
-    [_objectChanges removeAllObjects];
 }
 
 #pragma mark - Colection view customization functions
@@ -225,12 +220,12 @@
 {
     if([[segue identifier] isEqualToString:@"addCardAndStore"]){
         Store *store = (Store*)[NSEntityDescription insertNewObjectForEntityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
-        
         AddGiftCardViewController *agcvc = (AddGiftCardViewController*) segue.destinationViewController;
         agcvc.delegate = self;
         
         GiftCard *newGiftCard = (GiftCard*)[NSEntityDescription insertNewObjectForEntityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
         newGiftCard.store = store;
+        agcvc.managedObjectContext = self.managedObjectContext;
         agcvc.currentGiftCard = newGiftCard;
         agcvc.initialLoad = NO;
         agcvc.fromInStore = NO;
@@ -259,6 +254,10 @@
         NSLog(@"error fetching %@", error);
         abort();
     }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

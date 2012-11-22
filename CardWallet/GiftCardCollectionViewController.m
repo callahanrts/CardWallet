@@ -26,14 +26,16 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)AddGiftCardViewControllerDidSave
+-(void)AddGiftCardViewControllerDidSave:(GiftCard*)giftCardAdded
 {
-    NSError *error = nil;
-    if(![self.managedObjectContext save:&error]){
-        NSLog(@"Error Saving %@", error);
+    @autoreleasepool {
+        NSError *error = nil;
+        if(![self.managedObjectContext save:&error]){
+            NSLog(@"Error Saving %@", error);
+        }
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.collectionView reloadData];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.collectionView reloadData];
 }
 
 
@@ -113,11 +115,9 @@
     if ([_sectionChanges count] > 0)
     {
         [self.collectionView performBatchUpdates:^{
-            
             for (NSDictionary *change in _sectionChanges)
             {
                 [change enumerateKeysAndObjectsUsingBlock:^(NSNumber *key, id obj, BOOL *stop) {
-                    
                     NSFetchedResultsChangeType type = [key unsignedIntegerValue];
                     switch (type)
                     {
@@ -135,38 +135,8 @@
             }
         } completion:nil];
     }
-    
-    if ([_objectChanges count] > 0 && [_sectionChanges count] == 0)
-    {
-        [self.collectionView performBatchUpdates:^{
-            
-            for (NSDictionary *change in _objectChanges)
-            {
-                [change enumerateKeysAndObjectsUsingBlock:^(NSNumber *key, id obj, BOOL *stop) {
-                    
-                    NSFetchedResultsChangeType type = [key unsignedIntegerValue];
-                    switch (type)
-                    {
-                        case NSFetchedResultsChangeInsert:
-                            [self.collectionView insertItemsAtIndexPaths:@[obj]];
-                            break;
-                        case NSFetchedResultsChangeDelete:
-                            [self.collectionView deleteItemsAtIndexPaths:@[obj]];
-                            break;
-                        case NSFetchedResultsChangeUpdate:
-                            [self.collectionView reloadItemsAtIndexPaths:@[obj]];
-                            break;
-                        case NSFetchedResultsChangeMove:
-                            [self.collectionView moveItemAtIndexPath:obj[0] toIndexPath:obj[1]];
-                            break;
-                    }
-                }];
-            }
-        } completion:nil];
-    }
-    
+    [self.collectionView reloadData];
     [_sectionChanges removeAllObjects];
-    [_objectChanges removeAllObjects];
 }
 
 #pragma mark - Colection view customization functions
@@ -208,11 +178,10 @@
     self.collectionView.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg2.png"]];
     //top left bottom right
     [self.collectionView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
-    
+    NSError *error = nil;
     //Change title of navigation bar
     self.navigationController.topViewController.title = _currentStore.name;
     //fetch data
-    NSError *error = nil;
     if(![self.fetchedResultsController performFetch:&error]){
         NSLog(@"Error fetching data, %@", error);
         abort();
@@ -228,6 +197,7 @@
         
         GiftCard *newGiftCard = (GiftCard*)[NSEntityDescription insertNewObjectForEntityForName:@"GiftCard" inManagedObjectContext:self.managedObjectContext];
         newGiftCard.store = _currentStore;
+        agcvc.managedObjectContext = self.managedObjectContext;
         agcvc.currentGiftCard = newGiftCard;
         agcvc.initialLoad = YES;
         agcvc.fromInStore = YES;
@@ -242,6 +212,12 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [self.collectionView reloadData];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    if([self numberOfGiftCardsInStore:_currentStore] < 1){
+        [self.navigationController popViewControllerAnimated:YES];
+    }
     [self.collectionView reloadData];
 }
 
@@ -263,5 +239,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Custom Functions
+
+-(NSInteger)numberOfGiftCardsInStore:(Store*)store{
+    NSError *error = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"GiftCard" inManagedObjectContext:_managedObjectContext];
+    [fetchRequest setEntity:entity];
+    //Search predicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(store == %@)", store];
+    [fetchRequest setPredicate:predicate];
+    return [[_managedObjectContext executeFetchRequest:fetchRequest error:&error] count];
 }
 @end

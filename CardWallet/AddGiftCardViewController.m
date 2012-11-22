@@ -45,8 +45,8 @@ BOOL stayup;
     CGRect fourthPos  = CGRectMake(20, 240, 280, 35);
     CGRect fifthPos   = CGRectMake(20, 285, 280, 35);
     //height is standard
-    CGRect pickerRect = CGRectMake(0, 244 + 250, 320, 250);
-    CGRect toolbarRect = CGRectMake(0, 244 + 250, 320, 35);
+    CGRect pickerRect = CGRectMake(0, 480, 320, 236);
+    CGRect toolbarRect = CGRectMake(0, 480, 320, 35);
     
     _storeName     = [self makeTexfieldWithCGRect:firstPos  withPlaceholder:@"Store Name"];
     _name          = [self makeTexfieldWithCGRect:secondPos withPlaceholder:@"Gift Card Name"];
@@ -159,20 +159,16 @@ BOOL stayup;
 #pragma mark - Custom Functions
 
 -(void)slidePickerDown{
-    CGPoint toolbarOrigin = toolbar.frame.origin, pickerOrigin = picker.frame.origin;
-    CGSize  toolbarSize   = toolbar.frame.size,   pickerSize   = picker.frame.size;
     [UIView animateWithDuration:0.3 animations:^{
-        picker.frame = CGRectMake(pickerOrigin.x, pickerOrigin.y + pickerSize.height, pickerSize.width, pickerSize.height);
-        toolbar.frame = CGRectMake(toolbarOrigin.x, toolbarOrigin.y + pickerSize.height + toolbarSize.height, toolbarSize.width, toolbarSize.height);
+        picker.frame = CGRectMake(0, 480, 320, 236);
+        toolbar.frame = CGRectMake(0, 480, 320, 35);
     }];
     [_storeName setEnabled:YES];
 }
 -(void)slidePickerUp{
-    CGPoint toolbarOrigin = toolbar.frame.origin, pickerOrigin = picker.frame.origin;
-    CGSize  toolbarSize   = toolbar.frame.size,   pickerSize   = picker.frame.size;
     [UIView animateWithDuration:0.3 animations:^{
-        picker.frame = CGRectMake(pickerOrigin.x, pickerOrigin.y - pickerSize.height, pickerSize.width, pickerSize.height);
-        toolbar.frame = CGRectMake(toolbarOrigin.x, toolbarOrigin.y - pickerSize.height - toolbarSize.height, toolbarSize.width, toolbarSize.height);
+        picker.frame = CGRectMake(0, 480 - 236, 320, 236);
+        toolbar.frame = CGRectMake(0, 480 - 236 - 35, 320, 35);
     }];
     [_storeName setEnabled:NO];
 }
@@ -315,7 +311,7 @@ BOOL stayup;
     [self.delegate AddGiftCardViewControllerDidCancel:self.currentGiftCard];
 }
 
-- (IBAction)save:(id)sender {
+- (IBAction)save:(id)sender {        
     if([_storeName.text length] < 1)
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Name?" message:@"Don't forget to assign your gift card to a store!" delegate:self cancelButtonTitle:@"Go Back" otherButtonTitles:nil];
@@ -332,7 +328,7 @@ BOOL stayup;
         self.currentGiftCard.accountNumber = _accountNumber.text;
         self.currentGiftCard.pin = _pinNumber.text;
         self.currentGiftCard.barCode = _barCode.text;
-        [self.delegate AddGiftCardViewControllerDidSave];
+        [self.delegate AddGiftCardViewControllerDidSave:self.currentGiftCard];
     }
 }
 
@@ -422,6 +418,7 @@ BOOL stayup;
 
 - (void)initializeSupportedRetailers{
     retailers = [[NSMutableArray alloc]initWithObjects:
+                 @"", 
                  @"Abercrombie & Fitch",
                  @"Addidas",
                  @"Aeropostale",
@@ -477,7 +474,7 @@ BOOL stayup;
                  @"Game Stop",
                  @"Gap",
                  @"Home Depot",
-                 @"iTunes",
+                 @"ITunes",
                  @"JCPenny",
                  @"Kohls",
                  @"Kroger",
@@ -506,6 +503,7 @@ BOOL stayup;
                  nil];
     
     icons = [[NSMutableArray alloc] initWithObjects:
+             @"",
              @"abercrombie.png",
              @"addidas.png",
              @"aeropostale.png",
@@ -560,6 +558,7 @@ BOOL stayup;
              @"gamestop.png",
              @"gap.png",
              @"homedepot.png",
+             @"ikea.png",
              @"itunes.png",
              @"jcpenny.png",
              @"kohls.png",
@@ -591,6 +590,31 @@ BOOL stayup;
     [icons sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     [retailers addObject:@"Other"];
     [icons addObject:@"other.png"];
+    [self removeUsedStoresFromList];
+}
+
+-(void)removeUsedStoresFromList
+{
+    NSError *error = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    //Search predicate
+    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    NSMutableIndexSet *toDelete = [NSMutableIndexSet indexSet];
+    
+    for(Store *store in results)
+    {
+        for(NSString *name in retailers){
+            int index = [retailers indexOfObject:name];
+            //NSLog(@"%@ == %@", store.name, [retailers objectAtIndex:index]);
+            if([store.name isEqualToString:name]){
+                [toDelete addIndex:[retailers indexOfObject:name]];
+            }//if
+        }//for
+    }//for
+    [retailers removeObjectsAtIndexes:toDelete];
+    [icons     removeObjectsAtIndexes:toDelete];
 }
 @end
 

@@ -72,6 +72,17 @@
     return type;
 }
 
+-(NSInteger)numberOfGiftCardsInStore:(Store*)store{
+    NSError *error = nil;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"GiftCard" inManagedObjectContext:_managedObjectContext];
+    [fetchRequest setEntity:entity];
+    //Search predicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(store == %@)", store];
+    [fetchRequest setPredicate:predicate];
+    return [[_managedObjectContext executeFetchRequest:fetchRequest error:&error] count];
+}
+
 #pragma mark - Buttons
 - (IBAction)deleteCard:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Remove Gift Card?" message:@"Do you really want to delete this gift card?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Delete", nil];
@@ -151,8 +162,8 @@
         if(![self.managedObjectContext save:&error]){
             NSLog(@"Error saving deleted object, %@", error);
         }
-        [self dismissViewControllerAnimated:YES completion:nil];
-        
+        BOOL isLast = ([self numberOfGiftCardsInStore:_currentGiftCard.store] < 1) ? YES : NO;
+        [self dismissViewControllerAnimated:isLast completion:nil];
     }
 }
 
