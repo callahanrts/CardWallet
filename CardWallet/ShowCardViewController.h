@@ -12,7 +12,7 @@
 #import "BarcodeManager.h"
 #import "ZBarSymbol.h"
 
-@interface ShowCardViewController : UIViewController <UIAlertViewDelegate>
+@interface ShowCardViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) GiftCard *currentGiftCard;
 
@@ -21,7 +21,10 @@
 @property (strong, nonatomic) IBOutlet UIImageView *barCodeImage;
 @property (strong, nonatomic) IBOutlet UILabel *accountNumberLabel;
 @property (strong, nonatomic) IBOutlet UILabel *pinLabel;
+@property (strong, nonatomic) IBOutlet UITextField *balanceField;
+
 @property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
+@property (strong, nonatomic) IBOutlet UILabel *pinTitle;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)deleteCard:(id)sender;

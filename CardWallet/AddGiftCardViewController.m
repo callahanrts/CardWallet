@@ -42,17 +42,20 @@ BOOL stayup;
     CGRect firstPos   = CGRectMake(20, 105, 280, 35);
     CGRect secondPos  = CGRectMake(20, 150, 280, 35);
     CGRect thirdPos   = CGRectMake(20, 195, 280, 35);
-    CGRect fourthPos  = CGRectMake(20, 240, 280, 35);
-    CGRect fifthPos   = CGRectMake(20, 285, 280, 35);
+    CGRect fourthPos  = CGRectMake(20, 240, 130, 35);
+    CGRect fifthPos   = CGRectMake(170, 240, 130, 35);
+    //CGRect sixthPos   = CGRectMake(20, 8, 280, 35);
     //height is standard
     CGRect pickerRect = CGRectMake(0, 480, 320, 236);
     CGRect toolbarRect = CGRectMake(0, 480, 320, 35);
     
-    _storeName     = [self makeTexfieldWithCGRect:firstPos  withPlaceholder:@"Store Name"];
-    _name          = [self makeTexfieldWithCGRect:secondPos withPlaceholder:@"Gift Card Name"];
-    _accountNumber = [self makeTexfieldWithCGRect:thirdPos  withPlaceholder:@"Account Number"];
-    _pinNumber     = [self makeTexfieldWithCGRect:fourthPos withPlaceholder:@"Pin Number"];
-    _barCode       = [self makeTexfieldWithCGRect:fifthPos  withPlaceholder:@"Bar Code"];
+    _storeName     = [self makeTexfieldWithCGRect:firstPos  withPlaceholder:@"Store Name" usesNumbers: NO];
+    _name          = [self makeTexfieldWithCGRect:secondPos withPlaceholder:@"Gift Card Name" usesNumbers: NO];
+    _accountNumber = [self makeTexfieldWithCGRect:thirdPos  withPlaceholder:@"Account Number" usesNumbers: NO];
+    _pinNumber     = [self makeTexfieldWithCGRect:fourthPos withPlaceholder:@"Pin Number" usesNumbers: YES];
+    //_barCode       = [self makeTexfieldWithCGRect:fifthPos  withPlaceholder:@"Bar Code"];
+    _balance       = [self makeTexfieldWithCGRect:fifthPos  withPlaceholder:@"Balance" usesNumbers: YES];
+    
     if(fromInStore){
         _storeName.text = self.currentGiftCard.store.name;
         [_storeName setEnabled:NO];
@@ -288,7 +291,7 @@ BOOL stayup;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(UITextField*)makeTexfieldWithCGRect:(CGRect)cgrect withPlaceholder:(NSString*)placeholder
+-(UITextField*)makeTexfieldWithCGRect:(CGRect)cgrect withPlaceholder:(NSString*)placeholder usesNumbers:(BOOL)numberKeyboard
 {
     UITextField* textField = [[UITextField alloc] initWithFrame:cgrect];
     textField.borderStyle = UITextBorderStyleRoundedRect;
@@ -296,6 +299,8 @@ BOOL stayup;
     textField.returnKeyType = UIReturnKeyDone;
     textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     textField.delegate = self;
+    if(numberKeyboard)
+        textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     [self.view addSubview:textField];
     return textField;
 }
@@ -317,6 +322,11 @@ BOOL stayup;
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Name?" message:@"Don't forget to assign your gift card to a store!" delegate:self cancelButtonTitle:@"Go Back" otherButtonTitles:nil];
         [alert show];
     }
+    else if([_name.text length] < 1)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Name?" message:@"Don't forget to give a name to your gift card!" delegate:self cancelButtonTitle:@"Go Back" otherButtonTitles:nil];
+        [alert show];   
+    }
     else
     {
         NSUInteger index = [retailers indexOfObject:_storeName.text];
@@ -328,6 +338,7 @@ BOOL stayup;
         self.currentGiftCard.accountNumber = _accountNumber.text;
         self.currentGiftCard.pin = _pinNumber.text;
         self.currentGiftCard.barCode = _barCode.text;
+        self.currentGiftCard.balance = _balance.text;
         [self.delegate AddGiftCardViewControllerDidSave:self.currentGiftCard];
     }
 }
@@ -605,10 +616,10 @@ BOOL stayup;
     
     for(Store *store in results)
     {
-        for(NSString *name in retailers){
-            int index = [retailers indexOfObject:name];
-            //NSLog(@"%@ == %@", store.name, [retailers objectAtIndex:index]);
-            if([store.name isEqualToString:name]){
+        for(NSString *name in retailers)
+        {
+            if([store.name isEqualToString:name])
+            {
                 [toDelete addIndex:[retailers indexOfObject:name]];
             }//if
         }//for

@@ -14,6 +14,7 @@
 
 @dynamic accountNumber;
 @dynamic barCode;
+@dynamic balance;
 @dynamic name;
 @dynamic pin;
 @dynamic zbarCodeType;

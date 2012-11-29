@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * accountNumber;
 @property (nonatomic, retain) NSString * barCode;
+@property (nonatomic, retain) NSString * balance;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * pin;
 @property (nonatomic, retain) NSNumber * zbarCodeType;

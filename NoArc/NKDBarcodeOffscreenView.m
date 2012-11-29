@@ -100,8 +100,6 @@
     }
     if ([barcode printsCaption])
     {
-		NSLog(@":::::::NOTE:::::: DOES NOT CURRENTLY PRINT CAPTION");
-		NSLog(@":::::::NOTE:::::: FIX PROGRAMMER");		
 		/*
 		NSMutableAttributedString *sAttr;
 		float kerning;

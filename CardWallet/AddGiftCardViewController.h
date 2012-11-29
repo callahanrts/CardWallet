@@ -26,6 +26,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *barCode;
 @property (strong, nonatomic) IBOutlet UITextField *pinNumber;
 @property (strong, nonatomic) IBOutlet UITextField *storeName;
+@property (strong, nonatomic) IBOutlet UITextField *balance;
 @property (strong, nonatomic) IBOutlet UIPickerView *storePicker;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *saveBtn;
 @property BOOL initialLoad;

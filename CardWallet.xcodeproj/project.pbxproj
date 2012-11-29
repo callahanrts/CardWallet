@@ -201,6 +201,9 @@
 		1F7B187F1659ACC8005FDD5C /* BarcodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B187E1659ACC8005FDD5C /* BarcodeManager.m */; };
 		1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */; };
 		1FAAB2531659CD5C000C9E3F /* GiftCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2521659CD5B000C9E3F /* GiftCard.m */; };
+		1FB4B7AA16645953007BE706 /* other.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4B7A916645953007BE706 /* other.png */; };
+		1FB4B7AD16645B6D007BE706 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4B7AC16645B6D007BE706 /* Default@2x.png */; };
+		1FB4B7AF16645B7B007BE706 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FB4B7AE16645B7B007BE706 /* Default.png */; };
 		1FBC5065165B480F00F335A2 /* bg1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC5062165B480F00F335A2 /* bg1@2x.png */; };
 		1FBC5066165B480F00F335A2 /* bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC5063165B480F00F335A2 /* bg2@2x.png */; };
 		1FBC5067165B480F00F335A2 /* bg3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FBC5064165B480F00F335A2 /* bg3@2x.png */; };
@@ -470,6 +473,10 @@
 		1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGiftCardViewController.m; sourceTree = "<group>"; };
 		1FAAB2511659CD5B000C9E3F /* GiftCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCard.h; sourceTree = "<group>"; };
 		1FAAB2521659CD5B000C9E3F /* GiftCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCard.m; sourceTree = "<group>"; };
+		1FAE0CC4166670760047DF87 /* CardWallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CardWallet.entitlements; sourceTree = "<group>"; };
+		1FB4B7A916645953007BE706 /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = other.png; path = icons/other.png; sourceTree = "<group>"; };
+		1FB4B7AC16645B6D007BE706 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		1FB4B7AE16645B7B007BE706 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		1FBC5062165B480F00F335A2 /* bg1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg1@2x.png"; path = "icons/bg1@2x.png"; sourceTree = "<group>"; };
 		1FBC5063165B480F00F335A2 /* bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg2@2x.png"; path = "icons/bg2@2x.png"; sourceTree = "<group>"; };
 		1FBC5064165B480F00F335A2 /* bg3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg3@2x.png"; path = "icons/bg3@2x.png"; sourceTree = "<group>"; };
@@ -623,6 +630,7 @@
 		1F10C1C516479FE400CC7519 /* CardWallet */ = {
 			isa = PBXGroup;
 			children = (
+				1FAE0CC4166670760047DF87 /* CardWallet.entitlements */,
 				1F10C1D716479FE400CC7519 /* CardWallet.xcdatamodeld */,
 				1F10C1DF1647A07700CC7519 /* MainiPhoneStoryBoard.storyboard */,
 				1F10C1CE16479FE400CC7519 /* AppDelegate.h */,
@@ -656,6 +664,7 @@
 		1F116BBB1647A2D5000B8660 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				1FB4B7A916645953007BE706 /* other.png */,
 				1F484755165C89E700933F30 /* burlington.png */,
 				1F484673165C6D6900933F30 /* 711.png */,
 				1F484674165C6D6900933F30 /* abercrombie.png */,
@@ -860,6 +869,8 @@
 		1F380A761656106F00788014 /* Logos */ = {
 			isa = PBXGroup;
 			children = (
+				1FB4B7AE16645B7B007BE706 /* Default.png */,
+				1FB4B7AC16645B6D007BE706 /* Default@2x.png */,
 				1F380A6D1656030C00788014 /* iphone.png */,
 				1F380A6B1656030200788014 /* ipad.png */,
 				1F380A69165602D300788014 /* iphoneRetina.png */,
@@ -1027,7 +1038,6 @@
 				1F10C1B516479FE400CC7519 /* Sources */,
 				1F10C1B616479FE400CC7519 /* Frameworks */,
 				1F10C1B716479FE400CC7519 /* Resources */,
-				50524F424C454D533F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1270,26 +1280,13 @@
 				1F484753165C6D6900933F30 /* wholefoods.png in Resources */,
 				1F484754165C6D6900933F30 /* younkers.png in Resources */,
 				1F484756165C89E700933F30 /* burlington.png in Resources */,
+				1FB4B7AA16645953007BE706 /* other.png in Resources */,
+				1FB4B7AD16645B6D007BE706 /* Default@2x.png in Resources */,
+				1FB4B7AF16645B7B007BE706 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		50524F424C454D533F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F10C1B516479FE400CC7519 /* Sources */ = {
@@ -1374,7 +1371,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cody Callahan (P54TD7747W)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1390,6 +1388,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "46BAC003-8D39-41F6-BBE8-59E656B4A803";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1404,7 +1403,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cody Callahan (P54TD7747W)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1413,6 +1413,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "46BAC003-8D39-41F6-BBE8-59E656B4A803";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

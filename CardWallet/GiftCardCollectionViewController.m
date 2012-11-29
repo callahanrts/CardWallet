@@ -28,14 +28,12 @@
 
 -(void)AddGiftCardViewControllerDidSave:(GiftCard*)giftCardAdded
 {
-    @autoreleasepool {
-        NSError *error = nil;
-        if(![self.managedObjectContext save:&error]){
-            NSLog(@"Error Saving %@", error);
-        }
-        [self dismissViewControllerAnimated:YES completion:nil];
-        [self.collectionView reloadData];
+    NSError *error = nil;
+    if(![self.managedObjectContext save:&error]){
+        NSLog(@"Error Saving %@", error);
     }
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.collectionView reloadData];
 }
 
 
@@ -164,6 +162,7 @@
     } else {
         cell.foldImage.image = [UIImage imageNamed:@"fold2.png"];
     }
+    
     cell.giftCardImage.image = [UIImage imageNamed:giftCard.store.image];
     cell.giftCardLabel.text = giftCard.name;
     return cell;

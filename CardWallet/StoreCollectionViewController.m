@@ -42,34 +42,6 @@
     [self.collectionView reloadData];
 }
 
--(Store*)getExistingStore:(NSString*)storeName{
-    NSError *error = nil;
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Store" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    //Search predicate
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name == %@)", storeName];
-    [fetchRequest setPredicate:predicate];
-    NSArray *results = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    if([results count] > 0)
-        return [results objectAtIndex:0];
-    return nil;
-}
-
--(BOOL)storeDoesExist:(Store*)store{
-    NSError *error = nil;
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Store" inManagedObjectContext:_managedObjectContext];
-    [fetchRequest setEntity:entity];
-    //Search predicate
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name == %@)", store.name];
-    [fetchRequest setPredicate:predicate];
-    if([[_managedObjectContext executeFetchRequest:fetchRequest error:&error] count] > 1)
-        return YES;
-    else
-        return NO;
-}
-
 -(NSFetchedResultsController *)fetchedResultsController{
     if(_fetchedResultsController != nil){
         return _fetchedResultsController;
