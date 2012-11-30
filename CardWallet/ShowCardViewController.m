@@ -13,7 +13,9 @@
 @end
 
 @implementation ShowCardViewController{
+    BOOL keyboardVisible;
     int negative;
+    CGRect originalFrame;
 }
 #pragma mark - Custom Functions
 
@@ -69,7 +71,7 @@
         case 5://ean5
         default:
             NSLog(@"Unsupported Type");
-            type = Code128;
+            type = -1;
     }
     return type;
 }
@@ -113,10 +115,10 @@
     return string;
 }
 
-- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up animated:(BOOL)animated
 {
     const int movementDistance = 140 * negative; //negative for upside down orientation (1 / -1)
-    const float movementDuration = 0.3f; // tweak as needed
+    const float movementDuration = animated ? 0.3f : 0.0; // tweak as needed
     
     int movement = (up ? -movementDistance : movementDistance);
     
@@ -151,6 +153,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //set original view frame
+    originalFrame = self.view.frame;
+    
 	// Do any additional setup after loading the view.
     //Change title of navigation bar
     _navigationBar.topItem.title = _currentGiftCard.name;
@@ -168,9 +173,11 @@
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(deviceOrientationDidChange:) name: UIDeviceOrientationDidChangeNotification object: nil];
 
     //labels
+    NSString *acctNumber = @"Acct: ";
+    NSString *number = _currentGiftCard.accountNumber ? [self getAccountString:_currentGiftCard.accountNumber]:@"";
     _storeLabel.text = _currentGiftCard.store.name;
     _accountNumberLabel.numberOfLines = 0;
-    _accountNumberLabel.text = _currentGiftCard.accountNumber ? [self getAccountString:_currentGiftCard.accountNumber]:@"";
+    _accountNumberLabel.text = [acctNumber stringByAppendingString:number];
     _pinLabel.text = _currentGiftCard.pin;
     _balanceField.delegate = self;
     _balanceField.text = _currentGiftCard.balance;
@@ -189,10 +196,10 @@
                                                                          (320 / 2) - (2 * bc.size.height / 3),
                                                                           bc.size.width, bc.size.height)];
     
-    
-    [self.view addSubview:bcImage];
-    bcImage.image = bc;
-    
+    if([self getType] != -1){
+        [self.view addSubview:bcImage];
+        bcImage.image = bc;
+    }
     if(bcImage.frame.size.width > 390){
         bc = [BarcodeManager generateBarcodeImageWithContent: _currentGiftCard.accountNumber type:[self getType] size:CGSizeMake(390, 0)];
         bcImage.frame = CGRectMake((480 / 2) - (390 / 2), (320 / 2) - (2 * bcImage.frame.size.height / 3), 390, bcImage.frame.size.height);
@@ -200,11 +207,15 @@
     }
 }
 
+
 -(void)deviceOrientationDidChange: (NSNotification *)notification {
     //Obtaining the current device orientation
     UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
     
     //Ignoring specific orientations
+    if(keyboardVisible){
+        [self animateTextField:_balanceField up:NO animated:NO];
+    }
     if (orientation == UIDeviceOrientationLandscapeLeft)
         negative = -1;
     else
@@ -238,10 +249,12 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    [self animateTextField: textField up: YES];
+    keyboardVisible = YES;
+    [self animateTextField: textField up: YES animated:YES];
 }
 -(void)textFieldDidEndEditing:(UITextField *)textField{
-    [self animateTextField: textField up: NO];
+    [self animateTextField: textField up: NO animated:YES];
+    keyboardVisible = NO;
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
@@ -261,5 +274,6 @@
         [self dismissViewControllerAnimated:isLast completion:nil];
     }
 }
+
 
 @end

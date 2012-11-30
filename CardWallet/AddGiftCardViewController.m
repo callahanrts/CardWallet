@@ -17,6 +17,7 @@
     NSMutableArray *retailers;
     NSMutableArray *icons;
     UIToolbar *toolbar;
+    int phoneHeight;
 }
 @synthesize reader;
 @synthesize initialLoad;
@@ -37,6 +38,17 @@ BOOL stayup;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if (screenSize.height > 480.0f) {
+            phoneHeight = 568;
+        } else {
+            phoneHeight = 480;
+        }
+    }
+    
 	// Do any additional setup after loading the view.
     //x y width height
     CGRect firstPos   = CGRectMake(20, 105, 280, 35);
@@ -46,8 +58,8 @@ BOOL stayup;
     CGRect fifthPos   = CGRectMake(170, 240, 130, 35);
     //CGRect sixthPos   = CGRectMake(20, 8, 280, 35);
     //height is standard
-    CGRect pickerRect = CGRectMake(0, 480, 320, 236);
-    CGRect toolbarRect = CGRectMake(0, 480, 320, 35);
+    CGRect pickerRect = CGRectMake(0, phoneHeight, 320, 236);
+    CGRect toolbarRect = CGRectMake(0, phoneHeight, 320, 35);
     
     _storeName     = [self makeTexfieldWithCGRect:firstPos  withPlaceholder:@"Store Name" usesNumbers: NO];
     _name          = [self makeTexfieldWithCGRect:secondPos withPlaceholder:@"Gift Card Name" usesNumbers: NO];
@@ -162,16 +174,17 @@ BOOL stayup;
 #pragma mark - Custom Functions
 
 -(void)slidePickerDown{
+    
     [UIView animateWithDuration:0.3 animations:^{
-        picker.frame = CGRectMake(0, 480, 320, 236);
-        toolbar.frame = CGRectMake(0, 480, 320, 35);
+        picker.frame = CGRectMake(0, phoneHeight, 320, 236);
+        toolbar.frame = CGRectMake(0, phoneHeight, 320, 35);
     }];
     [_storeName setEnabled:YES];
 }
 -(void)slidePickerUp{
     [UIView animateWithDuration:0.3 animations:^{
-        picker.frame = CGRectMake(0, 480 - 236, 320, 236);
-        toolbar.frame = CGRectMake(0, 480 - 236 - 35, 320, 35);
+        picker.frame = CGRectMake(0, phoneHeight - 236, 320, 236);
+        toolbar.frame = CGRectMake(0, phoneHeight - 236 - 35, 320, 35);
     }];
     [_storeName setEnabled:NO];
 }
@@ -206,6 +219,7 @@ BOOL stayup;
                           config: ZBAR_CFG_ENABLE
                               to: 0];
     reader.readerView.zoom = 1.0;
+    
 }
 
 - (void) orientationChanged:(NSNotification *)note

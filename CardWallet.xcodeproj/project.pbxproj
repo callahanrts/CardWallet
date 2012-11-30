@@ -473,7 +473,6 @@
 		1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGiftCardViewController.m; sourceTree = "<group>"; };
 		1FAAB2511659CD5B000C9E3F /* GiftCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCard.h; sourceTree = "<group>"; };
 		1FAAB2521659CD5B000C9E3F /* GiftCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCard.m; sourceTree = "<group>"; };
-		1FAE0CC4166670760047DF87 /* CardWallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CardWallet.entitlements; sourceTree = "<group>"; };
 		1FB4B7A916645953007BE706 /* other.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = other.png; path = icons/other.png; sourceTree = "<group>"; };
 		1FB4B7AC16645B6D007BE706 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		1FB4B7AE16645B7B007BE706 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
@@ -630,7 +629,6 @@
 		1F10C1C516479FE400CC7519 /* CardWallet */ = {
 			isa = PBXGroup;
 			children = (
-				1FAE0CC4166670760047DF87 /* CardWallet.entitlements */,
 				1F10C1D716479FE400CC7519 /* CardWallet.xcdatamodeld */,
 				1F10C1DF1647A07700CC7519 /* MainiPhoneStoryBoard.storyboard */,
 				1F10C1CE16479FE400CC7519 /* AppDelegate.h */,
@@ -1372,7 +1370,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cody Callahan (P54TD7747W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cody Callahan";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1388,7 +1386,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "46BAC003-8D39-41F6-BBE8-59E656B4A803";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1404,7 +1402,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cody Callahan (P54TD7747W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cody Callahan";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1413,7 +1411,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "46BAC003-8D39-41F6-BBE8-59E656B4A803";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1431,6 +1429,7 @@
 					"\"$(SRCROOT)/CardWallet/ZBarSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1446,6 +1445,7 @@
 					"\"$(SRCROOT)/CardWallet/ZBarSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
