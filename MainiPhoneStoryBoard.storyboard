@@ -98,6 +98,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Stores" id="EvE-a9-qnv">
+                        <barButtonItem key="leftBarButtonItem" title="Info" id="MTf-8i-ANF">
+                            <connections>
+                                <action selector="infoBtn:" destination="UNq-6s-VFW" id="sWN-sJ-1r0"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hvK-Sn-7Kc">
                             <connections>
                                 <action selector="addStore:" destination="UNq-6s-VFW" id="OUI-7H-bXf"/>

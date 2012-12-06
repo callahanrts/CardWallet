@@ -214,6 +214,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //first launch
+    BOOL foo = [[NSUserDefaults standardUserDefaults]boolForKey:@"previouslyLaunched"];
+    if (!foo)
+    {
+        NSLog(@"FirstLaunch");
+        [self showHelp];
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"previouslyLaunched"];
+    }
+    
     self.collectionView.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg1.png"]];
     //top left bottom right
     [self.collectionView setContentInset:UIEdgeInsetsMake(10, 0, 10, 0)];
@@ -228,6 +238,11 @@
     }
 }
 
+-(void)showHelp{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hey there, Awesome!" message:@"Welcome to Card Wallet. \n Use Card Wallet to store your gift cards for mobile use. Scan gift cards in using bar codes or enter the information manually. Use gift cards at stores that scan bar codes or simply keep information in app for online purchases. \n \n Let Card Wallet lighten your wallet so you can save room for cash!" delegate:self cancelButtonTitle:@"Begin!" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
 -(void)viewDidAppear:(BOOL)animated{
     [self.collectionView reloadData];
 }
@@ -239,4 +254,7 @@
 }
 
 
+- (IBAction)infoBtn:(id)sender {
+    [self showHelp];
+}
 @end

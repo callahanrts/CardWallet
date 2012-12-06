@@ -246,9 +246,9 @@ BOOL stayup;
     int width, height;
     if(isPortrait){
         width = 320;
-        height = 480;
+        height = self.view.frame.size.height + 20;
     } else {
-        width = 480;
+        width = self.view.frame.size.height + 20;
         height = 320;
     }
     UIView *overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, height)];

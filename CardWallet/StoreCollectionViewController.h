@@ -16,6 +16,7 @@
 @interface StoreCollectionViewController : UICollectionViewController
 <AddGiftCardViewControllerDelegate, NSFetchedResultsControllerDelegate>
 
+- (IBAction)infoBtn:(id)sender;
 @property (nonatomic, retain) AppDelegate *theAppDelegate;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
