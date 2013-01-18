@@ -22,13 +22,14 @@
 		1F116BB61647A228000B8660 /* StoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB51647A228000B8660 /* StoreCollectionViewController.m */; };
 		1F116BBA1647A269000B8660 /* StoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BB91647A269000B8660 /* StoreCell.m */; };
 		1F116BC716481F9C000B8660 /* AddStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F116BC616481F9C000B8660 /* AddStoreViewController.m */; };
+		1F1C6AD416A9CF8A007B4567 /* VehicleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F1C6AD316A9CF8A007B4567 /* VehicleTableViewController.m */; };
 		1F380A5B1655C32200788014 /* GiftCardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A5A1655C32200788014 /* GiftCardCollectionViewController.m */; };
 		1F380A5E1655C61C00788014 /* GiftCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A5D1655C61C00788014 /* GiftCardCell.m */; };
 		1F380A68165602B200788014 /* ipadRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A67165602B200788014 /* ipadRetina.png */; };
 		1F380A6A165602D300788014 /* iphoneRetina.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A69165602D300788014 /* iphoneRetina.png */; };
 		1F380A6C1656030200788014 /* ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A6B1656030200788014 /* ipad.png */; };
 		1F380A6E1656030C00788014 /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A6D1656030C00788014 /* iphone.png */; };
-		1F380A851656A24900788014 /* NavigactionBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A841656A24900788014 /* NavigactionBarController.m */; };
+		1F380A851656A24900788014 /* NavigationBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F380A841656A24900788014 /* NavigationBarController.m */; };
 		1F380AC01657450100788014 /* 711.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A881657450100788014 /* 711.png */; };
 		1F380AC11657450100788014 /* acehardware.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A891657450100788014 /* acehardware.png */; };
 		1F380AC21657450100788014 /* amazon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F380A8A1657450100788014 /* amazon.png */; };
@@ -198,6 +199,18 @@
 		1F484753165C6D6900933F30 /* wholefoods.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4846E2165C6D6900933F30 /* wholefoods.png */; };
 		1F484754165C6D6900933F30 /* younkers.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F4846E3165C6D6900933F30 /* younkers.png */; };
 		1F484756165C89E700933F30 /* burlington.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F484755165C89E700933F30 /* burlington.png */; };
+		1F5AA42216A9D71800BCCC40 /* License.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5AA42116A9D71800BCCC40 /* License.m */; };
+		1F5AA42616A9D71800BCCC40 /* Vehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5AA42516A9D71800BCCC40 /* Vehicle.m */; };
+		1F5AA42916A9D71800BCCC40 /* Insurance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5AA42816A9D71800BCCC40 /* Insurance.m */; };
+		1F5AA42C16A9D96000BCCC40 /* InsuranceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5AA42B16A9D96000BCCC40 /* InsuranceTableViewController.m */; };
+		1F5AA42F16A9DE0100BCCC40 /* cardicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5AA42D16A9DE0100BCCC40 /* cardicon.png */; };
+		1F5AA43016A9DE0100BCCC40 /* cardicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5AA42E16A9DE0100BCCC40 /* cardicon@2x.png */; };
+		1F5AA43316A9DEA300BCCC40 /* vehicle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5AA43116A9DEA300BCCC40 /* vehicle.png */; };
+		1F5AA43416A9DEA300BCCC40 /* vehicle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5AA43216A9DEA300BCCC40 /* vehicle@2x.png */; };
+		1F5AA43716A9DFAE00BCCC40 /* insurance.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5AA43516A9DFAE00BCCC40 /* insurance.png */; };
+		1F5AA43816A9DFAE00BCCC40 /* insurance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F5AA43616A9DFAE00BCCC40 /* insurance@2x.png */; };
+		1F5AA43B16A9E10E00BCCC40 /* AddVehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5AA43A16A9E10E00BCCC40 /* AddVehicleViewController.m */; };
+		1F5AA43E16A9E11C00BCCC40 /* AddInsuranceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5AA43D16A9E11C00BCCC40 /* AddInsuranceViewController.m */; };
 		1F7B187F1659ACC8005FDD5C /* BarcodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B187E1659ACC8005FDD5C /* BarcodeManager.m */; };
 		1FA5BA18164DEA12001AD0C8 /* AddGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA5BA17164DEA12001AD0C8 /* AddGiftCardViewController.m */; };
 		1FAAB2531659CD5C000C9E3F /* GiftCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAAB2521659CD5B000C9E3F /* GiftCard.m */; };
@@ -288,6 +301,8 @@
 		1F116BB91647A269000B8660 /* StoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreCell.m; sourceTree = "<group>"; };
 		1F116BC516481F9C000B8660 /* AddStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStoreViewController.h; sourceTree = "<group>"; };
 		1F116BC616481F9C000B8660 /* AddStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStoreViewController.m; sourceTree = "<group>"; };
+		1F1C6AD216A9CF8A007B4567 /* VehicleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleTableViewController.h; sourceTree = "<group>"; };
+		1F1C6AD316A9CF8A007B4567 /* VehicleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleTableViewController.m; sourceTree = "<group>"; };
 		1F380A591655C32200788014 /* GiftCardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardCollectionViewController.h; sourceTree = "<group>"; };
 		1F380A5A1655C32200788014 /* GiftCardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiftCardCollectionViewController.m; sourceTree = "<group>"; };
 		1F380A5C1655C61C00788014 /* GiftCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiftCardCell.h; sourceTree = "<group>"; };
@@ -296,8 +311,8 @@
 		1F380A69165602D300788014 /* iphoneRetina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphoneRetina.png; path = ../iphoneRetina.png; sourceTree = "<group>"; };
 		1F380A6B1656030200788014 /* ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ipad.png; path = ../ipad.png; sourceTree = "<group>"; };
 		1F380A6D1656030C00788014 /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphone.png; path = ../iphone.png; sourceTree = "<group>"; };
-		1F380A831656A24900788014 /* NavigactionBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigactionBarController.h; sourceTree = "<group>"; };
-		1F380A841656A24900788014 /* NavigactionBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigactionBarController.m; sourceTree = "<group>"; };
+		1F380A831656A24900788014 /* NavigationBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarController.h; sourceTree = "<group>"; };
+		1F380A841656A24900788014 /* NavigationBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarController.m; sourceTree = "<group>"; };
 		1F380A881657450100788014 /* 711.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 711.png; path = icons/711.png; sourceTree = "<group>"; };
 		1F380A891657450100788014 /* acehardware.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = acehardware.png; path = icons/acehardware.png; sourceTree = "<group>"; };
 		1F380A8A1657450100788014 /* amazon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = amazon.png; path = icons/amazon.png; sourceTree = "<group>"; };
@@ -467,6 +482,24 @@
 		1F4846E2165C6D6900933F30 /* wholefoods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wholefoods.png; path = icons/wholefoods.png; sourceTree = "<group>"; };
 		1F4846E3165C6D6900933F30 /* younkers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = younkers.png; path = icons/younkers.png; sourceTree = "<group>"; };
 		1F484755165C89E700933F30 /* burlington.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = burlington.png; path = icons/burlington.png; sourceTree = "<group>"; };
+		1F5AA42016A9D71800BCCC40 /* License.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = License.h; sourceTree = "<group>"; };
+		1F5AA42116A9D71800BCCC40 /* License.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = License.m; sourceTree = "<group>"; };
+		1F5AA42416A9D71800BCCC40 /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
+		1F5AA42516A9D71800BCCC40 /* Vehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vehicle.m; sourceTree = "<group>"; };
+		1F5AA42716A9D71800BCCC40 /* Insurance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insurance.h; sourceTree = "<group>"; };
+		1F5AA42816A9D71800BCCC40 /* Insurance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insurance.m; sourceTree = "<group>"; };
+		1F5AA42A16A9D96000BCCC40 /* InsuranceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsuranceTableViewController.h; sourceTree = "<group>"; };
+		1F5AA42B16A9D96000BCCC40 /* InsuranceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsuranceTableViewController.m; sourceTree = "<group>"; };
+		1F5AA42D16A9DE0100BCCC40 /* cardicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardicon.png; sourceTree = "<group>"; };
+		1F5AA42E16A9DE0100BCCC40 /* cardicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cardicon@2x.png"; sourceTree = "<group>"; };
+		1F5AA43116A9DEA300BCCC40 /* vehicle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehicle.png; sourceTree = "<group>"; };
+		1F5AA43216A9DEA300BCCC40 /* vehicle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vehicle@2x.png"; sourceTree = "<group>"; };
+		1F5AA43516A9DFAE00BCCC40 /* insurance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = insurance.png; sourceTree = "<group>"; };
+		1F5AA43616A9DFAE00BCCC40 /* insurance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "insurance@2x.png"; sourceTree = "<group>"; };
+		1F5AA43916A9E10E00BCCC40 /* AddVehicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddVehicleViewController.h; sourceTree = "<group>"; };
+		1F5AA43A16A9E10E00BCCC40 /* AddVehicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVehicleViewController.m; sourceTree = "<group>"; };
+		1F5AA43C16A9E11C00BCCC40 /* AddInsuranceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddInsuranceViewController.h; sourceTree = "<group>"; };
+		1F5AA43D16A9E11C00BCCC40 /* AddInsuranceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddInsuranceViewController.m; sourceTree = "<group>"; };
 		1F7B187D1659ACC8005FDD5C /* BarcodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeManager.h; sourceTree = "<group>"; };
 		1F7B187E1659ACC8005FDD5C /* BarcodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeManager.m; sourceTree = "<group>"; };
 		1FA5BA16164DEA12001AD0C8 /* AddGiftCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGiftCardViewController.h; sourceTree = "<group>"; };
@@ -633,6 +666,7 @@
 				1F10C1DF1647A07700CC7519 /* MainiPhoneStoryBoard.storyboard */,
 				1F10C1CE16479FE400CC7519 /* AppDelegate.h */,
 				1F10C1CF16479FE400CC7519 /* AppDelegate.m */,
+				1F1C6ACB16A9CD72007B4567 /* Policies */,
 				1F3DC361164DCEDF0085586B /* GiftCards */,
 				1F116BC8164827A0000B8660 /* Stores */,
 				1F799C3A16521E7900AB016A /* HelpMenu */,
@@ -662,6 +696,12 @@
 		1F116BBB1647A2D5000B8660 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				1F5AA43516A9DFAE00BCCC40 /* insurance.png */,
+				1F5AA43616A9DFAE00BCCC40 /* insurance@2x.png */,
+				1F5AA43116A9DEA300BCCC40 /* vehicle.png */,
+				1F5AA43216A9DEA300BCCC40 /* vehicle@2x.png */,
+				1F5AA42D16A9DE0100BCCC40 /* cardicon.png */,
+				1F5AA42E16A9DE0100BCCC40 /* cardicon@2x.png */,
 				1FB4B7A916645953007BE706 /* other.png */,
 				1F484755165C89E700933F30 /* burlington.png */,
 				1F484673165C6D6900933F30 /* 711.png */,
@@ -843,6 +883,12 @@
 		1F116BC41647A5F9000B8660 /* EntitySubClasses */ = {
 			isa = PBXGroup;
 			children = (
+				1F5AA42716A9D71800BCCC40 /* Insurance.h */,
+				1F5AA42816A9D71800BCCC40 /* Insurance.m */,
+				1F5AA42416A9D71800BCCC40 /* Vehicle.h */,
+				1F5AA42516A9D71800BCCC40 /* Vehicle.m */,
+				1F5AA42016A9D71800BCCC40 /* License.h */,
+				1F5AA42116A9D71800BCCC40 /* License.m */,
 				1FAAB2511659CD5B000C9E3F /* GiftCard.h */,
 				1FAAB2521659CD5B000C9E3F /* GiftCard.m */,
 				1FFE1F51164EE77300DA0869 /* Store.h */,
@@ -862,6 +908,21 @@
 				1F116BB91647A269000B8660 /* StoreCell.m */,
 			);
 			name = Stores;
+			sourceTree = "<group>";
+		};
+		1F1C6ACB16A9CD72007B4567 /* Policies */ = {
+			isa = PBXGroup;
+			children = (
+				1F1C6AD216A9CF8A007B4567 /* VehicleTableViewController.h */,
+				1F1C6AD316A9CF8A007B4567 /* VehicleTableViewController.m */,
+				1F5AA42A16A9D96000BCCC40 /* InsuranceTableViewController.h */,
+				1F5AA42B16A9D96000BCCC40 /* InsuranceTableViewController.m */,
+				1F5AA43916A9E10E00BCCC40 /* AddVehicleViewController.h */,
+				1F5AA43A16A9E10E00BCCC40 /* AddVehicleViewController.m */,
+				1F5AA43C16A9E11C00BCCC40 /* AddInsuranceViewController.h */,
+				1F5AA43D16A9E11C00BCCC40 /* AddInsuranceViewController.m */,
+			);
+			name = Policies;
 			sourceTree = "<group>";
 		};
 		1F380A761656106F00788014 /* Logos */ = {
@@ -897,8 +958,8 @@
 			children = (
 				1FEE14F416545BFD008E8C3F /* HelpViewController.h */,
 				1FEE14F516545BFD008E8C3F /* HelpViewController.m */,
-				1F380A831656A24900788014 /* NavigactionBarController.h */,
-				1F380A841656A24900788014 /* NavigactionBarController.m */,
+				1F380A831656A24900788014 /* NavigationBarController.h */,
+				1F380A841656A24900788014 /* NavigationBarController.m */,
 			);
 			name = HelpMenu;
 			sourceTree = "<group>";
@@ -1281,6 +1342,12 @@
 				1FB4B7AA16645953007BE706 /* other.png in Resources */,
 				1FB4B7AD16645B6D007BE706 /* Default@2x.png in Resources */,
 				1FB4B7AF16645B7B007BE706 /* Default.png in Resources */,
+				1F5AA42F16A9DE0100BCCC40 /* cardicon.png in Resources */,
+				1F5AA43016A9DE0100BCCC40 /* cardicon@2x.png in Resources */,
+				1F5AA43316A9DEA300BCCC40 /* vehicle.png in Resources */,
+				1F5AA43416A9DEA300BCCC40 /* vehicle@2x.png in Resources */,
+				1F5AA43716A9DFAE00BCCC40 /* insurance.png in Resources */,
+				1F5AA43816A9DFAE00BCCC40 /* insurance@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1303,8 +1370,15 @@
 				1FEE14F616545BFD008E8C3F /* HelpViewController.m in Sources */,
 				1F380A5B1655C32200788014 /* GiftCardCollectionViewController.m in Sources */,
 				1F380A5E1655C61C00788014 /* GiftCardCell.m in Sources */,
-				1F380A851656A24900788014 /* NavigactionBarController.m in Sources */,
+				1F380A851656A24900788014 /* NavigationBarController.m in Sources */,
 				1FAAB2531659CD5C000C9E3F /* GiftCard.m in Sources */,
+				1F1C6AD416A9CF8A007B4567 /* VehicleTableViewController.m in Sources */,
+				1F5AA42216A9D71800BCCC40 /* License.m in Sources */,
+				1F5AA42616A9D71800BCCC40 /* Vehicle.m in Sources */,
+				1F5AA42916A9D71800BCCC40 /* Insurance.m in Sources */,
+				1F5AA42C16A9D96000BCCC40 /* InsuranceTableViewController.m in Sources */,
+				1F5AA43B16A9E10E00BCCC40 /* AddVehicleViewController.m in Sources */,
+				1F5AA43E16A9E11C00BCCC40 /* AddInsuranceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

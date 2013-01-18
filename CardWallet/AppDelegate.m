@@ -17,10 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UINavigationController *nav = (UINavigationController*)self.window.rootViewController;
-    
-    StoreCollectionViewController *scvc = (StoreCollectionViewController*)[[nav viewControllers] objectAtIndex:0];
-    scvc.managedObjectContext = self.managedObjectContext;
     
     return YES;
 }

@@ -215,6 +215,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    //get managed object context
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    _managedObjectContext = appDelegate.managedObjectContext;
+    
     //first launch
     BOOL foo = [[NSUserDefaults standardUserDefaults]boolForKey:@"previouslyLaunched"];
     if (!foo)

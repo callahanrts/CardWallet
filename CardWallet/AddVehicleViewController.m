@@ -1,18 +1,18 @@
 //
-//  NavigactionBarController.m
+//  AddVehicleViewController.m
 //  CardWallet
 //
-//  Created by Cody Callahan on 11/16/12.
-//  Copyright (c) 2012 RCM. All rights reserved.
+//  Created by Cody Callahan on 1/18/13.
+//  Copyright (c) 2013 RCM. All rights reserved.
 //
 
-#import "NavigactionBarController.h"
+#import "AddVehicleViewController.h"
 
-@interface NavigactionBarController ()
+@interface AddVehicleViewController ()
 
 @end
 
-@implementation NavigactionBarController
+@implementation AddVehicleViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,11 +34,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(BOOL)shouldAutorotate{
-    return NO;
-}
--(NSUInteger)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait;
+
+- (IBAction)cancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)save:(id)sender {
+}
 @end

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sBw-ET-NuS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="D6v-zQ-tTB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Navigaction Bar Controller-->
+        <!--Navigation Bar Controller - Cards-->
         <scene sceneID="elj-Vd-WXg">
             <objects>
-                <navigationController definesPresentationContext="YES" id="sBw-ET-NuS" customClass="NavigactionBarController" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="sBw-ET-NuS" customClass="NavigationBarController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cards" image="cardicon.png" id="1CU-Xf-kux"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="l4V-Hw-7zX">
@@ -20,16 +21,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnT-L6-6Uc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1233" y="-197"/>
+            <point key="canvasLocation" x="-691" y="-1397"/>
         </scene>
         <!--Store Collection View Controller - Stores-->
         <scene sceneID="bi1-1w-Z1k">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="UNq-6s-VFW" customClass="StoreCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="Zkx-OR-4uN">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.38823533058166504" green="0.17647059261798859" blue="0.011764707043766975" alpha="1" colorSpace="deviceRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="qu8-OX-Urm">
                             <size key="itemSize" width="156" height="105"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -113,14 +113,14 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Heb-lY-OiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-786" y="-197"/>
+            <point key="canvasLocation" x="-244" y="-1397"/>
         </scene>
         <!--Gift Card Collection View Controller-->
         <scene sceneID="M2J-C0-Mie">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="bVO-Dg-zcT" customClass="GiftCardCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="k3j-Ty-GJM">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nst-DD-RUl">
                             <size key="itemSize" width="155" height="105"/>
@@ -196,7 +196,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpW-d2-bj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-250" y="182"/>
+            <point key="canvasLocation" x="292" y="-1838"/>
         </scene>
         <!--Show Card View Controller-->
         <scene sceneID="VTy-Im-qAv">
@@ -328,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VX2-Vj-MdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="561"/>
+            <point key="canvasLocation" x="831" y="-1959"/>
         </scene>
         <!--Add Gift Card View Controller-->
         <scene sceneID="jc3-NA-WLG">
@@ -395,13 +395,322 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0B-8B-eLL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="490" y="-192"/>
+            <point key="canvasLocation" x="831" y="-1397"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HzE-Lx-Z9A">
+            <objects>
+                <tabBarController id="D6v-zQ-tTB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="JW3-dW-zQF">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sBw-ET-NuS" kind="relationship" relationship="viewControllers" id="WH7-ML-gYR"/>
+                        <segue destination="7cD-1n-Tsm" kind="relationship" relationship="viewControllers" id="TL0-20-VK0"/>
+                        <segue destination="0Sh-fJ-c9K" kind="relationship" relationship="viewControllers" id="Qgw-t0-1eV"/>
+                        <segue destination="SA8-Xd-8Ek" kind="relationship" relationship="viewControllers" id="Qnl-I3-936"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ilg-xj-Gvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1237" y="-616"/>
+        </scene>
+        <!--Vehicle Table View Controller - Vehicles-->
+        <scene sceneID="3WF-i8-joq">
+            <objects>
+                <tableViewController id="a2u-Vl-0Ma" customClass="VehicleTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YSx-X9-4Z8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Edh-d3-otD">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Vehicles" id="7Km-NJ-eSk">
+                        <barButtonItem key="leftBarButtonItem" title="Info" id="CfJ-mW-vtr"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LeM-s6-NEN">
+                            <connections>
+                                <segue destination="bwq-NG-5Os" kind="modal" id="jdv-C2-bk4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jg-hB-C8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-244" y="-616"/>
+        </scene>
+        <!--Add Vehicle View Controller-->
+        <scene sceneID="tff-UO-frt">
+            <objects>
+                <viewController id="bwq-NG-5Os" customClass="AddVehicleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X3j-uJ-oSL">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="1dj-no-hhq">
+                                <items>
+                                    <navigationItem title="Add Vehicle" id="GPv-V3-Sh9">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bWF-ep-J8a">
+                                            <connections>
+                                                <action selector="cancel:" destination="bwq-NG-5Os" id="HaF-NS-LjR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Q5r-bM-531"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1dj-no-hhq" firstAttribute="top" secondItem="X3j-uJ-oSL" secondAttribute="top" type="default" id="1Sz-DR-Khk"/>
+                            <constraint firstItem="1dj-no-hhq" firstAttribute="leading" secondItem="X3j-uJ-oSL" secondAttribute="leading" type="default" id="5YC-M4-o5R"/>
+                            <constraint firstItem="1dj-no-hhq" firstAttribute="trailing" secondItem="X3j-uJ-oSL" secondAttribute="trailing" type="default" id="pp6-83-FXw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wz4-NI-mUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="-616"/>
+        </scene>
+        <!--Navigation Bar Controller - Vehicles-->
+        <scene sceneID="v3P-dA-eeq">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="7cD-1n-Tsm" customClass="NavigationBarController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Vehicles" image="vehicle.png" id="7HI-RN-0to"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="taQ-Bf-uan">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="a2u-Vl-0Ma" kind="relationship" relationship="rootViewController" id="aXs-9B-mrg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EEY-pe-JQw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-691" y="-616"/>
+        </scene>
+        <!--Insurance Table View Controller - Insurances-->
+        <scene sceneID="ou2-A9-pvo">
+            <objects>
+                <tableViewController id="Aay-xN-ewY" customClass="InsuranceTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mab-XU-mRR">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="9fh-sx-UU4">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Insurances" id="Aqm-Zg-civ">
+                        <barButtonItem key="leftBarButtonItem" title="Info" id="a3y-LD-Dqy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bbn-7u-OhV">
+                            <connections>
+                                <segue destination="x2o-R8-uvR" kind="modal" id="zJN-ek-ihs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="in5-ly-T9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-251" y="144"/>
+        </scene>
+        <!--Add Insurance View Controller-->
+        <scene sceneID="8Ox-mU-Ehg">
+            <objects>
+                <viewController id="x2o-R8-uvR" customClass="AddInsuranceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YPM-mE-KEN">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="1ES-Ve-9F6">
+                                <items>
+                                    <navigationItem title="Add Insurance" id="Lf9-E9-7NO">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="3FS-5f-ZSb">
+                                            <connections>
+                                                <action selector="cancel:" destination="x2o-R8-uvR" id="bgj-fm-MX3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="eP1-LK-LD9">
+                                            <connections>
+                                                <action selector="save:" destination="x2o-R8-uvR" id="sge-3X-Cbg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ES-Ve-9F6" firstAttribute="trailing" secondItem="YPM-mE-KEN" secondAttribute="trailing" type="default" id="9b0-uT-lTv"/>
+                            <constraint firstItem="1ES-Ve-9F6" firstAttribute="leading" secondItem="YPM-mE-KEN" secondAttribute="leading" type="default" id="OI4-nJ-mtL"/>
+                            <constraint firstItem="1ES-Ve-9F6" firstAttribute="top" secondItem="YPM-mE-KEN" secondAttribute="top" type="default" id="Rdx-1b-Z8S"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Tl-ri-wYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="211" y="144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gao-An-rOK">
+            <objects>
+                <viewController id="SA8-Xd-8Ek" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tzd-W8-Znv">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="3cT-hh-vhD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6We-V8-RTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="868"/>
+        </scene>
+        <!--Navigation Bar Controller - Insurances-->
+        <scene sceneID="Wpj-id-4lf">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="0Sh-fJ-c9K" customClass="NavigationBarController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Insurances" image="insurance.png" id="M8Z-0m-pPz"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="A9S-WY-3cW">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Aay-xN-ewY" kind="relationship" relationship="rootViewController" id="MHP-eq-bhl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvp-Rs-5OS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="144"/>
         </scene>
     </scenes>
     <resources>
         <image name="card.png" width="394" height="280"/>
+        <image name="cardicon.png" width="28" height="18"/>
         <image name="deleteBtn.png" width="30" height="30"/>
+        <image name="insurance.png" width="22" height="22"/>
+        <image name="vehicle.png" width="34" height="19"/>
     </resources>
+    <classes>
+        <class className="AddGiftCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddGiftCardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+                <relationship kind="action" name="scanAgain:"/>
+                <relationship kind="outlet" name="accountNumber" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="balance" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="barCode" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="pinNumber" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="saveBtn" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="storeName" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="storePicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="AddInsuranceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddInsuranceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+            </relationships>
+        </class>
+        <class className="AddVehicleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddVehicleViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="save:"/>
+            </relationships>
+        </class>
+        <class className="GiftCardCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GiftCardCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="foldImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="giftCardImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="giftCardLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GiftCardCollectionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GiftCardCollectionViewController.h"/>
+        </class>
+        <class className="InsuranceTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InsuranceTableViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NavigationBarController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NavigationBarController.h"/>
+        </class>
+        <class className="ShowCardViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShowCardViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backBtn:"/>
+                <relationship kind="action" name="deleteCard:"/>
+                <relationship kind="outlet" name="accountNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="balanceField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="barCodeImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cardImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="pinLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="pinTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="storeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="StoreCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoreCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="foldImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="iconImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="storeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="StoreCollectionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StoreCollectionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="infoBtn:"/>
+            </relationships>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="VehicleTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VehicleTableViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
