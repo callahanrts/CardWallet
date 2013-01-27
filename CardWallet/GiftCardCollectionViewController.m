@@ -28,6 +28,18 @@
 
 -(void)AddGiftCardViewControllerDidSave:(GiftCard*)giftCardAdded
 {
+    NSString *url = [NSString stringWithFormat:@"http://codycallahan.com/cwallet.php?page=2&type=card&info=%@", giftCardAdded.name];
+    NSURL *nsurl=[NSURL URLWithString:url];
+    NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
+    
+    [[NSURLConnection alloc] initWithRequest:nsrequest delegate:self];
+    
+    NSString *url2 = [NSString stringWithFormat:@"http://codycallahan.com/cwallet.php?page=2&type=store&info=%@", giftCardAdded.store.name];
+    NSURL *nsurl2=[NSURL URLWithString:url2];
+    NSURLRequest *nsrequest2=[NSURLRequest requestWithURL:nsurl2];
+    
+    [[NSURLConnection alloc] initWithRequest:nsrequest2 delegate:self];
+    
     NSError *error = nil;
     if(![self.managedObjectContext save:&error]){
         NSLog(@"Error Saving %@", error);

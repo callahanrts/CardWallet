@@ -15,7 +15,7 @@
 @property (nonatomic, retain) NSString * make;
 @property (nonatomic, retain) NSString * model;
 @property (nonatomic, retain) NSString * vinNum;
-@property (nonatomic, retain) NSNumber * year;
+@property (nonatomic, retain) NSString * year;
 @property (nonatomic, retain) NSManagedObject *insurance;
 
 @end

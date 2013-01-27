@@ -21,5 +21,6 @@
 @dynamic phone;
 @dynamic policyNum;
 @dynamic vehicle;
+@dynamic type;
 
 @end

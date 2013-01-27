@@ -2,7 +2,7 @@
 //  TabBarViewController.m
 //  CardWallet
 //
-//  Created by Cody Callahan on 1/18/13.
+//  Created by Cody Callahan on 1/19/13.
 //  Copyright (c) 2013 RCM. All rights reserved.
 //
 
@@ -33,6 +33,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma  mark - Orientation
+
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+ 
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

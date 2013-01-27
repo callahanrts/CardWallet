@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="GiftCard" representedClassName="GiftCards" syncable="YES">
+        <attribute name="accountNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="balance" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="barCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zbarCodeType" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="store" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Store" inverseName="giftCard" inverseEntity="Store" syncable="YES"/>
+    </entity>
+    <entity name="Insurance" representedClassName="Insurance" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="agent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="agentNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="effectiveDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="expDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="policyNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vehicle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Vehicle" inverseName="insurance" inverseEntity="Vehicle" syncable="YES"/>
+    </entity>
+    <entity name="License" representedClassName="License" syncable="YES"/>
+    <entity name="Store" representedClassName="Store" syncable="YES">
+        <attribute name="barCodeType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="giftCard" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GiftCard" inverseName="store" inverseEntity="GiftCard" syncable="YES"/>
+    </entity>
+    <entity name="Vehicle" representedClassName="Vehicle" syncable="YES">
+        <attribute name="make" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vinNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="insurance" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Insurance" inverseName="vehicle" inverseEntity="Insurance" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GiftCard" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Insurance" positionX="160" positionY="192" width="128" height="195"/>
+        <element name="License" positionX="160" positionY="192" width="128" height="45"/>
+        <element name="Store" positionX="-45" positionY="207" width="128" height="105"/>
+        <element name="Vehicle" positionX="160" positionY="192" width="128" height="120"/>
+    </elements>
+</model>

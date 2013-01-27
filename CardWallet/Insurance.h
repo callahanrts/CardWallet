@@ -17,10 +17,10 @@
 @property (nonatomic, retain) NSString * agent;
 @property (nonatomic, retain) NSString * agentNum;
 @property (nonatomic, retain) NSString * company;
-@property (nonatomic, retain) NSDate * effectiveDate;
-@property (nonatomic, retain) NSDate * expDate;
 @property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSString * policyNum;
-@property (nonatomic, retain) Vehicle *vehicle;
-
+@property (nonatomic, retain) NSString * type;
+@property (nonatomic, retain) Vehicle  * vehicle;
+@property (nonatomic, retain) NSDate   * effectiveDate;
+@property (nonatomic, retain) NSDate   * expDate;
 @end
