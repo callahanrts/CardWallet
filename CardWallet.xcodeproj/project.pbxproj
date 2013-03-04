@@ -1643,8 +1643,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cody Callahan (P54TD7747W)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cody Callahan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cody Callahan";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1660,7 +1660,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4A80E889-7679-4BF5-8BE6-7751E039E6CA";
+				PROVISIONING_PROFILE = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1675,8 +1676,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cody Callahan (P54TD7747W)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cody Callahan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cody Callahan";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1686,7 +1687,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4A80E889-7679-4BF5-8BE6-7751E039E6CA";
+				PROVISIONING_PROFILE = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1696,15 +1698,19 @@
 		1F10C1DD16479FE400CC7519 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cody Callahan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cody Callahan";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardWallet/CardWallet-Prefix.pch";
 				INFOPLIST_FILE = "CardWallet/CardWallet-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CardWallet/ZBarSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1713,17 +1719,19 @@
 		1F10C1DE16479FE400CC7519 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cody Callahan (P54TD7747W)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Cody Callahan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cody Callahan";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardWallet/CardWallet-Prefix.pch";
 				INFOPLIST_FILE = "CardWallet/CardWallet-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/CardWallet/ZBarSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4A80E889-7679-4BF5-8BE6-7751E039E6CA";
+				PROVISIONING_PROFILE = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AE8B154D-1C00-49C4-B5A9-674EE693C0E5";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
